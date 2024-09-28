@@ -266,8 +266,8 @@ function Right() {
         spacing: 4,
         children: [
 	    NetworkTraffic(),
-	    DiskSpace("/dev/disk/by-uuid/c8c8ca02-20f7-42ac-9c37-fd15858bf2fd", "", "root"),
-	    DiskSpace("/dev/disk/by-uuid/c8c8ca02-20f7-42ac-9c37-fd15858bf2fd", "", "home"),
+	    DiskSpace("/dev/disk/by-uuid/aae47407-820a-49ff-8790-e788a20df65b", "", "root"),
+	    DiskSpace("/dev/disk/by-uuid/a9f3812b-381a-406f-9a01-9838fbf796f9", "", "home"),
 	    CpuUsage(),
 	    MemoryUsage(),
             Volume(),

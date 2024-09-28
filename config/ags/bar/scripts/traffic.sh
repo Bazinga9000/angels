@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 INTERVAL=3
-INTERFACES="enp5s0 lo wlo1"
+INTERFACES="lo wlp0s20f3 enp0s31f6"
 
 declare -A bytes
 

@@ -6,7 +6,8 @@ App.config({
     style: "./style.css",
     windows: [
         applauncher,
-	Bar(),
+        Bar(0),
+        Bar(1),
         NotificationPopups()
     ],
 })
