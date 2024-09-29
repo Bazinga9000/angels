@@ -84,6 +84,9 @@
   # Enable ratbagd for configuring gaming mice
   services.ratbagd.enable = true;
 
+  # Enable support for ZSA keyboards
+  hardware.keyboard.zsa.enable = true;
+
   # Enable automatic garbage collection
   nix.gc = {
     automatic = true;
