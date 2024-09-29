@@ -64,8 +64,11 @@
       # Lock Screen
       "$mod, Escape, exec, hyprlock"
       
+      # Reset AGS (In case bars dissapear from a monitor)
+      "$mod SHIFT, B, exec, ags -q && ags &"
+
       # Leave
-      "$mod SHIFT CONTROL, Escape, exit"
+      "$mod SHIFT CONTROL, Escape, exit" 
     ];
     
     bindm = [
