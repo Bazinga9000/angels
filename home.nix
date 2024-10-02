@@ -79,7 +79,8 @@
       {
         timeout = 720;
         on-timeout = "hyprctl dispatch dpms off";
-        on-resume = "hyprctl dispatch dpms on";
+        # All this extra stuff to unfuck hyprlock after suspend. Hopefully it works.
+        on-resume = "hyprctl dispatch dpms on; killall -9 hyprlock; hyprctl --instance 0 'keyword misc:allow_session_lock_restore 1'; hyprctl --instance 0 'dispatch exec hyprlock'";
       }
     ];
   };

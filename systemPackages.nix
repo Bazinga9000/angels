@@ -10,6 +10,7 @@
     networkmanagerapplet # applet for managing networks 
     nushell              # alternative to sh with many functional paradigms
     gh                   # github cli
+    killall              # killall
  ];
 
   # programs.XXXXX.enable zone 
