@@ -18,6 +18,7 @@
     inkscape      # Vector Graphics
     cockatrice    # MTG Client
     yed           # Yed Graph Editor
+    element-web   # Matrix Client
     
     # Minecraft
     (prismlauncher.override {
