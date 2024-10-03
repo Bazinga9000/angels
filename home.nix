@@ -8,17 +8,17 @@
 
   # Packages
   home.packages = with pkgs; [
-    vivaldi       # Browser
-    kitty         # Terminal
-    xfce.thunar   # File Manager
-    polkit_gnome  # Authentication Agent
-    grimblast     # Screenshot Tool
-    piper         # Logitech Mouse Configurator
-    gimp          # GNU Image Manipulation Program
-    inkscape      # Vector Graphics
-    cockatrice    # MTG Client
-    yed           # Yed Graph Editor
-    element-web   # Matrix Client
+    vivaldi          # Browser
+    kitty            # Terminal
+    xfce.thunar      # File Manager
+    polkit_gnome     # Authentication Agent
+    grimblast        # Screenshot Tool
+    piper            # Logitech Mouse Configurator
+    gimp             # GNU Image Manipulation Program
+    inkscape         # Vector Graphics
+    cockatrice       # MTG Client
+    yed              # Yed Graph Editor
+    element-desktop  # Matrix Client
     
     # Minecraft
     (prismlauncher.override {
