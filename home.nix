@@ -9,7 +9,6 @@
   # Packages
   home.packages = with pkgs; [
     vivaldi          # Browser
-    kitty            # Terminal
     xfce.thunar      # File Manager
     polkit_gnome     # Authentication Agent
     grimblast        # Screenshot Tool
@@ -58,6 +57,13 @@
     love
   ];
  
+  # Kitty
+  programs.kitty.enable = true;
+  programs.kitty.font = {
+    name = "Hermit";
+    package = pkgs.hermit;
+  };
+
   # Hyprlock
   programs.hyprlock.enable = true;
   programs.hyprlock.settings = import ./hyprlock.nix;

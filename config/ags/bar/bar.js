@@ -57,7 +57,7 @@ function Clock() {
 	class_name: "clock",
 	vertical: "true",
 	children: [
-            Widget.Label({ label: time.bind() }),
+        Widget.Label({ css: "padding-top: 3px", label: time.bind() }),
 	    Widget.Label({ label: date.bind() })
 	]
     })
@@ -139,7 +139,7 @@ function MemoryUsage() {
 	vertical: true,
         children: [
 	    Widget.Label({
-		    label: " ",
+		    label: "",
 		    class_name: "icon-memory"
             }),
             Widget.Label({
@@ -159,7 +159,7 @@ function DiskSpace(fs, fs_char, fs_class_name) {
 	vertical: true,
         children: [
 	    Widget.Label({
-		    label: ` ${fs_char}`,
+		    label: `${fs_char}`,
 		    class_name: `icon-fs-${fs_class_name}`
             }),
             Widget.Label({
@@ -176,7 +176,7 @@ function NetworkTraffic() {
 	vertical: true,
         children: [
 	    Widget.Label({
-		    label: "󰖩 ",
+		    label: "󰖩",
 		    class_name: "icon-network"
             }),
             Widget.Label({
@@ -189,7 +189,7 @@ function NetworkTraffic() {
 	vertical: true,
         children: [
 	    Widget.Label({
-		    label: "󰖩 ",
+		    label: "󰖩",
 		    class_name: "icon-network"
             }),
             Widget.Label({

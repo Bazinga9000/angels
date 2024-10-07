@@ -2,6 +2,15 @@
   # Non-GTK: Catppuccin
   catppuccin.enable = true;  
 
+  # dconf Dark Mode (for the internet etc)
+  dconf.enable = true;
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      gtk-theme = "palenight";
+      color-scheme = "prefer-dark";
+    };
+  };
+
   # GTK: Palenight
   # Icons: Papirus-Dark
   gtk = {

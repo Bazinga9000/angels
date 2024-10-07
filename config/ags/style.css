@@ -1,7 +1,13 @@
+/* Font Stuff */
+window {
+    font-family: "FantasqueSansM Nerd Font Mono";
+}
+
 /* Bar */
 window.bar {
     /* background-color: @theme_bg_color; */
     color: @theme_fg_color;
+    font-size: 18px;
 }
 
 button {
@@ -176,9 +182,18 @@ window.notification-popups box.notifications {
     margin-bottom: -2px;
 }
 
-.icon-cpu {
-    padding-right: 4px;
+
+.icon-memory,
+.icon-fs-root,
+.icon-fs-home,
+.icon-network,
+.icon-cpu
+{
+    font-size: 30px;
+    margin-top: -4px;
+    margin-bottom: -4px;
 }
+
 
 /* Volume Slider */
 scale {
