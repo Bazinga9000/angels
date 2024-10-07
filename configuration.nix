@@ -91,6 +91,10 @@
   hardware.bluetooth.powerOnBoot = true; # Start default controller on boot
   services.blueman.enable = true; # Bluetooth GUI
 
+  # File Manager Goodies (Trash, Thumbnails for images, etd)
+  services.gvfs.enable = true;
+  services.tumbler.enable = true;
+
   # Enable automatic garbage collection
   nix.gc = {
     automatic = true;

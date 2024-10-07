@@ -160,4 +160,13 @@
         o.emattiza.vscode-purty
     ];
   };
+
+  # Default Applications
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "x-scheme-handler/mailto" = "vivaldi-stable.desktop";
+      "TerminalEmulator" = "kitty.desktop";
+    };
+  };
 }
