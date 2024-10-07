@@ -55,5 +55,6 @@
     proggyfonts
     nerdfonts
     hermit
+    google-fonts
   ];
 }

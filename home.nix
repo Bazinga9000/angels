@@ -18,6 +18,7 @@
     cockatrice       # MTG Client
     yed              # Yed Graph Editor
     element-desktop  # Matrix Client
+    font-manager     # Font Manager
     
     # Minecraft
     (prismlauncher.override {
