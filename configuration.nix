@@ -52,9 +52,8 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment.
+  # Enable the GNOME Display Manager.
   services.xserver.displayManager.gdm.enable = true;
-  # services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -86,6 +85,11 @@
 
   # Enable support for ZSA keyboards
   hardware.keyboard.zsa.enable = true;
+
+  # Bluetooth
+  hardware.bluetooth.enable = true; # Enable bluetooth
+  hardware.bluetooth.powerOnBoot = true; # Start default controller on boot
+  services.blueman.enable = true; # Bluetooth GUI
 
   # Enable automatic garbage collection
   nix.gc = {
