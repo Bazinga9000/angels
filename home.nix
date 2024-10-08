@@ -37,7 +37,7 @@
     # Language - Haskell
     ghc
     stack
-    haskell-language-server
+    haskellPackages.haskell-language-server
     
     # Language - PureScript
     purescript
