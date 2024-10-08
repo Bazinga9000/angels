@@ -11,6 +11,10 @@
     nushell              # alternative to sh with many functional paradigms
     gh                   # github cli
     killall              # killall
+
+    # Developer Libraries
+    pkg-config
+    zlib zlib.dev zlib.out
  ];
 
   # programs.XXXXX.enable zone 
