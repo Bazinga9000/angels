@@ -42,6 +42,7 @@
     # Language - PureScript
     purescript
     spago
+    esbuild
     
     # Language - C, C++
     gcc
