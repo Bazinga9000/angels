@@ -51,8 +51,8 @@
       "$mod SHIFT, 0, movetoworkspace, 10"
   
       # Scratchpad Workspace
-      "$mod, S, togglespecialworkspace, magic"
-      "$mod SHIFT, S, movetoworkspace, special:magic"
+      # "$mod, S, togglespecialworkspace, magic"
+      # "$mod SHIFT, S, movetoworkspace, special:magic"
   
       # Scroll through workspaces
       "$mod, mouse_down, workspace, e+1"
@@ -100,7 +100,7 @@
       "8, defaultName:θ"
       "9, defaultName:ι"
       "10, defaultName:κ"
-      "special:magic, defaultName:⁂"
+      # "special:magic, defaultName:⁂"
     ];
   
     general = {
