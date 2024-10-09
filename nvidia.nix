@@ -10,7 +10,6 @@ let driver555 = config.boot.kernelPackages.nvidiaPackages.mkDriver {
       persistencedSha256 = "sha256-lyYxDuGDTMdGxX3CaiWUh1IQuQlkI2hPEs5LI20vEVw=";
     };
     
-    # requires vulkan.h to exist somehow, so 560 probably won't build until an upgrade, but I will leave the hashes around, (thoguh at that rate there's probably a new nixpkgs anyways
     driver560 = config.boot.kernelPackages.nvidiaPackages.mkDriver {
       version = "560.35.03";
       sha256_64bit = "sha256-8pMskvrdQ8WyNBvkU/xPc/CtcYXCa7ekP73oGuKfH+M=";
@@ -20,7 +19,8 @@ let driver555 = config.boot.kernelPackages.nvidiaPackages.mkDriver {
       persistencedSha256 = "sha256-E2J2wYYyRu7Kc3MMZz/8ZIemcZg68rkzvqEwFAL3fFs=";
     };
 
-    driverPackage = driver560;
+    driverLatest = pkgs.linuxPackages.nvidiaPackages.latest;
+    driverPackage = driverLatest;
 in
 {
   # Enable graphics driver in NixOS unstable/NixOS 24.11
