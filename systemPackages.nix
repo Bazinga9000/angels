@@ -58,7 +58,6 @@
     dina-font
     proggyfonts
     nerdfonts
-    hermit
     google-fonts
   ];
 }

@@ -62,8 +62,8 @@
   # Kitty
   programs.kitty.enable = true;
   programs.kitty.font = {
-    name = "Hermit";
-    package = pkgs.hermit;
+    name = "FantasqueSansM Nerd Font Mono";
+    package = pkgs.nerdfonts;
   };
 
   # Hyprlock
