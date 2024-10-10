@@ -18,6 +18,11 @@
     # VSCodium Extensions
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     nix-vscode-extensions.inputs.nixpkgs.follows = "nixpkgs";
+
+    # Nix-Alien
+    nix-alien.url = "github:thiagokokada/nix-alien";
+    nix-alien.inputs.nixpkgs.follows = "nixpkgs";
+
   };
 
   outputs = {
@@ -37,7 +42,14 @@
     nixosConfigurations = {
       metatron = lib.nixosSystem {
         inherit system; 
+        specialArgs = { inherit self; };
         modules = [
+          ({ self, ... }: {
+            nixpkgs.overlays = [
+              self.inputs.nix-alien.overlays.default
+            ];
+          })
+
           ./configuration.nix
           ./nvidia.nix # the demon of babylon disguises himself with the coat of the righteous
           ./systemPackages.nix 

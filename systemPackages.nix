@@ -11,6 +11,7 @@
     nushell              # alternative to sh with many functional paradigms
     gh                   # github cli
     killall              # killall
+    nix-alien            # running Weird Binaries
 
     # Developer Libraries
     pkg-config
