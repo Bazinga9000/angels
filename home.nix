@@ -40,9 +40,10 @@
     haskellPackages.haskell-language-server
     
     # Language - PureScript
-    purescript
-    spago
-    esbuild
+    purs
+    spago-unstable
+    purs-tidy-bin.purs-tidy-0_10_0
+    purs-backend-es
     
     # Language - C, C++
     gcc

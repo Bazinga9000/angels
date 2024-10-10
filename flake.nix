@@ -23,6 +23,9 @@
     nix-alien.url = "github:thiagokokada/nix-alien";
     nix-alien.inputs.nixpkgs.follows = "nixpkgs";
 
+    # Purescript Overlay
+    purescript-overlay.url = "github:thomashoneyman/purescript-overlay";
+    purescript-overlay.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
@@ -44,9 +47,12 @@
         inherit system; 
         specialArgs = { inherit self; };
         modules = [
+
+          # Nixpkgs overlays
           ({ self, ... }: {
             nixpkgs.overlays = [
-              self.inputs.nix-alien.overlays.default
+              self.inputs.nix-alien.overlays.default # nix-alien
+              self.inputs.purescript-overlay.overlays.default # purescript
             ];
           })
 
