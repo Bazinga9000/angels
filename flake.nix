@@ -56,10 +56,10 @@
 
             # Make the chosen overlays apply globally, not just in the flake build
             nix.nixPath =
-              # Prepend default nixPath values.
-              options.nix.nixPath.default ++
-              # Append our nixpkgs-overlays.
-              [ "nixpkgs-overlays=${./overlays-compat}" ];
+              [ 
+                "nixpkgs=flake:nixpkgs:/nix/var/nix/profiles/per-user/root/channels"
+                "nixpkgs-overlays=${./overlays-compat}" 
+              ];
           })
 
           ./configuration.nix
