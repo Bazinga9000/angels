@@ -6,6 +6,7 @@
     "$terminal" = "kitty";
     "$fileManager" = "thunar";
     "$browser" = "vivaldi";
+    "$editor" = "code --disable-gpu";
   
     bind = [
       # Program Launchers
@@ -14,7 +15,8 @@
       "$mod SHIFT, Q, killactive"
       "$mod, N, exec, $fileManager"
       "$mod, Space, exec, ags -t applauncher"
-      "$mod SHIFT, C, exec, code ~/metatron --disable-gpu"
+      "$mod, C, exec, $editor"
+      "$mod SHIFT, C, exec, $editor ~/metatron"
       
       # Move the Focus
       "$mod, left, movefocus, l"
