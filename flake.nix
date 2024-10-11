@@ -46,12 +46,20 @@
         specialArgs = { inherit self; };
         modules = [
 
-          # Nixpkgs overlays
-          ({ self, ... }: {
+          # Nixpkgs Overlays Module
+          ({ self, options, ... }: {
+            # Enable the desired overlays
             nixpkgs.overlays = [
               self.inputs.nix-alien.overlays.default # nix-alien
               self.inputs.purescript-overlay.overlays.default # purescript
             ];
+
+            # Make the chosen overlays apply globally, not just in the flake build
+            nix.nixPath =
+              # Prepend default nixPath values.
+              options.nix.nixPath.default ++
+              # Append our nixpkgs-overlays.
+              [ "nixpkgs-overlays=${./overlays-compat}" ];
           })
 
           ./configuration.nix
