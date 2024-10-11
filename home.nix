@@ -130,7 +130,6 @@
     in [
         o.rust-lang.rust-analyzer
         o.formulahendry.auto-close-tag
-        o.hookyqr.beautify
         o.formulahendry.code-runner
         o.naumovs.color-highlight
         o.icrawl.discord-vscode
