@@ -34,13 +34,11 @@
     home-manager, 
     catppuccin, 
     ags, 
-    nix-vscode-extensions,
     ...
   } @inputs:
     let 
       lib = nixpkgs.lib;
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
     in {
     nixosConfigurations = {
       metatron = lib.nixosSystem {
@@ -65,7 +63,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "bak";
-            home-manager.users.bazinga = { pkgs, nix-vscode-extensions, ...}: {
+            home-manager.users.bazinga = { pkgs, ...}: {
               imports = [
                 ./home.nix # General Home-Manager Config
                 ./theme.nix # Appearance Config

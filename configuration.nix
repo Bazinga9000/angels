@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports =
@@ -115,9 +115,7 @@
     description = "bazinga";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.nushell;
-    packages = with pkgs; [
-    #  thunderbird
-    ];
+    packages = [];
   };
 
   # Allow unfree packages
