@@ -12,10 +12,6 @@
     gh                   # github cli
     killall              # killall
     nix-alien            # running Weird Binaries
-
-    # Developer Libraries
-    pkg-config
-    zlib zlib.dev zlib.out
  ];
 
   # programs.XXXXX.enable zone 
