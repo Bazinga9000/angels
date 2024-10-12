@@ -68,5 +68,6 @@
     proggyfonts
     nerdfonts
     google-fonts
+    corefonts
   ];
 }
