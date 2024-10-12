@@ -74,42 +74,6 @@
     package = pkgs.nerdfonts;
   };
 
-  # Hyprlock
-  programs.hyprlock.enable = true;
-  programs.hyprlock.settings = import ./hyprlock.nix;
-  
-  # Hypridle
-  services.hypridle.enable = true;
-  services.hypridle.settings = {
-    general = {
-      after_sleep_cmd = "hyprctl dispatch dpms on";
-      ignore_dbus_inhibit = false;
-      lock_cmd = "hyprlock";
-    };
-
-    listener = [
-      {
-        timeout = 600;
-        on-timeout = "hyprlock";
-      }
-
-      {
-        timeout = 720;
-        on-timeout = "hyprctl dispatch dpms off";
-        on-resume = "hyprctl dispatch dpms on";
-      }
-    ];
-  };
-  
-  # Hyprpaper
-  services.hyprpaper.enable = true;
-  services.hyprpaper.settings = let
-    tinot_robots = ./config/wallpapers/tinot_robots_in_the_garden.png;
-  in {
-    preload = "${tinot_robots}";
-    wallpaper = ", ${tinot_robots}";
-  };
-
   # AGS
   programs.ags = {
     enable = true;
