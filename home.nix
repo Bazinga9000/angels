@@ -9,7 +9,6 @@
   # Packages
   home.packages = with pkgs; [
     vivaldi          # Browser
-    xfce.thunar      # File Manager
     polkit_gnome     # Authentication Agent
     grimblast        # Screenshot Tool
     piper            # Logitech Mouse Configurator
@@ -60,7 +59,14 @@
     lua
     love
   ];
- 
+
+  # Environment
+  home.sessionVariables = {
+    EDITOR = "vim";
+    BROWSER = "vivaldi";
+    TERMINAL = "kitty";
+  };
+
   # Kitty
   programs.kitty.enable = true;
   programs.kitty.font = {
@@ -161,14 +167,5 @@
         o.catppuccin.catppuccin-vsc-icons
         o.emattiza.vscode-purty
     ];
-  };
-
-  # Default Applications
-  xdg.mimeApps = {
-    enable = true;
-    defaultApplications = {
-      "x-scheme-handler/mailto" = "vivaldi-stable.desktop";
-      "TerminalEmulator" = "kitty.desktop";
-    };
   };
 }

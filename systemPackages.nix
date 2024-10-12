@@ -21,6 +21,7 @@
   # programs.XXXXX.enable zone 
   programs.firefox.enable = true;
   programs.hyprland.enable = true;
+  
   programs.steam = {
       enable = true;
       gamescopeSession.enable = true;
@@ -33,10 +34,17 @@
           proton-ge-bin
       ];
   };
+
   programs.direnv = {
       enable = true;
       nix-direnv.enable = true;
   };
+  
+  programs.thunar.enable = true;
+  programs.thunar.plugins = with pkgs.xfce; [
+    thunar-archive-plugin
+    thunar-volman
+  ];
 
   # Hint electron apps to use Wayland
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
