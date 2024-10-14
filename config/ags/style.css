@@ -125,8 +125,8 @@ label {
 .icon-battery-charging,
 .icon-battery-notcharging
 {
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: 1px;
+    padding-bottom: 5px;
 }
 
 .icon-volume,

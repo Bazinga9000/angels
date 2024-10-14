@@ -95,7 +95,10 @@
   # File Manager Goodies (Trash, Thumbnails for images, etd)
   services.gvfs.enable = true;
   services.tumbler.enable = true;
-
+  
+  # Upower (Battery Management)
+  services.upower.enable = true;
+  
   # Enable automatic garbage collection
   nix.gc = {
     automatic = true;
