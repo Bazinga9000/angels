@@ -22,6 +22,10 @@ const cpu_used = Variable("", {
     poll: [1000, "sh -c \"{ head -n1 /proc/stat;sleep 0.2;head -n1 /proc/stat; } | awk '/^cpu /{u=$2-u;s=$4-s;i=$5-i;w=$6-w}END{print int(0.5+100*(u+s+w)/(u+s+i+w))}'\""]
 })
 
+const generation = Variable("", {
+    poll: [3000, "sh -c \"readlink /nix/var/nix/profiles/system | cut -d- -f2\""]
+})
+
 // widgets can be only assigned as a child in one container
 // so to make a reuseable widget, make it a function
 // then you can simply instantiate one by calling it
@@ -220,6 +224,22 @@ function CpuUsage() {
     })
 }
 
+function NixOSGeneration() {
+    return Widget.Box({
+        class_name: "generation",
+	vertical: true,
+        children: [
+	    Widget.Label({
+		    label: "",
+		    class_name: "icon-generation"
+            }),
+            Widget.Label({
+		    label: generation.bind().as(m => `${m}`)
+	    }),
+        ],
+    })
+}
+
 function SysTray() {
     const items = systemtray.bind("items")
         .as(items => items.map(item => Widget.Button({
@@ -266,13 +286,14 @@ function Right() {
         spacing: 4,
         children: [
 	    NetworkTraffic(),
-	    DiskSpace("/dev/disk/by-uuid/aae47407-820a-49ff-8790-e788a20df65b", "", "root"),
+        NixOSGeneration(),
+	    DiskSpace("/dev/disk/by-uuid/aae47407-820a-49ff-8790-e788a20df65b", "", "root"),
 	    DiskSpace("/dev/disk/by-uuid/a9f3812b-381a-406f-9a01-9838fbf796f9", "", "home"),
 	    CpuUsage(),
 	    MemoryUsage(),
-            Volume(),
-            BatteryLabel(),
-            SysTray(),
+        Volume(),
+        BatteryLabel(),
+        SysTray(),
         ],
     })
 }

@@ -107,6 +107,7 @@ window.notification-popups box.notifications {
 .fs-home,
 .networktraffic,
 .cpu,
+.generation,
 .tray
 {
     background-color: rgba(17, 17, 17, 0.5);
@@ -138,7 +139,7 @@ window.notification-popups box.notifications {
 }
 
 .volume {
-    color: #74c7ec; /* Catp. Sapphire */
+    color: #94e2d5	; /* Catp. Teal */
 }
 
 .icon-volume-muted {
@@ -159,6 +160,10 @@ window.notification-popups box.notifications {
 
 .cpu {
     color: #f9e2af; /* Catp. Yellow */
+}
+
+.generation {
+    color: #74c7ec; /* Catp. Sapphire */
 }
 
 .client-title {
@@ -187,7 +192,8 @@ window.notification-popups box.notifications {
 .icon-fs-root,
 .icon-fs-home,
 .icon-network,
-.icon-cpu
+.icon-cpu,
+.icon-generation
 {
     font-size: 30px;
     margin-top: -4px;
@@ -210,16 +216,16 @@ slider {
 }
 
 slider:hover {
-    background-color: rgba(116, 119, 236, 0.4);
+    background-color: rgba(148, 226, 213, 0.4);
 }
 
 slider:active {
-    background-color: rgba(116, 119, 236, 0.6);
+    background-color: rgba(148, 226, 213, 0.6);
 }
 
 highlight {
     min-height: 2px;
-    background-color: #74c7ec;
+    background-color: #94e2d5;
 }
 
 /* Tray Buttons */
