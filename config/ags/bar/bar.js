@@ -290,8 +290,8 @@ function Right() {
         children: [
 	    NetworkTraffic(),
         NixOSGeneration(),
-	    DiskSpace("/dev/disk/by-uuid/aae47407-820a-49ff-8790-e788a20df65b", "", "root"),
-	    DiskSpace("/dev/disk/by-uuid/a9f3812b-381a-406f-9a01-9838fbf796f9", "", "home"),
+	    DiskSpace("/dev/disk/by-uuid/aae47407-820a-49ff-8790-e788a20df65b", "󰿠", "root"),
+	    DiskSpace("/dev/disk/by-uuid/a9f3812b-381a-406f-9a01-9838fbf796f9", "󰀆", "home"),
 	    CpuUsage(),
 	    MemoryUsage(),
         Volume(),
