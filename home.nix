@@ -76,6 +76,11 @@
   
   # Dunst Notifications
   services.dunst.enable = true;
+  services.dunst.settings = {
+    global = {
+      follow = "mouse";
+    };
+  };
 
   # AGS
   programs.ags = {
