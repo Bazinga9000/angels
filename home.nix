@@ -73,6 +73,9 @@
     name = "FantasqueSansM Nerd Font Mono";
     package = pkgs.nerdfonts;
   };
+  
+  # Dunst Notifications
+  services.dunst.enable = true;
 
   # AGS
   programs.ags = {
