@@ -33,8 +33,11 @@ const generation = Variable("", {
 function Workspaces() {
     const activeId = hyprland.active.workspace.bind("id")
     const workspaces = hyprland.bind("workspaces")
-        .as(ws => ws.map(({ id, name }) => Widget.Button({
-	    class_name: "workspaces-button",
+        .as(ws => ws
+        .filter(({ id }) => id > 0) // remove scratchpads, if any
+        .sort((a, b) => a.id - b.id) // sort by ID
+        .map(({ id, name }) => Widget.Button({
+	        class_name: "workspaces-button",
             on_clicked: () => hyprland.messageAsync(`dispatch workspace ${id}`),
             child: Widget.Label(`${name}`),
             class_name: activeId.as(i => `${i === id ? "focused" : ""}`),
