@@ -79,6 +79,8 @@
   services.dunst.settings = {
     global = {
       follow = "mouse";
+      corner_radius = 3;
+      font = "FantasqueSansM Nerd Font Mono 12";
     };
   };
 
