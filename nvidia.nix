@@ -24,8 +24,14 @@ let
     driverPackage = driverLatest;
 in
 {
-  # Enable graphics driver in NixOS unstable/NixOS 24.11
+  # Enable graphics driver
   hardware.graphics.enable = true;
+
+  # Hardware Video Acceleration
+  hardware.graphics.extraPackages = with pkgs; [
+      nvidia-vaapi-driver
+      libvdpau-va-gl
+  ];
 
   # Load "nvidia" driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"];
