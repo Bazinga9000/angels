@@ -100,11 +100,12 @@
   services.upower.enable = true;
   
   # Enable automatic garbage collection
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 30d";
-  };
+  # [commented out for now because it appears to be killing hyprlock]
+  # nix.gc = {
+  #  automatic = true;
+  #  dates = "weekly";
+  #  options = "--delete-older-than 30d";
+  # };
 
   # Enable polkit for authentication agents
   security.polkit.enable = true;
