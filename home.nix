@@ -141,6 +141,7 @@
         o.catppuccin.catppuccin-vsc
         o.catppuccin.catppuccin-vsc-icons
         o.emattiza.vscode-purty
+        o.jock.svg
     ];
   };
 }
