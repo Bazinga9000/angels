@@ -59,6 +59,9 @@
     # Language - Lua
     lua
     love
+
+    # Language - Python
+    uv
   ];
 
   # Environment
