@@ -61,6 +61,7 @@
     love
 
     # Language - Python
+    python313
     uv
   ];
 
