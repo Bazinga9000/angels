@@ -20,6 +20,8 @@
     font-manager     # Font Manager
     mathematica      # Mathematica (NB: Installer needs manual addition to nix-store)
     flatpak          # Flatpak
+    graphviz         # Graph Visualization Tools
+    zathura          # PDF Viewer
     
     # Minecraft
     (prismlauncher.override {
