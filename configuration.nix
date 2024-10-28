@@ -99,9 +99,6 @@
   # Upower (Battery Management)
   services.upower.enable = true;
   
-  # Enable hypridle service (workaround for github.com/nix-community/home-manager/issues/5899)
-  services.hypridle.enable = true;
-
   # Enable automatic garbage collection
   # [commented out for now because it appears to be killing hyprlock]
   # nix.gc = {
