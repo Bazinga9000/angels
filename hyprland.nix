@@ -84,6 +84,7 @@
       "nm-applet &"      # Network configuration in system tray
       "blueman-applet" # Bluetooth
       "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1 &" # Auth
+      "hypridle"         # (Workaround for github.com/nix-community/home-manager/issues/5899)
     ];
     
     env = [
