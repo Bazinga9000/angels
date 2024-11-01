@@ -22,6 +22,7 @@
     flatpak          # Flatpak
     graphviz         # Graph Visualization Tools
     zathura          # PDF Viewer
+    bottles          # Running windows applications
     
     # Minecraft
     (prismlauncher.override {
