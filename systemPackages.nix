@@ -64,11 +64,10 @@
   ];
   programs.file-roller.enable = true;
 
-  # Hint electron apps to use Wayland
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
-
-  # Hint steam games to use Wayland
-  environment.sessionVariables.SDL_VIDEODRIVER = "wayland"; 
+  # Wayland Fixes
+  environment.sessionVariables.NIXOS_OZONE_WL = "1"; # Electron
+  environment.sessionVariables.SDL_VIDEODRIVER = "wayland"; # Steam
+  environment.sessionVariables.GSK_RENDERER = "ngl"; # Fix to "Error 71" for apps like file-roller
   
   # Enable Hyprlock in PAM
   security.pam.services.hyprlock = {};
