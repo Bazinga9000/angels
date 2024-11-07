@@ -29,27 +29,6 @@
       extraCompatPackages = with pkgs; [
           proton-ge-bin
       ];
-
-      # workaround for https://github.com/NixOS/nixpkgs/issues/353405
-      package = pkgs.steam.override {
-        extraLibraries = pkgs: [ pkgs.xorg.libxcb ];
-        extraPkgs =
-          pkgs: with pkgs; [
-            attr
-            xorg.libXcursor
-            xorg.libXi
-            xorg.libXinerama
-            xorg.libXScrnSaver
-            libpng
-            libpulseaudio
-            libvorbis
-            stdenv.cc.cc.lib
-            libkrb5
-            keyutils
-            gamemode
-          ];
-      };
-      # end workaround 
   };
 
   programs.direnv = {
