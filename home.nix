@@ -68,13 +68,6 @@
     uv
   ];
 
-  # Environment
-  home.sessionVariables = {
-    EDITOR = "vim";
-    BROWSER = "vivaldi";
-    TERMINAL = "kitty";
-  };
-
   # Kitty
   programs.kitty.enable = true;
   programs.kitty.font = {

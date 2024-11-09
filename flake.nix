@@ -67,6 +67,7 @@
           ./configuration.nix
           ./nvidia.nix # the demon of babylon disguises himself with the coat of the righteous
           ./systemPackages.nix 
+          ./env_variables.nix
           catppuccin.nixosModules.catppuccin
           home-manager.nixosModules.home-manager {
             home-manager.extraSpecialArgs = inputs;

@@ -95,7 +95,7 @@
   
   # Upower (Battery Management)
   services.upower.enable = true;
-  
+
   # Enable automatic garbage collection
   # [commented out for now because it appears to be killing hyprlock]
   # nix.gc = {
@@ -107,6 +107,9 @@
   # Enable polkit for authentication agents
   security.polkit.enable = true;
   
+  # Enable Hyprlock in PAM
+  security.pam.services.hyprlock = {};
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
