@@ -113,12 +113,15 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  # Set nushell to be the default shell
+  users.defaultUserShell = pkgs.nushell;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.bazinga = {
     isNormalUser = true;
     description = "bazinga";
     extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.nushell;
+    useDefaultShell = true;
     packages = [];
   };
 
