@@ -80,9 +80,6 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
-  
-  # Enable ratbagd for configuring gaming mice
-  services.ratbagd.enable = true;
 
   # Enable support for ZSA keyboards
   hardware.keyboard.zsa.enable = true;

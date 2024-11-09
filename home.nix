@@ -11,7 +11,7 @@
     vivaldi          # Browser
     polkit_gnome     # Authentication Agent
     grimblast        # Screenshot Tool
-    piper            # Logitech Mouse Configurator
+    input-remapper   # Mouse Configurator
     gimp             # GNU Image Manipulation Program
     inkscape         # Vector Graphics
     cockatrice       # MTG Client
