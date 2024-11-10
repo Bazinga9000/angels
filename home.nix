@@ -22,6 +22,7 @@
     graphviz         # Graph Visualization Tools
     zathura          # PDF Viewer
     bottles          # Running windows applications
+    zed-editor.fhs   # Zed Editor
     
     # Minecraft
     (prismlauncher.override {

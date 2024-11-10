@@ -6,7 +6,7 @@
     "$terminal" = "kitty";
     "$fileManager" = "thunar";
     "$browser" = "vivaldi";
-    "$editor" = "code --disable-gpu";
+    "$editor" = "WAYLAND_DISPLAY='' zeditor";
   
     bind = [
       # Program Launchers
