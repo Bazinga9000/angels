@@ -11,7 +11,6 @@
     vivaldi          # Browser
     polkit_gnome     # Authentication Agent
     grimblast        # Screenshot Tool
-    input-remapper   # Mouse Configurator
     gimp             # GNU Image Manipulation Program
     inkscape         # Vector Graphics
     cockatrice       # MTG Client
@@ -142,6 +141,7 @@
         o.catppuccin.catppuccin-vsc-icons
         o.emattiza.vscode-purty
         o.jock.svg
+        o.thenuprojectcontributors.vscode-nushell-lang
     ];
   };
 }
