@@ -96,6 +96,9 @@
   # Upower (Battery Management)
   services.upower.enable = true;
 
+  # Enable Input-Remapper to configure mouse
+  services.input-remapper.enable = true;
+  
   # Enable automatic garbage collection
   # [commented out for now because it appears to be killing hyprlock]
   # nix.gc = {
