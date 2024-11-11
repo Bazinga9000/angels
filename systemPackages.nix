@@ -4,20 +4,20 @@
     vim
     wget
     git
- 
+
     comma                # nix-shell wrapper
     vesktop              # discord - in systemPackages to allow screenshare with audio
-    networkmanagerapplet # applet for managing networks 
+    networkmanagerapplet # applet for managing networks
     nushell              # alternative to sh with many functional paradigms
     gh                   # github cli
     killall              # killall
     nix-alien            # running Weird Binaries
  ];
 
-  # programs.XXXXX.enable zone 
+  # programs.XXXXX.enable zone
   programs.firefox.enable = true;
   programs.hyprland.enable = true;
-  
+
   programs.steam = {
       enable = true;
       gamescopeSession.enable = true;
@@ -35,7 +35,7 @@
       enable = true;
       nix-direnv.enable = true;
   };
-  
+
   programs.thunar.enable = true;
   programs.thunar.plugins = with pkgs.xfce; [
     thunar-archive-plugin

@@ -17,13 +17,13 @@
   boot.loader.grub.efiSupport = true;
   # boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  
+
   networking.hostName = "metatron"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  
+
   # Enable NTFS Support
   boot.supportedFilesystems = ["ntfs"];
-  
+
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -92,13 +92,13 @@
   # File Manager Goodies (Trash, Thumbnails for images, etd)
   services.gvfs.enable = true;
   services.tumbler.enable = true;
-  
+
   # Upower (Battery Management)
   services.upower.enable = true;
 
   # Enable Input-Remapper to configure mouse
   services.input-remapper.enable = true;
-  
+
   # Enable automatic garbage collection
   # [commented out for now because it appears to be killing hyprlock]
   # nix.gc = {
@@ -109,7 +109,7 @@
 
   # Enable polkit for authentication agents
   security.polkit.enable = true;
-  
+
   # Enable Hyprlock in PAM
   security.pam.services.hyprlock = {};
 

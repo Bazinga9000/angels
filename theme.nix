@@ -1,6 +1,6 @@
 { pkgs, ...}: {
   # Non-GTK: Catppuccin
-  catppuccin.enable = true;  
+  catppuccin.enable = true;
 
   # dconf Dark Mode (for the internet etc)
   dconf.enable = true;
