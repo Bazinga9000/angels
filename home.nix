@@ -1,5 +1,5 @@
 { pkgs, nix-vscode-extensions, ...}: {
-  
+
   # Basic configuration
   home.username = "bazinga";
   home.homeDirectory = "/home/bazinga";
@@ -22,8 +22,10 @@
     graphviz         # Graph Visualization Tools
     zathura          # PDF Viewer
     bottles          # Running windows applications
-    zed-editor.fhs   # Zed Editor
-    
+
+    # Zed Editor (libz is for the Discord presence extension)
+    (zed-editor.fhsWithPackages (ps: with ps; [libz]))
+
     # Minecraft
     (prismlauncher.override {
       jdks = [
@@ -31,24 +33,24 @@
         temurin-bin-17
         temurin-bin-21
       ];
-    })  
+    })
 
     # Libreoffice and Spell Check
     libreoffice-qt
     hunspell
-    hunspellDicts.en_US    
+    hunspellDicts.en_US
 
     # Language - Haskell
     ghc
     stack
     haskellPackages.haskell-language-server
-    
+
     # Language - PureScript
     purs
     spago-unstable
     purs-tidy-bin.purs-tidy-0_10_0
     purs-backend-es
-    
+
     # Language - C, C++
     gcc
     libgcc
@@ -74,7 +76,7 @@
     name = "FantasqueSansM Nerd Font Mono";
     package = pkgs.nerdfonts;
   };
-  
+
   # Dunst Notifications
   services.dunst.enable = true;
   services.dunst.settings = {
@@ -95,10 +97,10 @@
       accountsservice
     ];
   };
-  
+
   # Nushell
   programs.nushell = {
-    enable = true; 
+    enable = true;
     configFile.source = ./config/nu/config.nu;
   };
 
