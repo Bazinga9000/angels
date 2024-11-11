@@ -1,7 +1,7 @@
 # ABANDON ALL HOPE YE WHO ENTER HERE
 
 { /* config, */ pkgs, ... }:
-let 
+let
     # driver555 = config.boot.kernelPackages.nvidiaPackages.mkDriver {
     #   version = "555.58";
     #   sha256_64bit = "sha256-bXvcXkg2kQZuCNKRZM5QoTaTjF4l2TtrsKUvyicj5ew=";
@@ -20,8 +20,9 @@ let
     #   persistencedSha256 = "sha256-E2J2wYYyRu7Kc3MMZz/8ZIemcZg68rkzvqEwFAL3fFs=";
     # };
 
-    driverLatest = pkgs.linuxPackages.nvidiaPackages.latest;
-    driverPackage = driverLatest;
+    # driverLatest = pkgs.linuxPackages.nvidiaPackages.latest;
+    driverBeta = pkgs.linuxPackages.nvidiaPackages.beta;
+    driverPackage = driverBeta;
 in
 {
   # Enable graphics driver
@@ -39,7 +40,7 @@ in
 
   # Magic incantation to fix NVK error
   environment.sessionVariables.VK_DRIVER_FILES = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.x86_64.json:/run/opengl-driver/share/vulkan/icd.d/intel_icd.x86_64.json";
-  
+
   # Enable NVIDIA related kernel module
   boot.kernelParams = [ "nvidia-drm.fbdev=1" ];
 
@@ -49,7 +50,7 @@ in
     GBM_BACKEND = "nvidia-drm";
     XDG_SESSION_TYPE = "wayland";
     LIBVA_DRIVER_NAME = "nvidia";
-  };  
+  };
 
   hardware.nvidia = {
 
@@ -58,7 +59,7 @@ in
 
     # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
     # Enable this if you have graphical corruption issues or application crashes after waking
-    # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead 
+    # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead
     # of just the bare essentials.
     powerManagement.enable = false;
 
@@ -82,6 +83,6 @@ in
     	intelBusId = "PCI:0:2:0"; #same on the real machine
     	nvidiaBusId = "PCI:1:0:0";
     };
-    
+
   };
 }
