@@ -6,8 +6,8 @@
     "$terminal" = "kitty";
     "$fileManager" = "thunar";
     "$browser" = "vivaldi";
-    "$editor" = "WAYLAND_DISPLAY='' zeditor";
-  
+    "$editor" = "zeditor";
+
     bind = [
       # Program Launchers
       "$mod, Return, exec, $terminal"
@@ -17,18 +17,18 @@
       "$mod, Space, exec, ags -t applauncher"
       "$mod, C, exec, $editor"
       "$mod SHIFT, C, exec, $editor ~/metatron"
-      
+
       # Move the Focus
       "$mod, left, movefocus, l"
       "$mod, right, movefocus, r"
       "$mod, up, movefocus, u"
       "$mod, down, movefocus, d"
-   
+
       # Floating and Fullscreen
       "$mod, F, togglefloating"
       "$mod SHIFT, F, fullscreen, 0" # Take entire screen
       "$mod CONTROL SHIFT, F, fullscreen, 0" # Preserve gaps/bars
-  
+
       # Standard Workspaces
       "$mod, 1, workspace, 1"
       "$mod, 2, workspace, 2"
@@ -40,7 +40,7 @@
       "$mod, 8, workspace, 8"
       "$mod, 9, workspace, 9"
       "$mod, 0, workspace, 10"
-      
+
       "$mod SHIFT, 1, movetoworkspace, 1"
       "$mod SHIFT, 2, movetoworkspace, 2"
       "$mod SHIFT, 3, movetoworkspace, 3"
@@ -51,47 +51,47 @@
       "$mod SHIFT, 8, movetoworkspace, 8"
       "$mod SHIFT, 9, movetoworkspace, 9"
       "$mod SHIFT, 0, movetoworkspace, 10"
-  
+
       # Scratchpad Workspace
       # "$mod, S, togglespecialworkspace, magic"
       # "$mod SHIFT, S, movetoworkspace, special:magic"
-  
+
       # Scroll through workspaces
       "$mod, mouse_down, workspace, e+1"
       "$mod, mouse_up, workspace, e-1"
-    
+
       # Print Screen
       ", Print, exec, grimblast copy area"
-      
+
       # Lock Screen
       "$mod, Escape, exec, hyprlock"
-      
+
       # Reset AGS (In case bars dissapear from a monitor)
       "$mod SHIFT, B, exec, ags -q && ags &"
 
       # Leave
-      "$mod SHIFT CONTROL, Escape, exit" 
+      "$mod SHIFT CONTROL, Escape, exit"
     ];
-    
+
     bindm = [
       # Move/resize windows
       "$mod, mouse:272, movewindow"
       "$mod, mouse:273, resizewindow"
     ];
-  
+
     exec-once = [
       "ags &"            # Enable AGS, activating status bar, app launcher, etc
       "nm-applet &"      # Network configuration in system tray
       "blueman-applet"   # Bluetooth
       "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1 &" # Auth
     ];
-    
+
     env = [
       "XCURSOR_THEME, Numix-Cursor"
       "XCURSOR_SIZE, 24"
       "HYPRCURSOR_SIZE, 24"
     ];
-   
+
     workspace = [
       "1, defaultName:α"
       "2, defaultName:β"
@@ -105,36 +105,36 @@
       "10, defaultName:κ"
       # "special:magic, defaultName:⁂"
     ];
-  
+
     general = {
       gaps_in = 5;
       gaps_out = 10;
-  
+
       border_size = 2;
-      
+
       "col.active_border" = "rgba(eba0acee) rgba(fab387ee) 45deg";
       "col.inactive_border" = "rgba(595959aa)";
-      
+
       # Set to true to enable resizing windows by clicking and dragging on borders and gaps
       resize_on_border = false;
-  
+
       # Check wiki before messing with this
       allow_tearing = false;
-  
+
       layout = "dwindle";
     };
-   
+
     decoration = {
       rounding = 10;
-      
+
       active_opacity = 1.0;
       inactive_opacity = 1.0;
-  
+
       drop_shadow = true;
       shadow_range = 4;
       shadow_render_power = 3;
       "col.shadow" = "rgba(1a1a1aee)";
-      
+
       blur = {
         enabled = true;
         size = 3;
@@ -142,7 +142,7 @@
         vibrancy = 0.1696;
       };
     };
-    
+
     # Disable the default wallpaper/splash
     misc = {
       disable_hyprland_logo = true;
@@ -153,7 +153,7 @@
     windowrulev2 = [
       "suppressevent maximize, class:.*"
     ];
-    
+
     monitor = [
       "eDP-1, 1920x1080, 0x0, 1"
       "DP-5, 1920x1080, 1920x0, 1"
@@ -163,7 +163,7 @@
       force_zero_scaling = true;
     };
   };
-  
+
   # Hyprlock
   programs.hyprlock.enable = true;
   programs.hyprlock.settings = {
@@ -177,7 +177,7 @@
       vibrancy = 0.2100;
       vibrancy_darkness = 0.0;
     };
-  
+
     input-field = {
       size = "250, 50";
       outline_thickness = 3;
@@ -200,14 +200,14 @@
         text = "cmd[update:1000] echo \"<b><big>$(date +\"%H:%M:%S\")</big></b>\"";
         color = "#fff8e7";
         font_size = 94;
-        
+
         position = "0, 0";
         halign = "center";
         valign = "center";
       }
     ];
   };
-  
+
   # Hypridle
   services.hypridle.enable = true;
   services.hypridle.settings = {
@@ -230,7 +230,7 @@
       }
     ];
   };
-  
+
   # Hyprpaper
   services.hyprpaper.enable = true;
   services.hyprpaper.settings = let
