@@ -24,7 +24,10 @@
     bottles          # Running windows applications
 
     # Zed Editor (libz is for the Discord presence extension)
-    (zed-editor.fhsWithPackages (ps: with ps; [libz]))
+    (zed-editor.fhsWithPackages (ps: with ps; [
+      libz
+      openssl
+    ]))
 
     # Minecraft
     (prismlauncher.override {
