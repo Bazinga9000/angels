@@ -30,7 +30,7 @@ const generation = Variable("", {
 const nixpkgs_age = Variable("", {
   poll: [
     5000,
-    'nu -c "(open ~/metatron/flake.lock | from json | get nodes.nixpkgs.locked.lastModified) * 1_000_000_000 | into datetime"',
+    'nu -c "(open ~/metatron/flake.lock | from json | get nodes.nixpkgs.locked.lastModified) * 1_000_000_000 | into datetime | date humanize"',
   ],
 });
 
