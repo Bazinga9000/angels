@@ -27,6 +27,13 @@ const generation = Variable("", {
   poll: [3000, 'sh -c "readlink /nix/var/nix/profiles/system | cut -d- -f2"'],
 });
 
+const nixpkgs_age = Variable("", {
+  poll: [
+    5000,
+    'nu -c "(open ~/metatron/flake.lock | from json | get nodes.nixpkgs.locked.lastModified) * 1_000_000_000 | into datetime"',
+  ],
+});
+
 // widgets can be only assigned as a child in one container
 // so to make a reuseable widget, make it a function
 // then you can simply instantiate one by calling it
