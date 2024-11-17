@@ -12,7 +12,8 @@
     catppuccin.url = "github:catppuccin/nix";
 
     # AGS - Bar/Notifications/Applauncher
-    ags.url = "github:Aylur/ags";
+    # TODO either port to v2 or some other bar/app launcher
+    ags.url = "github:Aylur/ags/v1";
     ags.inputs.nixpkgs.follows = "nixpkgs";
 
     # VSCodium Extensions
