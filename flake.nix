@@ -80,6 +80,7 @@
                 ./home.nix # General Home-Manager Config
                 ./theme.nix # Appearance Config
                 ./hyprland.nix # Hyprland
+                ./waybar.nix # Waybar
                 catppuccin.homeManagerModules.catppuccin
                 ags.homeManagerModules.default
               ];

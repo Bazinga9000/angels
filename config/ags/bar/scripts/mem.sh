@@ -1,2 +1,0 @@
-#!/bin/env sh
-free -m | grep Mem | awk '{print $3}'

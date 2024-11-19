@@ -66,9 +66,6 @@
       # Lock Screen
       "$mod, Escape, exec, hyprlock"
 
-      # Reset AGS (In case bars dissapear from a monitor)
-      "$mod SHIFT, B, exec, ags -q && ags &"
-
       # Leave
       "$mod SHIFT CONTROL, Escape, exit"
     ];
@@ -80,7 +77,8 @@
     ];
 
     exec-once = [
-      "ags &"            # Enable AGS, activating status bar, app launcher, etc
+      "ags &"            # Enable AGS, activating app launcher
+      "waybar &"         # Activate waybar for the status bar
       "nm-applet &"      # Network configuration in system tray
       "blueman-applet"   # Bluetooth
       "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1 &" # Auth
