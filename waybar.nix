@@ -93,7 +93,8 @@
         "custom/nixgen" = {
             interval = 3;
             format = " \n{}";
-            exec = "sh -c \"readlink /nix/var/nix/profiles/system | cut -d- -f2\"";
+            exec = "nu ${./config/waybar/scripts/nixOSGeneration.nu}";
+            return-type = "json";
             justify = "center";
         };
 
