@@ -66,6 +66,9 @@
       # Lock Screen
       "$mod, Escape, exec, hyprlock"
 
+      # Restart Waybar
+      "$mod SHIFT, B, exec, pkill waybar && hyprctl dispatch exec waybar"
+
       # Leave
       "$mod SHIFT CONTROL, Escape, exit"
     ];
