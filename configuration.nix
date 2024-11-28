@@ -32,6 +32,9 @@
   networking.networkmanager.enable = true;
   networking.networkmanager.wifi.powersave = false;
 
+  # Set DNS
+  networking.nameservers = [ "1.1.1.1" "9.9.9.9" ];
+
   # Set your time zone.
   time.timeZone = "America/New_York";
 
