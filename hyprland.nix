@@ -14,7 +14,7 @@
       "$mod SHIFT, Return, exec, $browser"
       "$mod SHIFT, Q, killactive"
       "$mod, N, exec, $fileManager"
-      "$mod, Space, exec, ags -t applauncher"
+      "$mod, Space, exec, ${./config/rofi_executables/launcher}"
       "$mod, C, exec, $editor"
       "$mod SHIFT, C, exec, $editor ~/metatron"
 
@@ -64,7 +64,9 @@
       ", Print, exec, grimblast copy area"
 
       # Lock Screen
-      "$mod, Escape, exec, hyprlock"
+      # "$mod, Escape, exec, hyprlock"
+      # Rofi Powermenu
+      "$mod, Escape, exec, ${./config/rofi_executables/powermenu}"
 
       # Restart Waybar
       "$mod SHIFT, B, exec, pkill waybar && hyprctl dispatch exec waybar"

@@ -11,11 +11,6 @@
     # Catppuccin - A theme
     catppuccin.url = "github:catppuccin/nix";
 
-    # AGS - Bar/Notifications/Applauncher
-    # TODO either port to v2 or some other bar/app launcher
-    ags.url = "github:Aylur/ags/v1";
-    ags.inputs.nixpkgs.follows = "nixpkgs";
-
     # VSCodium Extensions
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     nix-vscode-extensions.inputs.nixpkgs.follows = "nixpkgs";
@@ -34,7 +29,6 @@
     nixpkgs,
     home-manager,
     catppuccin,
-    ags,
     ...
   } @inputs:
     let
@@ -82,7 +76,6 @@
                 ./hyprland.nix # Hyprland
                 ./waybar.nix # Waybar
                 catppuccin.homeManagerModules.catppuccin
-                ags.homeManagerModules.default
               ];
             };
           }

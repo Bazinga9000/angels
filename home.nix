@@ -22,6 +22,7 @@
     graphviz         # Graph Visualization Tools
     zathura          # PDF Viewer
     bottles          # Running windows applications
+    rofi-wayland     # Rofi Package
 
     # Zed Editor (libz is for the Discord presence extension)
     (zed-editor.fhsWithPackages (ps: with ps; [
@@ -90,16 +91,8 @@
     };
   };
 
-  # AGS
-  programs.ags = {
-    enable = true;
-    configDir = ./config/ags;
-    extraPackages = with pkgs; [
-      gtksourceview
-      webkitgtk
-      accountsservice
-    ];
-  };
+  # Rofi
+  xdg.configFile."rofi".source = ./config/rofi;
 
   # Nushell
   programs.nushell = {
