@@ -34,6 +34,7 @@
 
   # Set DNS
   networking.nameservers = [ "1.1.1.1" "9.9.9.9" ];
+  networking.networkmanager.dns = "none";
 
   # Set your time zone.
   time.timeZone = "America/New_York";
