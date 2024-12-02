@@ -63,10 +63,9 @@
       # Print Screen
       ", Print, exec, grimblast copy area"
 
-      # Lock Screen
-      # "$mod, Escape, exec, hyprlock"
-      # Rofi Powermenu
-      "$mod, Escape, exec, ${./config/rofi_executables/powermenu}"
+      # Lock Screen / Rofi Powermenu
+      "$mod, Escape, exec, hyprlock"
+      "$mod SHIFT, Escape, exec, ${./config/rofi_executables/powermenu}"
 
       # Restart Waybar
       "$mod SHIFT, B, exec, pkill waybar && hyprctl dispatch exec waybar"
