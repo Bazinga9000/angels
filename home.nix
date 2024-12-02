@@ -23,6 +23,7 @@
     zathura          # PDF Viewer
     bottles          # Running windows applications
     rofi-wayland     # Rofi Package
+    just             # Command runner
 
     # Zed Editor (libz is for the Discord presence extension)
     (zed-editor.fhsWithPackages (ps: with ps; [
