@@ -78,7 +78,7 @@
   programs.kitty.enable = true;
   programs.kitty.font = {
     name = "FantasqueSansM Nerd Font Mono";
-    package = pkgs.nerdfonts;
+    package = pkgs.nerd-fonts.fantasque-sans-mono;
   };
 
   # Dunst Notifications

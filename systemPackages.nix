@@ -1,4 +1,4 @@
-{ pkgs, ...}:
+{ pkgs, lib, ...}:
 {
   environment.systemPackages = with pkgs; [
     vim
@@ -54,8 +54,7 @@
     mplus-outline-fonts.githubRelease
     dina-font
     proggyfonts
-    nerdfonts
     google-fonts
     corefonts
-  ];
+  ] ++ (builtins.filter lib.isDerivation (builtins.attrValues nerd-fonts));
 }
