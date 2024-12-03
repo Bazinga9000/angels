@@ -1,18 +1,20 @@
-alias r := rebuild
-alias u := update
+default:
+  @just --list --justfile {{justfile()}}
 
 # Rebuild system
 rebuild *FLAGS:
     git add --intent-to-add *
     sudo nixos-rebuild switch --flake .#metatron {{FLAGS}}
+alias r := rebuild
 
 # Update the flake inputs, then rebuild the system
 update *FLAGS:
     nix flake update
-    just rebuild {{FLAGS}}
+    @just --justfile {{justfile()}} rebuild {{FLAGS}}
     git add flake.lock
     git commit -m "update flake"
     git push origin main
+alias u := update
 
 # Refresh hyprlock
 relock:
