@@ -6,11 +6,13 @@ let
       beta = pkgs.linuxPackages.nvidiaPackages.beta;
       latest = pkgs.linuxPackages.nvidiaPackages.latest;
     };
-    driverPackage = drivers.beta;
 in
 {
   # Enable graphics driver
   hardware.graphics.enable = true;
+
+  # NVIDIA Driver
+  hardware.nvidia.package = drivers.beta;
 
   # Hardware Video Acceleration
   hardware.graphics.extraPackages = with pkgs; [
@@ -58,8 +60,6 @@ in
 
     # Enable the Nvidia settings menu,
     nvidiaSettings = true;
-
-    package = driverPackage;
 
     prime = {
         sync.enable = true;
