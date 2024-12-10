@@ -12,7 +12,6 @@
     gh                   # github cli
     killall              # killall
     nix-alien            # running Weird Binaries
-    extest               # Extest for steam
  ];
 
   # programs.XXXXX.enable zone
