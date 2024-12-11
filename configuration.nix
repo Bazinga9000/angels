@@ -100,6 +100,9 @@
   # Upower (Battery Management)
   services.upower.enable = true;
 
+  # Global Flatpak
+  services.flatpak.enable = true;
+
   # Enable automatic garbage collection
   # [commented out for now because it appears to be killing hyprlock]
   # nix.gc = {
