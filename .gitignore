@@ -1,0 +1,2 @@
+store-files/*
+!store-files/README.md
