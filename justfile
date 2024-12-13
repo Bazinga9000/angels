@@ -1,4 +1,4 @@
-default:
+_default:
   @just --list --justfile {{justfile()}}
 
 # Rebuild system
