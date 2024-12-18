@@ -23,6 +23,7 @@
             "disk#root"
             "disk#home"
             "cpu"
+            "custom/gpu"
             "memory"
             "pulseaudio"
             "battery"
@@ -122,6 +123,14 @@
             interval = 600;
             exec = "${pkgs.wttrbar}/bin/wttrbar --fahrenheit --mph --custom-indicator \"{ICON} \n{temp_F}°\"";
             return-type = "json";
+            justify = "center";
+        };
+
+        "custom/gpu" = {
+            format = "󰕣\n{}%";
+            tooltip = false;
+            interval = 1;
+            exec = "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits";
             justify = "center";
         };
       };

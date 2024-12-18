@@ -89,6 +89,7 @@
 #battery,
 #pulseaudio,
 #cpu,
+#custom-gpu,
 #custom-lock,
 #custom-power,
 #disk.root,
@@ -154,6 +155,10 @@
 
 #cpu {
     color: @yellow;
+}
+
+#custom-gpu {
+    color: @sky;
 }
 
 #network {
