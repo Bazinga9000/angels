@@ -60,6 +60,10 @@
   # Enable the GNOME Display Manager.
   services.xserver.displayManager.gdm.enable = true;
 
+  # Gnome (without core utilities), to have a non-hyprland session and/or X11 session lying around
+  services.xserver.desktopManager.gnome.enable = true;
+  services.gnome.core-utilities.enable = false;
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";

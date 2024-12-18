@@ -18,10 +18,9 @@
   programs.firefox.enable = true;
   programs.hyprland.enable = true;
 
-  programs.gamemode.enable = true;
+  # Steam and friends
   programs.steam = {
       enable = true;
-      gamescopeSession.enable = true;
       protontricks.enable = true;
       extest.enable = true;
       remotePlay.openFirewall = true;
@@ -31,6 +30,8 @@
           proton-ge-bin
       ];
   };
+  programs.gamemode.enable = true;
+  programs.gamescope.enable = true;
 
   programs.direnv = {
       enable = true;
