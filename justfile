@@ -30,3 +30,9 @@ store:
 clean:
     sudo nix-collect-garbage -d
     @just --justfile {{justfile()}} store
+
+# Commit the entire working tree, and push to remote
+deploy:
+    git add *
+    git commit
+    git push origin main
