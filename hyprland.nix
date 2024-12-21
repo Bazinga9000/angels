@@ -81,7 +81,6 @@
     ];
 
     exec-once = [
-      "ags &"            # Enable AGS, activating app launcher
       "waybar &"         # Activate waybar for the status bar
       "nm-applet &"      # Network configuration in system tray
       "blueman-applet"   # Bluetooth
