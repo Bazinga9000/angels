@@ -84,7 +84,7 @@
       "waybar &"         # Activate waybar for the status bar
       "nm-applet &"      # Network configuration in system tray
       "blueman-applet"   # Bluetooth
-      "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1 &" # Auth
+      "systemctl --user start hyprpolkitagent" # Auth
     ];
 
     env = [

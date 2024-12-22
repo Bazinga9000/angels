@@ -12,6 +12,7 @@
     gh                   # github cli
     killall              # killall
     nix-alien            # running Weird Binaries
+    hyprpolkitagent      # Hyprland Authentication Agent
  ];
 
   # programs.XXXXX.enable zone
