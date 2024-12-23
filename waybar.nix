@@ -39,15 +39,15 @@
             separate-outputs = true;
             format = "<big>{title}</big>";
             justify = "center";
+            # Dirty Hack: All of the rules that are subsets of other rules start with ".big>" instead of "<big>" so they appear first in the output.
             rewrite = {
               "<big>(.*) - Vivaldi</big>" = "<big>󰖟  $1</big>"; # Vivaldi (Default)
-              # Dirty Hack: All of the rules for specific webpages start with ".big>" instead of "<big>" so they appear before the main Vivaldi rule in the output.
               ".big>(.*) - Youtube - Vivaldi</big>" = "<big>󰖟  󰗃  $1</big>"; # Vivaldi (Youtube)
               ".big>(.*) - Google Sheets - Vivaldi</big>" = "<big>󰖟  󰧷  $1</big>"; # Vivaldi (Google Sheets)
               ".big>(.*) - Google Docs - Vivaldi</big>" = "<big>󰖟  󰈙  $1</big>"; # Vivaldi (Google Docs)
 
-              "<big>(?:• |\\(\\d+\\) )?Discord \\| #(.*) \\| (.*)</big>" = "<big>  $2  $1</big>"; # Discord (Channel)
-              "<big>(?:• |\\(\\d+\\) )?Discord \\| ([^#].*) \\| (.*)</big>" = "<big>    $2  $1</big>"; # Discord (Settings)
+              "<big>(?:• |\\(\\d+\\) )?Discord \\| (.*) \\| (.*)</big>" = "<big>  $2  $1</big>"; # Discord (Channel)
+              ".big>(?:• |\\(\\d+\\) )?Discord \\| (.*) \\| User Settings</big>" = "<big>    $1</big>"; # Discord (Settings)
               "<big>(?:• |\\(\\d+\\) )?Discord \\| @(.*)</big>" = "<big>    $1</big>"; # Discord (Individual DM)
               "<big>(?:• |\\(\\d+\\) )?Discord \\| ([^@].*)</big>" = "<big>    $1</big>"; # Discord (Group Chat)
 
