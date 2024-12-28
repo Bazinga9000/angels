@@ -21,7 +21,8 @@
     flatpak          # Flatpak
     graphviz         # Graph Visualization Tools
     zathura          # PDF Viewer
-    bottles          # Running windows applications
+    # Temporary removal until 367772 is fixed
+    # bottles        # Running windows applications
     rofi-wayland     # Rofi Package
     just             # Command runner
     sm64coopdx       # Mario 64 Port
