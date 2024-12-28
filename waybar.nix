@@ -45,12 +45,14 @@
               ".big>(.*) - Youtube - Vivaldi</big>" = "<big>󰖟  󰗃  $1</big>"; # Vivaldi (Youtube)
               ".big>(.*) - Google Sheets - Vivaldi</big>" = "<big>󰖟  󰧷  $1</big>"; # Vivaldi (Google Sheets)
               ".big>(.*) - Google Docs - Vivaldi</big>" = "<big>󰖟  󰈙  $1</big>"; # Vivaldi (Google Docs)
+              ".big>(.*) - Wikipedia - Vivaldi</big>" = "<big>󰖟  󰖬  $1</big>"; # Vivaldi (Wikipedia)
 
               "<big>(?:• |\\(\\d+\\) )?Discord \\| (.*) \\| (.*)</big>" = "<big>  $2  $1</big>"; # Discord (Channel)
               ".big>(?:• |\\(\\d+\\) )?Discord \\| (.*) \\| User Settings</big>" = "<big>    $1</big>"; # Discord (Settings)
               "<big>(?:• |\\(\\d+\\) )?Discord \\| @(.*)</big>" = "<big>    $1</big>"; # Discord (Individual DM)
               "<big>(?:• |\\(\\d+\\) )?Discord \\| ([^@].*)</big>" = "<big>    $1</big>"; # Discord (Group Chat)
 
+              "<big>(.*)([mM]etatron)(.*)</big>" = "<big>$1<span foreground=\"#f9e2af\">$2</span>$3</big>"; # Generic "metatron"
             };
         };
 
