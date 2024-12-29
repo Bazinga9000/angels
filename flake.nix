@@ -10,6 +10,7 @@
 
     # Catppuccin - A theme
     catppuccin.url = "github:catppuccin/nix";
+    catppuccin.inputs.nixpkgs.follows = "nixpkgs";
 
     # VSCodium Extensions
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
