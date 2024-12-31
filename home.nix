@@ -112,10 +112,10 @@
     enable = true;
     # package = pkgs.vscodium;
     extensions = let
-        # m = nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace;
+        m = nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace;
         o = nix-vscode-extensions.extensions.x86_64-linux.open-vsx;
     in [
-        o.rust-lang.rust-analyzer
+        m.rust-lang.rust-analyzer
         o.formulahendry.auto-close-tag
         o.formulahendry.code-runner
         o.naumovs.color-highlight
