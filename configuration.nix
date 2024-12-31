@@ -121,6 +121,11 @@
   # Enable Hyprlock in PAM
   security.pam.services.hyprlock = {};
 
+  # Enable GNOME Keyring Services
+  services.gnome.gnome-keyring.enable = true;
+  security.pam.services.gdm.enableGnomeKeyring = true;
+
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 

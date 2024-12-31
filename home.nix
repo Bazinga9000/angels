@@ -27,6 +27,7 @@
     just             # Command runner
     sm64coopdx       # Mario 64 Port
     baobab           # Disk Usage Analyzer
+    xivlauncher      # Final Fantasy XIV (god have mercy)
 
     # Zed Editor (libz is for the Discord presence extension)
     (zed-editor.fhsWithPackages (ps: with ps; [
@@ -47,6 +48,10 @@
     libreoffice-qt
     hunspell
     hunspellDicts.en_US
+
+    # GNOME Keyring
+    gnome-keyring
+    seahorse
 
     # Language - Haskell
     ghc
