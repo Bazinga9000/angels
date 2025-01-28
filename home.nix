@@ -21,12 +21,13 @@
     flatpak          # Flatpak
     graphviz         # Graph Visualization Tools
     zathura          # PDF Viewer
-    bottles        # Running windows applications
+    bottles          # Running windows applications
     rofi-wayland     # Rofi Package
     just             # Command runner
     sm64coopdx       # Mario 64 Port
     baobab           # Disk Usage Analyzer
     xivlauncher      # Final Fantasy XIV (god have mercy)
+    qgis             # Geographic Information System
 
     # Zed Editor (libz is for the Discord presence extension)
     (zed-editor.fhsWithPackages (ps: with ps; [
