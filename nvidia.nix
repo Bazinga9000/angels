@@ -12,7 +12,7 @@ in
   hardware.graphics.enable = true;
 
   # NVIDIA Driver
-  hardware.nvidia.package = drivers.latest;
+  hardware.nvidia.package = drivers.beta;
 
   # Hardware Video Acceleration
   hardware.graphics.extraPackages = with pkgs; [
