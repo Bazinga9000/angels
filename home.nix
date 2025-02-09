@@ -29,6 +29,7 @@
     baobab           # Disk Usage Analyzer
     xivlauncher      # Final Fantasy XIV (god have mercy)
     qgis             # Geographic Information System
+    celeste64        # Celeste 64 - Fragments of the Mountain
 
     # Zed Editor (libz is for the Discord presence extension)
     (zed-editor.fhsWithPackages (ps: with ps; [
