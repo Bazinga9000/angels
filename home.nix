@@ -14,7 +14,8 @@
     gimp             # GNU Image Manipulation Program
     inkscape         # Vector Graphics
     cockatrice       # MTG Client
-    yed              # Yed Graph Editor
+    # Removed for build failure - until 378167 is merged
+    # yed              # Yed Graph Editor
     element-desktop  # Matrix Client
     font-manager     # Font Manager
     mathematica      # Mathematica (NB: Installer needs manual addition to nix-store)

@@ -11,7 +11,8 @@
     nushell              # alternative to sh with many functional paradigms
     gh                   # github cli
     killall              # killall
-    nix-alien            # running Weird Binaries
+    # Removed due to build failure
+    # nix-alien            # running Weird Binaries
     hyprpolkitagent      # Hyprland Authentication Agent
  ];
 
