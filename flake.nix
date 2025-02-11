@@ -18,7 +18,6 @@
 
     # Nix-Alien
     nix-alien.url = "github:thiagokokada/nix-alien";
-    nix-alien.inputs.nixpkgs.follows = "nixpkgs";
 
     # Purescript Overlay
     purescript-overlay.url = "github:thomashoneyman/purescript-overlay";
