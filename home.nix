@@ -112,48 +112,4 @@
       metatron = "just --justfile=/home/bazinga/metatron/justfile"; # Global command to interact with this config
     };
   };
-
-  # VSCodium
-  programs.vscode = {
-    enable = true;
-    # package = pkgs.vscodium;
-    extensions = let
-        m = nix-vscode-extensions.extensions.x86_64-linux.vscode-marketplace;
-        o = nix-vscode-extensions.extensions.x86_64-linux.open-vsx;
-    in [
-        m.rust-lang.rust-analyzer
-        o.formulahendry.auto-close-tag
-        o.formulahendry.code-runner
-        o.naumovs.color-highlight
-        o.icrawl.discord-vscode
-        o.dbaeumer.vscode-eslint
-        o.github.vscode-pull-request-github
-        o.haskell.haskell
-        o.justusadam.language-haskell
-        o.ms-python.isort
-        o.ms-toolsai.jupyter
-        o.ms-toolsai.vscode-jupyter-cell-tags
-        o.ms-toolsai.jupyter-keymap
-        o.ms-toolsai.jupyter-renderers
-        o.james-yu.latex-workshop
-        o.sumneko.lua
-        o.zaaack.markdown-editor
-        o.ocamllabs.ocaml-platform
-        o.garlicbreadcleric.pandoc-markdown-syntax
-        o.esbenp.prettier-vscode
-        o.nwolverson.ide-purescript
-        o.nwolverson.language-purescript
-        o.ms-python.python
-        o.redhat.vscode-xml
-        o.redhat.vscode-yaml
-        o.jnoortheen.nix-ide
-        o.mkhl.direnv
-        o.arrterian.nix-env-selector
-        o.catppuccin.catppuccin-vsc
-        o.catppuccin.catppuccin-vsc-icons
-        o.emattiza.vscode-purty
-        o.jock.svg
-        o.thenuprojectcontributors.vscode-nushell-lang
-    ];
-  };
 }
