@@ -6,11 +6,7 @@
     git
 
     comma                # nix-shell wrapper
-    # vesktop              # discord - in systemPackages to allow screenshare with audio
-    # Electron override until 380429 is fixed
-    (vesktop.override {
-       electron = pkgs.electron_32;
-    })
+    vesktop              # discord - in systemPackages to allow screenshare with audio
     networkmanagerapplet # applet for managing networks
     nushell              # alternative to sh with many functional paradigms
     gh                   # github cli
