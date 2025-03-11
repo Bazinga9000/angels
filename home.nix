@@ -26,7 +26,6 @@
     just             # Command runner
     sm64coopdx       # Mario 64 Port
     baobab           # Disk Usage Analyzer
-    xivlauncher      # Final Fantasy XIV (god have mercy)
     qgis             # Geographic Information System
     celeste64        # Celeste 64 - Fragments of the Mountain
 
@@ -43,6 +42,12 @@
         temurin-bin-17
         temurin-bin-21
       ];
+    })
+
+    # Final Fantasy XIV (XIVLauncher RB Fork)
+    (xivlauncher-rb.override {
+      # TODO: get config.hardware.nvidia.package to work
+      nvngxPath = "${pkgs.linuxPackages.nvidiaPackages.beta}/lib/nvidia/wine";
     })
 
     # Libreoffice and Spell Check

@@ -22,6 +22,10 @@
     # Purescript Overlay
     purescript-overlay.url = "github:thomashoneyman/purescript-overlay";
     purescript-overlay.inputs.nixpkgs.follows = "nixpkgs";
+
+    # XIVLauncher-RB
+    nixos-xivlauncher-rb.url = "github:drakon64/nixos-xivlauncher-rb";
+    nixos-xivlauncher-rb.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
@@ -29,6 +33,7 @@
     nixpkgs,
     home-manager,
     catppuccin,
+    nixos-xivlauncher-rb,
     ...
   } @inputs:
     let
@@ -63,6 +68,7 @@
           ./nvidia.nix # the demon of babylon disguises himself with the coat of the righteous
           ./systemPackages.nix
           ./env_variables.nix
+          nixos-xivlauncher-rb.nixosModules.default
           catppuccin.nixosModules.catppuccin
           home-manager.nixosModules.home-manager {
             home-manager.extraSpecialArgs = inputs;
