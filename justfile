@@ -22,7 +22,7 @@ relock:
 
 # Add necessary external files to the Nix Store (see ./store-files/README.md for details)
 store:
-    nix-store --add-fixed sha256 ./store-files/Wolfram_14.1.0_LIN_Bndl.sh
+    nix-store --add-fixed sha256 ./store-files/Wolfram_14.2.0_LIN_Bndl.sh
     nix-store --add-fixed sha256 ./store-files/baserom.us.z64
 
 
