@@ -173,44 +173,98 @@
 
   # Hyprlock
   programs.hyprlock.enable = true;
+  # Since we're overriding default catppuccin, turn it off
+  catppuccin.hyprlock.enable = false;
   programs.hyprlock.settings = {
-    background = {
-      path = "screenshot";
-      blur_size = 5;
-      blur_passes = 5;
-      noise = 0.0117;
-      contrast = 1.3000;
-      brightness = 0.8000;
-      vibrancy = 0.2100;
-      vibrancy_darkness = 0.0;
+    # Colors from catpuccin
+    "$accent" = "rgb(cba6f7)"; # Mauve
+    "$accentAlpha" = "cba6f7";
+    "$base" = "rgb(1e1e2e)";
+    "$surface0" = "rgb(313244)";
+    "$text" = "rgb(cdd6f4)";
+    "$textAlpha" = "cdd6f4";
+    "$red" = "rgb(f38ba8)";
+    "$yellow" = "rgb(f9e2af)";
+
+    # Font
+    "$font" = "Quicksand, M PLUS 1p";
+
+    general = {
+      disable_loading_bar = true;
+      hide_cursor = true;
     };
 
-    input-field = {
-      size = "250, 50";
-      outline_thickness = 3;
-      dots_size = 0.33; # Scale of input-field height, 0.2 - 0.8
-      dots_spacing = 0.15; # Scale of dots' absolute size, 0.0 - 1.0
-      dots_center = true;
-      outer_color = "#fff8e7";
-      inner_color = "#000000";
-      font_color = "#fff8e7";
-      placeholder_text = "<i>Password...</i>";
-      hide_input = false;
-      position = "0, 200";
+    background = {
+      monitor = "";
+      path = "$HOME/.config/background";
+      blur_passes = 0;
+      color = "$base";
+    };
+
+    image = { # Profile picture
+      monitor = "";
+      path = "$HOME/.face";
+      size = 100;
+      border_color = "$accent";
+      position = "0, 75";
       halign = "center";
-      valign = "bottom";
-      fade_on_empty = "false";
+      valign = "center";
+    };
+
+    # INPUT FIELD
+    input-field = {
+      monitor = "";
+      size = "300, 60";
+      outline_thickness = 4;
+      dots_size = 0.2;
+      dots_spacing = 0.2;
+      dots_center = true;
+      outer_color = "$accent";
+      inner_color = "$surface0";
+      font_color = "$text";
+      font_family = "$font";
+      fade_on_empty = false;
+      placeholder_text = "<span foreground=\"##$textAlpha\"><i>󰌾 Logged in as </i><span foreground=\"##$accentAlpha\">$USER</span></span>";
+      hide_input = false;
+      check_color = "$accent";
+      fail_color = "$red";
+      fail_text = "<i>$FAIL <b>($ATTEMPTS)</b></i>";
+      capslock_color = "$yellow";
+      position = "0, -47";
+      halign = "center";
+      valign = "center";
     };
 
     label = [
-      {
-        text = "cmd[update:1000] echo \"<b><big>$(date +\"%H:%M:%S\")</big></b>\"";
-        color = "#fff8e7";
-        font_size = 94;
-
-        position = "0, 0";
-        halign = "center";
-        valign = "center";
+      { # Time
+        monitor = "";
+        text = "cmd[update:1000] echo \"$(date +\"%H:%M:%S\")\"";
+        color = "$text";
+        font_size = 90;
+        font_family = "$font";
+        position = "-30, 0";
+        halign = "right";
+        valign = "top";
+      }
+      { # Date
+        monitor = "";
+        text = "cmd[update:1000] date +\"%A, %d %B %Y\"";
+        color = "$text";
+        font_size = 25;
+        font_family = "$font";
+        position = "-30, -150";
+        halign = "right";
+        valign = "top";
+      }
+      { # Uptime
+        monitor = "";
+        text = "cmd[update:1000] nu ${./scripts/uptime.nu}";
+        color = "$text";
+        font_size = 25;
+        font_family = "$font";
+        position = "30, -30";
+        halign = "left";
+        valign = "top";
       }
     ];
   };

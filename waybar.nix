@@ -109,7 +109,7 @@
         "custom/nixgen" = {
             interval = 3;
             format = " \n{}";
-            exec = "nu ${./config/waybar/scripts/nixOSGeneration.nu}";
+            exec = "nu ${./scripts/nixOSGeneration.nu}";
             return-type = "json";
             justify = "center";
         };
