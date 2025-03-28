@@ -31,8 +31,8 @@
 
     # Zed Editor (libz is for the Discord presence extension)
     (zed-editor.fhsWithPackages (ps: with ps; [
-      libz
-      openssl
+     libz
+     openssl
     ]))
 
     # Minecraft
