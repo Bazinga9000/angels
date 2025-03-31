@@ -45,10 +45,11 @@
     })
 
     # Final Fantasy XIV
-    (xivlauncher-rb.override {
-      # TODO: get config.hardware.nvidia.package to work
-      nvngxPath = "${pkgs.linuxPackages.nvidiaPackages.beta}/lib/nvidia/wine";
-    })
+    xivlauncher
+    # (xivlauncher-rb.override {
+    #  # TODO: get config.hardware.nvidia.package to work
+    #  nvngxPath = "${pkgs.linuxPackages.nvidiaPackages.beta}/lib/nvidia/wine";
+    # })
 
     # Libreoffice and Spell Check
     libreoffice-qt
