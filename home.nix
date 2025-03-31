@@ -45,11 +45,10 @@
     })
 
     # Final Fantasy XIV
-    xivlauncher # Using the main launcher instead of the rb fork until the dalamud internal error is fixed
-    # (xivlauncher-rb.override {
-    #  # TODO: get config.hardware.nvidia.package to work
-    #  nvngxPath = "${pkgs.linuxPackages.nvidiaPackages.beta}/lib/nvidia/wine";
-    # })
+    (xivlauncher-rb.override {
+      # TODO: get config.hardware.nvidia.package to work
+      nvngxPath = "${pkgs.linuxPackages.nvidiaPackages.beta}/lib/nvidia/wine";
+    })
 
     # Libreoffice and Spell Check
     libreoffice-qt
