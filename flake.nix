@@ -81,7 +81,7 @@
                 ./theme.nix # Appearance Config
                 ./hyprland.nix # Hyprland
                 ./waybar.nix # Waybar
-                catppuccin.homeManagerModules.catppuccin
+                catppuccin.homeModules.catppuccin
               ];
             };
           }
