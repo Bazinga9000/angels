@@ -28,7 +28,6 @@
     baobab           # Disk Usage Analyzer
     qgis             # Geographic Information System
     celeste64        # Celeste 64 - Fragments of the Mountain
-    archipelago      # Archipelago MW Client
 
     # Zed Editor (libz is for the Discord presence extension)
     (zed-editor.fhsWithPackages (ps: with ps; [
@@ -52,6 +51,14 @@
     #  nvngxPath = "${pkgs.linuxPackages.nvidiaPackages.beta}/lib/nvidia/wine";
     # })
 
+    # Archipelago Client
+    (archipelago.override {
+      extraPackages = with pkgs; [
+        # NB: archipelago-minecraft exists, but it adds openjdk and not temurin,
+        # and this is a more general solution in case other games need things
+        temurin-bin-17 # Java 17 for Minecraft
+      ];
+    })
     # Bizhawk Emulator
     (import bizhawk {
       inherit system;
