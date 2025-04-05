@@ -26,6 +26,10 @@
     # XIVLauncher-RB
     nixos-xivlauncher-rb.url = "github:drakon64/nixos-xivlauncher-rb";
     nixos-xivlauncher-rb.inputs.nixpkgs.follows = "nixpkgs";
+
+    # Bizhawk
+    bizhawk.url = "github:TASEmulators/BizHawk";
+    bizhawk.flake = false;
   };
 
   outputs = {

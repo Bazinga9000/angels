@@ -1,4 +1,4 @@
-{ pkgs, nix-vscode-extensions, ...}: {
+{ pkgs, bizhawk, ...}: {
 
   # Basic configuration
   home.username = "bazinga";
@@ -51,6 +51,11 @@
     #  # TODO: get config.hardware.nvidia.package to work
     #  nvngxPath = "${pkgs.linuxPackages.nvidiaPackages.beta}/lib/nvidia/wine";
     # })
+
+    # Bizhawk Emulator
+    (import bizhawk {
+      inherit system;
+    }).emuhawk-latest-bin
 
     # Libreoffice and Spell Check
     libreoffice-qt
