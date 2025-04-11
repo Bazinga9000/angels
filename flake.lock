@@ -1,5 +1,26 @@
 {
   "nodes": {
+    "baz9k-pkgs": {
+      "inputs": {
+        "flake-compat": "flake-compat",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1744344490,
+        "narHash": "sha256-Yaxqq50FG7gNE31uqcolHKItlPg2taNm1dggjtxLGx8=",
+        "owner": "Bazinga9000",
+        "repo": "baz9k-pkgs",
+        "rev": "83141f5db9ced562bb140c0e7e8d7d6348a1b2e8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Bazinga9000",
+        "repo": "baz9k-pkgs",
+        "type": "github"
+      }
+    },
     "bizhawk": {
       "flake": false,
       "locked": {
@@ -37,6 +58,7 @@
       }
     },
     "flake-compat": {
+      "flake": false,
       "locked": {
         "lastModified": 1733328505,
         "narHash": "sha256-NeCCThCEP3eCl2l/+27kNNK7QrwZB1IJCrXfrbv5oqU=",
@@ -52,6 +74,21 @@
       }
     },
     "flake-compat_2": {
+      "locked": {
+        "lastModified": 1733328505,
+        "narHash": "sha256-NeCCThCEP3eCl2l/+27kNNK7QrwZB1IJCrXfrbv5oqU=",
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "rev": "ff81ac966bb2cae68946d5ed5fc4994f96d0ffec",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "type": "github"
+      }
+    },
+    "flake-compat_3": {
       "flake": false,
       "locked": {
         "lastModified": 1696426674,
@@ -107,7 +144,7 @@
     },
     "nix-alien": {
       "inputs": {
-        "flake-compat": "flake-compat",
+        "flake-compat": "flake-compat_2",
         "nix-index-database": "nix-index-database",
         "nixpkgs": "nixpkgs"
       },
@@ -220,7 +257,7 @@
     },
     "purescript-overlay": {
       "inputs": {
-        "flake-compat": "flake-compat_2",
+        "flake-compat": "flake-compat_3",
         "nixpkgs": [
           "nixpkgs"
         ],
@@ -242,6 +279,7 @@
     },
     "root": {
       "inputs": {
+        "baz9k-pkgs": "baz9k-pkgs",
         "bizhawk": "bizhawk",
         "catppuccin": "catppuccin",
         "home-manager": "home-manager",

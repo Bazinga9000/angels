@@ -28,6 +28,7 @@
     baobab           # Disk Usage Analyzer
     qgis             # Geographic Information System
     celeste64        # Celeste 64 - Fragments of the Mountain
+    baz9k.magicseteditor-allgames # MSE incl. non-Magic Templates
 
     # Zed Editor (libz is for the Discord presence extension)
     (zed-editor.fhsWithPackages (ps: with ps; [

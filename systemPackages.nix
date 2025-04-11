@@ -59,5 +59,6 @@
     proggyfonts
     google-fonts
     corefonts
+    baz9k.magicseteditor-allgames.fonts
   ] ++ (builtins.filter lib.isDerivation (builtins.attrValues nerd-fonts));
 }
