@@ -24,11 +24,15 @@
     bottles          # Running windows applications
     rofi-wayland     # Rofi Package
     just             # Command runner
-    sm64coopdx       # Mario 64 Port
     baobab           # Disk Usage Analyzer
     qgis             # Geographic Information System
     celeste64        # Celeste 64 - Fragments of the Mountain
     baz9k.magicseteditor-allgames # MSE incl. non-Magic Templates
+
+    # Mario 64 Port, attribute override until 399415 is merged
+    (sm64coopdx.overrideAttrs (oldAttrs: {
+      buildInputs = oldAttrs.buildInputs ++ [ libGL ];
+    }))
 
     # Zed Editor (libz is for the Discord presence extension)
     (zed-editor.fhsWithPackages (ps: with ps; [
