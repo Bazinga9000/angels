@@ -169,6 +169,11 @@
     cursor = {
       no_hardware_cursors = true;
     };
+
+    # Compose key
+    input = {
+      kb_options = "compose:caps";
+    };
   };
 
   # Hyprlock
