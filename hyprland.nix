@@ -301,8 +301,9 @@
   services.hyprpaper.enable = true;
   services.hyprpaper.settings = let
     tinot_robots = ./config/wallpapers/tinot_robots_in_the_garden.png;
+    xiv_interphos = ./config/wallpapers/doom_sasasu_interphos.png;
   in {
-    preload = "${tinot_robots}";
-    wallpaper = ", ${tinot_robots}";
+    preload = "${xiv_interphos}";
+    wallpaper = ", ${xiv_interphos}";
   };
 }
