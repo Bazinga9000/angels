@@ -30,6 +30,7 @@
     celeste64        # Celeste 64 - Fragments of the Mountain
     baz9k.magicseteditor-allgames # MSE incl. non-Magic Templates
     baz9k.cambridge  # Cambridge Stacker
+    godot            # Godot Game Engine
 
     # Zed Editor (libz is for the Discord presence extension)
     (zed-editor.fhsWithPackages (ps: with ps; [
