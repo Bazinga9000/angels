@@ -8,11 +8,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1745039161,
-        "narHash": "sha256-VLwFrqsKo/SEUA41fYkJKze4xD1qVO1pUhtNUjdBN1Y=",
+        "lastModified": 1746068153,
+        "narHash": "sha256-4mEIT6nQopbcNyFmFoPUVaXm0uFTSxI9lJyq8EUMDEQ=",
         "owner": "Bazinga9000",
         "repo": "baz9k-pkgs",
-        "rev": "dbd4a972c9a228e77e4c93f070cc52633828a7be",
+        "rev": "585fdd6dad8584e1e8b546a6a153e08e02cf9ad8",
         "type": "github"
       },
       "original": {
