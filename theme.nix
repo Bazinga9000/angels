@@ -1,6 +1,8 @@
 { pkgs, ...}: {
   # Non-GTK: Catppuccin
   catppuccin.enable = true;
+  # Explicitly disable mako to avoid build failure until catp fixes this
+  catppuccin.mako.enable = false;
 
   # dconf Dark Mode (for the internet etc)
   dconf.enable = true;
