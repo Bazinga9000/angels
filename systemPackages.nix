@@ -13,6 +13,7 @@
     killall              # killall
     nix-alien            # running Weird Binaries
     hyprpolkitagent      # Hyprland Authentication Agent
+    nh                   # Nix Helper
  ];
 
   # programs.XXXXX.enable zone
