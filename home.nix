@@ -28,7 +28,7 @@
     qgis             # Geographic Information System
     sm64coopdx       # Mario 64 Port
     celeste64        # Celeste 64 - Fragments of the Mountain
-    baz9k.magicseteditor-allgames # MSE incl. non-Magic Templates
+    baz9k.magicseteditor.all # MSE incl. non-Magic Templates
     baz9k.cambridge  # Cambridge Stacker
     godot            # Godot Game Engine
 
