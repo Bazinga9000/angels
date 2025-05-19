@@ -62,7 +62,7 @@
 
   # Gnome (without core utilities), to have a non-hyprland session and/or X11 session lying around
   services.xserver.desktopManager.gnome.enable = true;
-  services.gnome.core-utilities.enable = false;
+  services.gnome.core-apps.enable = false;
 
   # Configure keymap in X11
   services.xserver.xkb = {
