@@ -107,6 +107,10 @@
   # Global Flatpak
   services.flatpak.enable = true;
 
+  # Automatic nix store optimize
+  nix.optimise.automatic = true;
+  nix.optimise.dates = [ "07:00" ];
+
   # Enable automatic garbage collection
   # [commented out for now because it appears to be killing hyprlock]
   # nix.gc = {
