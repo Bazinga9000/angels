@@ -109,8 +109,9 @@
   # Kitty
   programs.kitty.enable = true;
   programs.kitty.font = {
-    name = "FantasqueSansM Nerd Font Mono";
-    package = pkgs.nerd-fonts.fantasque-sans-mono;
+    name = "Fairfax SM HD";
+    package = pkgs.baz9k.kreative-kore-fonts;
+    size = 14;
   };
 
   # Dunst Notifications
