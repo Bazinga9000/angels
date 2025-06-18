@@ -5,7 +5,7 @@
     "$mod" = "SUPER";
     "$terminal" = "kitty";
     "$fileManager" = "thunar";
-    "$browser" = "vivaldi";
+    "$browser" = "zen";
     "$editor" = "zeditor";
 
     bind = [

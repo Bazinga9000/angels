@@ -2,7 +2,7 @@
   # Defaults
   environment.sessionVariables = {
     EDITOR = "vim";
-    BROWSER = "vivaldi";
+    BROWSER = "zen";
     TERMINAL = "kitty";
     TERM = "kitty";
   };

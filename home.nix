@@ -8,7 +8,6 @@
 
   # Packages
   home.packages = with pkgs; [
-    vivaldi          # Browser
     polkit_gnome     # Authentication Agent
     grimblast        # Screenshot Tool
     gimp             # GNU Image Manipulation Program

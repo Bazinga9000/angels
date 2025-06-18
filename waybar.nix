@@ -41,11 +41,11 @@
             justify = "center";
             # Dirty Hack: All of the rules that are subsets of other rules start with ".big>" instead of "<big>" so they appear first in the output.
             rewrite = {
-              "<big>(.*) - Vivaldi</big>" = "<big>󰖟  $1</big>"; # Vivaldi (Default)
-              ".big>(.*) - Youtube - Vivaldi</big>" = "<big>󰖟  󰗃  $1</big>"; # Vivaldi (Youtube)
-              ".big>(.*) - Google Sheets - Vivaldi</big>" = "<big>󰖟  󰧷  $1</big>"; # Vivaldi (Google Sheets)
-              ".big>(.*) - Google Docs - Vivaldi</big>" = "<big>󰖟  󰈙  $1</big>"; # Vivaldi (Google Docs)
-              ".big>(.*) - Wikipedia - Vivaldi</big>" = "<big>󰖟  󰖬  $1</big>"; # Vivaldi (Wikipedia)
+              "<big>(.*) — Zen Browser</big>" = "<big>󰖟  $1</big>"; # Vivaldi (Default)
+              ".big>(.*) - Youtube — Zen Browser</big>" = "<big>󰖟  󰗃  $1</big>"; # Vivaldi (Youtube)
+              ".big>(.*) - Google Sheets — Zen Browser</big>" = "<big>󰖟  󰧷  $1</big>"; # Vivaldi (Google Sheets)
+              ".big>(.*) - Google Docs — Zen Browser</big>" = "<big>󰖟  󰈙  $1</big>"; # Vivaldi (Google Docs)
+              ".big>(.*) - Wikipedia — Zen Browser</big>" = "<big>󰖟  󰖬  $1</big>"; # Vivaldi (Wikipedia)
 
               "<big>(?:• |\\(\\d+\\) )?Discord \\| (.*) \\| (.*)</big>" = "<big>  $2  $1</big>"; # Discord (Channel)
               ".big>(?:• |\\(\\d+\\) )?Discord \\| (.*) \\| User Settings</big>" = "<big>    $1</big>"; # Discord (Settings)
