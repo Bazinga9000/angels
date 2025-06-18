@@ -106,6 +106,9 @@
     uv
   ];
 
+  # Zen Browser
+  programs.zen-browser.enable = true;
+
   # Kitty
   programs.kitty.enable = true;
   programs.kitty.font = {

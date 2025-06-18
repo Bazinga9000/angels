@@ -23,6 +23,10 @@
     bizhawk.url = "github:TASEmulators/BizHawk";
     bizhawk.flake = false;
 
+    # Zen Browser
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    zen-browser.inputs.nixpkgs.follows = "nixpkgs";
+
     # My own package repo
     baz9k-pkgs.url = "github:Bazinga9000/baz9k-pkgs";
     baz9k-pkgs.inputs.nixpkgs.follows = "nixpkgs";
@@ -33,6 +37,7 @@
     nixpkgs,
     home-manager,
     catppuccin,
+    zen-browser,
     ...
   } @inputs:
     let
@@ -81,6 +86,7 @@
                 ./hyprland.nix # Hyprland
                 ./waybar.nix # Waybar
                 catppuccin.homeModules.catppuccin
+                zen-browser.homeModules.beta
               ];
             };
           }
