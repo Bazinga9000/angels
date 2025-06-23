@@ -70,6 +70,7 @@
           })
 
           ./configuration.nix
+          ./cosmic.nix # Cosmic DE
           ./nvidia.nix # the demon of babylon disguises himself with the coat of the righteous
           ./systemPackages.nix
           ./env_variables.nix
@@ -83,7 +84,6 @@
               imports = [
                 ./home.nix # General Home-Manager Config
                 ./theme.nix # Appearance Config
-                ./hyprland.nix # Hyprland
                 ./waybar.nix # Waybar
                 catppuccin.homeModules.catppuccin
                 zen-browser.homeModules.beta

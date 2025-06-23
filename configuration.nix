@@ -57,13 +57,6 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the GNOME Display Manager.
-  services.displayManager.gdm.enable = true;
-
-  # Gnome (without core utilities), to have a non-hyprland session and/or X11 session lying around
-  services.desktopManager.gnome.enable = true;
-  services.gnome.core-apps.enable = false;
-
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
