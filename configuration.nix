@@ -85,18 +85,6 @@
   # Enable support for ZSA keyboards
   hardware.keyboard.zsa.enable = true;
 
-  # Bluetooth
-  hardware.bluetooth.enable = true; # Enable bluetooth
-  hardware.bluetooth.powerOnBoot = true; # Start default controller on boot
-  services.blueman.enable = true; # Bluetooth GUI
-
-  # File Manager Goodies (Trash, Thumbnails for images, etd)
-  services.gvfs.enable = true;
-  services.tumbler.enable = true;
-
-  # Upower (Battery Management)
-  services.upower.enable = true;
-
   # Global Flatpak
   services.flatpak.enable = true;
 
@@ -114,14 +102,6 @@
 
   # Enable polkit for authentication agents
   security.polkit.enable = true;
-
-  # Enable Hyprlock in PAM
-  security.pam.services.hyprlock = {};
-
-  # Enable GNOME Keyring Services
-  services.gnome.gnome-keyring.enable = true;
-  security.pam.services.gdm.enableGnomeKeyring = true;
-
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;

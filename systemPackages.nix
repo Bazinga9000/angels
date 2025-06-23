@@ -7,18 +7,15 @@
 
     comma                # nix-shell wrapper
     vesktop              # discord - in systemPackages to allow screenshare with audio
-    networkmanagerapplet # applet for managing networks
     nushell              # alternative to sh with many functional paradigms
     gh                   # github cli
     killall              # killall
     nix-alien            # running Weird Binaries
-    hyprpolkitagent      # Hyprland Authentication Agent
     nh                   # Nix Helper
  ];
 
   # programs.XXXXX.enable zone
   programs.firefox.enable = true;
-  programs.hyprland.enable = true;
 
   # Steam and friends
   programs.steam = {
@@ -39,13 +36,6 @@
       enable = true;
       nix-direnv.enable = true;
   };
-
-  programs.thunar.enable = true;
-  programs.thunar.plugins = with pkgs.xfce; [
-    thunar-archive-plugin
-    thunar-volman
-  ];
-  programs.file-roller.enable = true;
 
   # Fonts
   fonts.packages = with pkgs; [

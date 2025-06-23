@@ -84,7 +84,6 @@
               imports = [
                 ./home.nix # General Home-Manager Config
                 ./theme.nix # Appearance Config
-                ./waybar.nix # Waybar
                 catppuccin.homeModules.catppuccin
                 zen-browser.homeModules.beta
               ];

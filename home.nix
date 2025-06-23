@@ -8,8 +8,6 @@
 
   # Packages
   home.packages = with pkgs; [
-    polkit_gnome     # Authentication Agent
-    grimblast        # Screenshot Tool
     gimp             # GNU Image Manipulation Program
     inkscape         # Vector Graphics
     cockatrice       # MTG Client
@@ -21,7 +19,6 @@
     graphviz         # Graph Visualization Tools
     zathura          # PDF Viewer
     bottles          # Running windows applications
-    rofi-wayland     # Rofi Package
     just             # Command runner
     baobab           # Disk Usage Analyzer
     qgis             # Geographic Information System
@@ -125,9 +122,6 @@
       font = "FantasqueSansM Nerd Font Mono 12";
     };
   };
-
-  # Rofi
-  xdg.configFile."rofi".source = ./config/rofi;
 
   # Nushell
   programs.nushell = {
