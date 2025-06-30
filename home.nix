@@ -1,4 +1,5 @@
-{ pkgs, bizhawk, ...}: {
+{ pkgs, bizhawk, ... }:
+{
 
   # Basic configuration
   home.username = "bazinga";
@@ -8,31 +9,33 @@
 
   # Packages
   home.packages = with pkgs; [
-    gimp             # GNU Image Manipulation Program
-    inkscape         # Vector Graphics
-    cockatrice       # MTG Client
-    yed              # Yed Graph Editor
-    element-desktop  # Matrix Client
-    font-manager     # Font Manager
-    mathematica      # Mathematica (NB: Installer needs manual addition to nix-store)
-    flatpak          # Flatpak
-    graphviz         # Graph Visualization Tools
-    zathura          # PDF Viewer
-    bottles          # Running windows applications
-    just             # Command runner
-    baobab           # Disk Usage Analyzer
-    qgis             # Geographic Information System
-    sm64coopdx       # Mario 64 Port
-    celeste64        # Celeste 64 - Fragments of the Mountain
+    gimp # GNU Image Manipulation Program
+    inkscape # Vector Graphics
+    cockatrice # MTG Client
+    yed # Yed Graph Editor
+    element-desktop # Matrix Client
+    font-manager # Font Manager
+    mathematica # Mathematica (NB: Installer needs manual addition to nix-store)
+    flatpak # Flatpak
+    graphviz # Graph Visualization Tools
+    zathura # PDF Viewer
+    bottles # Running windows applications
+    just # Command runner
+    baobab # Disk Usage Analyzer
+    qgis # Geographic Information System
+    sm64coopdx # Mario 64 Port
+    celeste64 # Celeste 64 - Fragments of the Mountain
     baz9k.magicseteditor.all # MSE incl. non-Magic Templates
-    baz9k.cambridge  # Cambridge Stacker
-    godot            # Godot Game Engine
+    baz9k.cambridge # Cambridge Stacker
+    godot # Godot Game Engine
 
     # Zed Editor (libz is for the Discord presence extension)
-    (zed-editor.fhsWithPackages (ps: with ps; [
-     libz
-     openssl
-    ]))
+    (zed-editor.fhsWithPackages (
+      ps: with ps; [
+        libz
+        openssl
+      ]
+    ))
 
     # Minecraft
     (prismlauncher.override {
@@ -100,6 +103,9 @@
     # Language - Python
     python313
     uv
+
+    # Language - LaTeX
+    texlive.combined.scheme-full
   ];
 
   # Zen Browser
