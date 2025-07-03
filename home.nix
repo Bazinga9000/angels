@@ -28,6 +28,7 @@
     baz9k.magicseteditor.all # MSE incl. non-Magic Templates
     baz9k.cambridge # Cambridge Stacker
     godot # Godot Game Engine
+    olympus # Celeste Mod Manager
 
     # Zed Editor (libz is for the Discord presence extension)
     (zed-editor.fhsWithPackages (
