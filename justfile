@@ -6,6 +6,11 @@ rebuild *FLAGS:
     git add --intent-to-add *
     nh os switch --ask --hostname metatron . {{FLAGS}}
 
+
+# Check on the state of your nixpkgs and update if needed
+status:
+    @nu scripts/updateMaybe.nu 
+
 # Update the flake inputs, then rebuild the system
 update *FLAGS:
     nh os switch --update --ask --hostname metatron . {{FLAGS}}
