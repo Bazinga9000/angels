@@ -29,6 +29,7 @@
     baz9k.cambridge # Cambridge Stacker
     godot # Godot Game Engine
     olympus # Celeste Mod Manager
+    musescore # Music Composition Software
 
     # Zed Editor (libz is for the Discord presence extension)
     (zed-editor.fhsWithPackages (
