@@ -9,13 +9,14 @@
 
   # Packages
   home.packages = with pkgs; [
-    gimp # GNU Image Manipulation Program
+    gimp3 # GNU Image Manipulation Program
     inkscape # Vector Graphics
     cockatrice # MTG Client
     yed # Yed Graph Editor
     element-desktop # Matrix Client
     font-manager # Font Manager
-    mathematica # Mathematica (NB: Installer needs manual addition to nix-store)
+    # build failure in dependency, removed until 425468 merged
+    #mathematica # Mathematica (NB: Installer needs manual addition to nix-store)
     flatpak # Flatpak
     graphviz # Graph Visualization Tools
     zathura # PDF Viewer
@@ -108,7 +109,8 @@
     uv
 
     # Language - LaTeX
-    texlive.combined.scheme-full
+    # build failure: re-add when 425299 is merged
+    # texlive.combined.scheme-full
   ];
 
   # Zen Browser
