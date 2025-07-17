@@ -18,12 +18,6 @@ update *FLAGS:
     git commit -m "update flake"
     git push origin main
 
-# Refresh hyprlock
-relock:
-    -killall -9 hyprlock
-    hyprctl --instance 0 'keyword misc:allow_session_lock_restore 1'
-    hyprctl --instance 0 'dispatch exec hyprlock'
-
 # Add necessary external files to the Nix Store (see ./store-files/README.md for details)
 store:
     nix-store --add-fixed sha256 ./store-files/Wolfram_14.2.1_LIN_Bndl.sh
