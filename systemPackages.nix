@@ -1,17 +1,10 @@
 { pkgs, lib, ...}:
 {
   environment.systemPackages = with pkgs; [
-    vim
-    wget
-    git
-
     comma                # nix-shell wrapper
     vesktop              # discord - in systemPackages to allow screenshare with audio
-    nushell              # alternative to sh with many functional paradigms
-    gh                   # github cli
     killall              # killall
     nix-alien            # running Weird Binaries
-    nh                   # Nix Helper
  ];
 
   # programs.XXXXX.enable zone

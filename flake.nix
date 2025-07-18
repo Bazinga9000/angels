@@ -69,6 +69,8 @@
             */
           })
 
+          ./common/configuration.nix
+          ./common/packages.nix
           ./configuration.nix
           ./cosmic.nix # Cosmic DE
           ./nvidia.nix # the demon of babylon disguises himself with the coat of the righteous
@@ -89,6 +91,16 @@
               ];
             };
           }
+        ];
+      };
+
+      jophiel = lib.nixosSystem {
+        inherit system;
+        specialArgs = { inherit self; };
+        modules = [
+          ./common/configuration.nix
+          ./common/packages.nix
+          ./jophiel/configuration.nix
         ];
       };
     };
