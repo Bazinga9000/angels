@@ -15,8 +15,7 @@
     yed # Yed Graph Editor
     element-desktop # Matrix Client
     font-manager # Font Manager
-    # build failure in dependency, removed until 425468 merged
-    #mathematica # Mathematica (NB: Installer needs manual addition to nix-store)
+    mathematica # Mathematica (NB: Installer needs manual addition to nix-store)
     flatpak # Flatpak
     graphviz # Graph Visualization Tools
     zathura # PDF Viewer
@@ -109,8 +108,7 @@
     uv
 
     # Language - LaTeX
-    # build failure: re-add when 425299 is merged
-    # texlive.combined.scheme-full
+    texlive.combined.scheme-full
   ];
 
   # Zen Browser
