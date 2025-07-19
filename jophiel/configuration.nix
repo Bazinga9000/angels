@@ -84,6 +84,8 @@
     description = "bazinga";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      python3
+      python310
       uv
     ];
   };
