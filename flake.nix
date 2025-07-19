@@ -71,6 +71,7 @@
 
           ./common/configuration.nix
           ./common/packages.nix
+          ./common/env_variables.nix
           ./configuration.nix
           ./cosmic.nix # Cosmic DE
           ./nvidia.nix # the demon of babylon disguises himself with the coat of the righteous
@@ -100,6 +101,7 @@
         modules = [
           ./common/configuration.nix
           ./common/packages.nix
+          ./common/env_variables.nix
           ./jophiel/configuration.nix
         ];
       };
