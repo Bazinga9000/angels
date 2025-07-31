@@ -12,6 +12,7 @@ print $"Latest Nixpkgs Release: ($latest_nixpkgs)"
 if $difference > 0sec {
   print $"Your nixpkgs is ($difference) out of date! Update now? [Y/N]"
   if (input --numchar 2 | str downcase) == "y" {
+    just --justfile=/home/bazinga/metatron/justfile store
     just --justfile=/home/bazinga/metatron/justfile update
   }
 } else {
