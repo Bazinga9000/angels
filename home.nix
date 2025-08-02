@@ -9,7 +9,7 @@
 
   # Packages
   home.packages = with pkgs; [
-    gimp3 # GNU Image Manipulation Program
+    gimp # GNU Image Manipulation Program
     inkscape # Vector Graphics
     cockatrice # MTG Client
     yed # Yed Graph Editor
@@ -31,6 +31,7 @@
     olympus # Celeste Mod Manager
     musescore # Music Composition Software
     baz9k.a-solitaire-mystery # Hempuli's 30 Solitaire Variants
+    krita
 
     # Zed Editor (libz is for the Discord presence extension)
     (zed-editor.fhsWithPackages (
