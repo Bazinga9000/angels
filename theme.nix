@@ -1,6 +1,7 @@
 { pkgs, ...}: {
   # Non-GTK: Catppuccin
   catppuccin.enable = true;
+  catppuccin.accent = "peach";
 
   # dconf Dark Mode (for the internet etc)
   dconf.enable = true;
