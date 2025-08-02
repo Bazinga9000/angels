@@ -12,14 +12,14 @@
   };
 
   # GTK: Palenight
-  # Icons: Papirus-Dark
   gtk = {
     enable = true;
 
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
-    };
+    # Icon theme moved into catppuccin
+    # iconTheme = {
+    #  name = "Papirus-Dark";
+    #  package = pkgs.papirus-icon-theme;
+    # };
 
     theme = {
       name = "palenight";
