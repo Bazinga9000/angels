@@ -29,7 +29,7 @@
     baz9k.cambridge # Cambridge Stacker
     godot # Godot Game Engine
     olympus # Celeste Mod Manager
-    musescore # Music Composition Software
+    helio-workstation # Composition software
     baz9k.a-solitaire-mystery # Hempuli's 30 Solitaire Variants
     krita
 
