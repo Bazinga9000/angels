@@ -32,6 +32,7 @@
     helio-workstation # Composition software
     baz9k.a-solitaire-mystery # Hempuli's 30 Solitaire Variants
     krita
+    baz9k.microwave # Microtonal Synth
 
     # Zed Editor (libz is for the Discord presence extension)
     (zed-editor.fhsWithPackages (
