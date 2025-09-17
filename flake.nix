@@ -71,7 +71,6 @@
 
           ./common/configuration.nix
           ./common/packages.nix
-          ./common/env_variables.nix
           ./common/languages
           ./configuration.nix
           ./cosmic.nix # Cosmic DE
