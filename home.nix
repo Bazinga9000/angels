@@ -79,38 +79,6 @@
     # GNOME Keyring
     gnome-keyring
     seahorse
-
-    # Language - Haskell
-    ghc
-    stack
-    haskellPackages.haskell-language-server
-
-    # Language - PureScript
-    purs
-    spago-unstable
-    purs-tidy-bin.purs-tidy-0_10_0
-    purs-backend-es
-
-    # Language - C, C++
-    gcc
-    libgcc
-
-    # Language - Rust
-    rustup
-
-    # Language - Nix
-    nil
-
-    # Language - Lua
-    lua
-    love
-
-    # Language - Python
-    python313
-    uv
-
-    # Language - LaTeX
-    texlive.combined.scheme-full
   ];
 
   # Zen Browser
