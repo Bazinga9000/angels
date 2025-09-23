@@ -85,14 +85,7 @@
   # Zen Browser
   programs.zen-browser.enable = true;
 
-  # Kitty
-  programs.kitty.enable = true;
-  programs.kitty.font = {
-    name = "Fairfax SM HD";
-    package = pkgs.baz9k.kreative-kore-fonts;
-    size = 14;
-  };
-
+  # Ghostty
   programs.ghostty.enable = true;
   programs.ghostty.settings = {
     font-family = "FairfaxHD";
