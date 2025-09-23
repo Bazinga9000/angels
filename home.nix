@@ -93,6 +93,12 @@
     size = 14;
   };
 
+  programs.ghostty.enable = true;
+  programs.ghostty.settings = {
+    font-family = "FairfaxHD";
+    font-size = 14;
+  };
+
   # Dunst Notifications
   services.dunst.enable = true;
   services.dunst.settings = {
