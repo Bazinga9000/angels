@@ -10,21 +10,6 @@
   # programs.XXXXX.enable zone
   programs.firefox.enable = true;
 
-  # Steam and friends
-  programs.steam = {
-      enable = true;
-      protontricks.enable = true;
-      extest.enable = true;
-      remotePlay.openFirewall = true;
-      dedicatedServer.openFirewall = true;
-      localNetworkGameTransfers.openFirewall = true;
-      extraCompatPackages = with pkgs; [
-          proton-ge-bin
-      ];
-  };
-  programs.gamemode.enable = true;
-  programs.gamescope.enable = true;
-
   programs.direnv = {
       enable = true;
       nix-direnv.enable = true;
