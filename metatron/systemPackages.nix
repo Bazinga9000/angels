@@ -6,10 +6,4 @@
     killall              # killall
     nix-alien            # running Weird Binaries
  ];
-
-  # programs.XXXXX.enable zone
-  programs.direnv = {
-      enable = true;
-      nix-direnv.enable = true;
-  };
 }
