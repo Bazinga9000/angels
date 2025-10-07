@@ -6,7 +6,7 @@
     ./fonts.nix
     ./hardware-configuration.nix
     ./nvidia.nix
+    ./packages.nix
     ./steam.nix
-    ./systemPackages.nix
   ];
 }
