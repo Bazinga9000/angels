@@ -98,6 +98,7 @@
           ./common/packages.nix
           ./common/env_variables.nix
           ./jophiel/configuration.nix
+          ./common/languages/python.nix
         ];
       };
     };
