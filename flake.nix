@@ -72,11 +72,7 @@
           ./common/configuration.nix
           ./common/packages.nix
           ./common/languages
-          ./configuration.nix
-          ./cosmic.nix # Cosmic DE
-          ./nvidia.nix # the demon of babylon disguises himself with the coat of the righteous
-          ./systemPackages.nix
-          ./env_variables.nix
+          ./metatron
           catppuccin.nixosModules.catppuccin
           home-manager.nixosModules.home-manager {
             home-manager.extraSpecialArgs = inputs;
@@ -85,8 +81,7 @@
             home-manager.backupFileExtension = "bak";
             home-manager.users.bazinga = { pkgs, ...}: {
               imports = [
-                ./home.nix # General Home-Manager Config
-                ./theme.nix # Appearance Config
+                ./metatron/home
                 catppuccin.homeModules.catppuccin
                 zen-browser.homeModules.beta
               ];
