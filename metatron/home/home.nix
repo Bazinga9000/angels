@@ -34,6 +34,7 @@
     krita # Art Program
     baz9k.microwave # Microtonal Synth
     jugglinglab # Juggling
+    obs-studio # OBS for recording
 
     # Zed Editor (libz is for the Discord presence extension)
     (zed-editor.fhsWithPackages (
