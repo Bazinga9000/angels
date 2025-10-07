@@ -15,7 +15,8 @@
     yed # Yed Graph Editor
     element-desktop # Matrix Client
     font-manager # Font Manager
-    mathematica # Mathematica (NB: Installer needs manual addition to nix-store)
+    # disabled due to libtins build error
+    # mathematica # Mathematica (NB: Installer needs manual addition to nix-store)
     flatpak # Flatpak
     graphviz # Graph Visualization Tools
     zathura # PDF Viewer
