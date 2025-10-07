@@ -92,16 +92,6 @@
     font-size = 14;
   };
 
-  # Dunst Notifications
-  services.dunst.enable = true;
-  services.dunst.settings = {
-    global = {
-      follow = "mouse";
-      corner_radius = 3;
-      font = "FantasqueSansM Nerd Font Mono 12";
-    };
-  };
-
   # Nushell
   programs.nushell = {
     enable = true;
