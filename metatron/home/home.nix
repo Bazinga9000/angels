@@ -35,6 +35,7 @@
     baz9k.microwave # Microtonal Synth
     jugglinglab # Juggling
     obs-studio # OBS for recording
+    baz9k.nsmb-mariovsluigi # NSMB Mario VS. Luigi reimplementation
 
     # Zed Editor (libz is for the Discord presence extension)
     (zed-editor.fhsWithPackages (
