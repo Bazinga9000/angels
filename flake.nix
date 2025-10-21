@@ -30,6 +30,9 @@
     # My own package repo
     baz9k-pkgs.url = "github:Bazinga9000/baz9k-pkgs";
     baz9k-pkgs.inputs.nixpkgs.follows = "nixpkgs";
+
+    # Nixpkgs PR Patcher
+    nixpkgs-patcher.url = "github:gepbird/nixpkgs-patcher";
   };
 
   outputs = {
@@ -38,6 +41,7 @@
     home-manager,
     catppuccin,
     zen-browser,
+    nixpkgs-patcher,
     ...
   } @inputs:
     let
@@ -45,9 +49,9 @@
       system = "x86_64-linux";
     in {
     nixosConfigurations = {
-      metatron = lib.nixosSystem {
+      metatron = nixpkgs-patcher.lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit self; };
+        specialArgs = inputs;
         modules = [
           ./common/configuration.nix
           ./common/overlays.nix

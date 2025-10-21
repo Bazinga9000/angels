@@ -202,6 +202,45 @@
         "type": "github"
       }
     },
+    "nixpkgs-patch-jugglinglab-desktop": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-PUhC+9u88PJXkHuGm+FU9RMQMrVHup1yc9fECkXE+0Y=",
+        "type": "file",
+        "url": "https://github.com/NixOS/nixpkgs/pull/444855.diff"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/NixOS/nixpkgs/pull/444855.diff"
+      }
+    },
+    "nixpkgs-patch-lovely-injector-update": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-qcE6xOSWiZYXLq6+lP9G9BkH9FIvvYjZs1+qvB5BuKY=",
+        "type": "file",
+        "url": "https://github.com/NixOS/nixpkgs/pull/446993.diff"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/NixOS/nixpkgs/pull/446993.diff"
+      }
+    },
+    "nixpkgs-patcher": {
+      "locked": {
+        "lastModified": 1759655918,
+        "narHash": "sha256-UBxtzgeSan7K186nYyokjIUIgMEqg1JM9yR0Lk6+ifQ=",
+        "owner": "gepbird",
+        "repo": "nixpkgs-patcher",
+        "rev": "385ea045e492ec62b2c9c571b4311f75dd5342d8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "gepbird",
+        "repo": "nixpkgs-patcher",
+        "type": "github"
+      }
+    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1760878510,
@@ -247,6 +286,9 @@
         "home-manager": "home-manager",
         "nix-alien": "nix-alien",
         "nixpkgs": "nixpkgs_2",
+        "nixpkgs-patch-jugglinglab-desktop": "nixpkgs-patch-jugglinglab-desktop",
+        "nixpkgs-patch-lovely-injector-update": "nixpkgs-patch-lovely-injector-update",
+        "nixpkgs-patcher": "nixpkgs-patcher",
         "purescript-overlay": "purescript-overlay",
         "zen-browser": "zen-browser"
       }
