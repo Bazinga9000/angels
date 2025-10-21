@@ -2,7 +2,6 @@
 {
 
   home.packages = with pkgs; [
-    balatro # Balatro
     baz9k.a-solitaire-mystery # Hempuli's 30 Solitaire Variants
     baz9k.cambridge # Cambridge Stacker
     baz9k.magicseteditor.all # MSE incl. non-Magic Templates
