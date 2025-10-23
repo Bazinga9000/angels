@@ -2,6 +2,7 @@
 {
 
   home.packages = with pkgs; [
+    archipelago # Archipelago multiworld randomizer client
     baz9k.a-solitaire-mystery # Hempuli's 30 Solitaire Variants
     baz9k.cambridge # Cambridge Stacker
     baz9k.magicseteditor.all # MSE incl. non-Magic Templates
@@ -12,15 +13,6 @@
     olympus # Celeste Mod Manager
     sm64coopdx # Mario 64 Port
     xivlauncher # Final Fantasy XIV
-
-    # Archipelago Client
-    (archipelago.override {
-      extraPackages = with pkgs; [
-        # NB: archipelago-minecraft exists, but it adds openjdk and not temurin,
-        # and this is a more general solution in case other games need things
-        temurin-bin-17 # Java 17 for Minecraft
-      ];
-    })
 
     # Bizhawk Emulator
     (import bizhawk {
