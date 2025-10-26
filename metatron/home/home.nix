@@ -27,6 +27,8 @@
     baz9k.microwave # Microtonal Synth
     jugglinglab # Juggling
     obs-studio # OBS for recording
+    cbonsai # Fun CLI: Bonsai Trees
+    asciiquarium # Fun CLI: Acquarium
 
     # Zed Editor (libz is for the Discord presence extension)
     (zed-editor.fhsWithPackages (
