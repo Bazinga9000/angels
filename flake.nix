@@ -33,11 +33,6 @@
 
     # Nixpkgs PR Patcher
     nixpkgs-patcher.url = "github:gepbird/nixpkgs-patcher";
-
-    nixpkgs-patch-jugglinglab-desktop = {
-      url = "https://github.com/NixOS/nixpkgs/pull/444855.diff";
-      flake = false;
-    };
   };
 
   outputs = {
