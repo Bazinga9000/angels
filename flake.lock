@@ -24,11 +24,11 @@
     "bizhawk": {
       "flake": false,
       "locked": {
-        "lastModified": 1761096704,
-        "narHash": "sha256-llLvJxhUiIbC1Dnab5SkVSGePrV9mMRDmEdRbgIiOVI=",
+        "lastModified": 1761403721,
+        "narHash": "sha256-nX76Q/mz96DhRhYUZWuIGyNGs5eeLR73e5ZN2j/H3BI=",
         "owner": "TASEmulators",
         "repo": "BizHawk",
-        "rev": "3af315ef63a582f401f069e0aad9ec7e99781464",
+        "rev": "52886ebf7bfc011728e9307821534a0ccf5e60ce",
         "type": "github"
       },
       "original": {
@@ -111,11 +111,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1761191301,
-        "narHash": "sha256-xsRL2Oyb4YRZZ1Tu4WzR2uFg1n931bH+PfLdFcqtLg8=",
+        "lastModified": 1761513701,
+        "narHash": "sha256-w7qOcQb1FSMZASvWe01r99QqZ5LnHO0k3rgs5ryyig0=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "4958aafe7b237dc1e857fb0c916efff72075048f",
+        "rev": "255b6a0ef2f488a2fad051361699cc67db57338c",
         "type": "github"
       },
       "original": {
@@ -202,18 +202,6 @@
         "type": "github"
       }
     },
-    "nixpkgs-patch-jugglinglab-desktop": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-PUhC+9u88PJXkHuGm+FU9RMQMrVHup1yc9fECkXE+0Y=",
-        "type": "file",
-        "url": "https://github.com/NixOS/nixpkgs/pull/444855.diff"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://github.com/NixOS/nixpkgs/pull/444855.diff"
-      }
-    },
     "nixpkgs-patcher": {
       "locked": {
         "lastModified": 1759655918,
@@ -231,11 +219,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1761114652,
-        "narHash": "sha256-f/QCJM/YhrV/lavyCVz8iU3rlZun6d+dAiC3H+CDle4=",
+        "lastModified": 1761373498,
+        "narHash": "sha256-Q/uhWNvd7V7k1H1ZPMy/vkx3F8C13ZcdrKjO7Jv7v0c=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "01f116e4df6a15f4ccdffb1bcd41096869fb385c",
+        "rev": "6a08e6bb4e46ff7fcbb53d409b253f6bad8a28ce",
         "type": "github"
       },
       "original": {
@@ -274,7 +262,6 @@
         "home-manager": "home-manager",
         "nix-alien": "nix-alien",
         "nixpkgs": "nixpkgs_2",
-        "nixpkgs-patch-jugglinglab-desktop": "nixpkgs-patch-jugglinglab-desktop",
         "nixpkgs-patcher": "nixpkgs-patcher",
         "purescript-overlay": "purescript-overlay",
         "zen-browser": "zen-browser"
@@ -309,11 +296,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1761180075,
-        "narHash": "sha256-V4WLeUQ4gCGZiVihlXWBOZ/1FNcL0jM4zgTY1haJLvY=",
+        "lastModified": 1761471016,
+        "narHash": "sha256-sCiTEdvR5bnsAKmm0BcR6DLN4YKSUa43xLopA0VHYww=",
         "owner": "0xc000022070",
         "repo": "zen-browser-flake",
-        "rev": "771a2604606905d8c0ffe3b818dc2cc5bd1405d8",
+        "rev": "9876658e1abf52bafa06bec7b0c2ba7e03931b0e",
         "type": "github"
       },
       "original": {
