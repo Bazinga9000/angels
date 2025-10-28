@@ -8,10 +8,6 @@ rebuild *FLAGS:
     nh os switch --ask --hostname $(hostname) . {{FLAGS}}
 
 
-# Check on the state of your nixpkgs and update if needed
-status:
-    @nu scripts/updateMaybe.nu
-
 # Update the flake inputs, then rebuild the system
 update *FLAGS:
     nh os switch --update --ask --hostname $(hostname) . {{FLAGS}}

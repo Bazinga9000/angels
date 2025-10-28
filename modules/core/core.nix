@@ -8,6 +8,7 @@
       includes = with aspects; [
         angels
         boot
+        hyfetch
         locale
         networking
         nix-meta
