@@ -1,90 +1,108 @@
+# DO-NOT-EDIT. This file was auto-generated using github:vic/flake-file.
+# Use `nix run .#write-flake` to regenerate it.
 {
-  description = "Make the system config";
+
+  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-unstable";
-
-    # Home Manager - Declarative dotfiles
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-
-    # Catppuccin - A theme
-    catppuccin.url = "github:catppuccin/nix";
-    catppuccin.inputs.nixpkgs.follows = "nixpkgs";
-
-    # Nix-Alien
-    nix-alien.url = "github:thiagokokada/nix-alien";
-
-    # Purescript Overlay
-    purescript-overlay.url = "github:thomashoneyman/purescript-overlay";
-    purescript-overlay.inputs.nixpkgs.follows = "nixpkgs";
-
-    # Bizhawk
-    bizhawk.url = "github:TASEmulators/BizHawk";
-    bizhawk.flake = false;
-
-    # Zen Browser
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
-    zen-browser.inputs.nixpkgs.follows = "nixpkgs";
-
-    # My own package repo
-    baz9k-pkgs.url = "github:Bazinga9000/baz9k-pkgs";
-    baz9k-pkgs.inputs.nixpkgs.follows = "nixpkgs";
-
-    # Nixpkgs PR Patcher
-    nixpkgs-patcher.url = "github:gepbird/nixpkgs-patcher";
-  };
-
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    catppuccin,
-    zen-browser,
-    nixpkgs-patcher,
-    ...
-  } @inputs:
-    let
-      lib = nixpkgs.lib;
-      system = "x86_64-linux";
-    in {
-    nixosConfigurations = {
-      metatron = nixpkgs-patcher.lib.nixosSystem {
-        inherit system;
-        specialArgs = inputs;
-        modules = [
-          ./common/configuration.nix
-          ./common/overlays.nix
-          ./common/packages.nix
-          ./common/languages
-          ./metatron
-          catppuccin.nixosModules.catppuccin
-          home-manager.nixosModules.home-manager {
-            home-manager.extraSpecialArgs = inputs;
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.backupFileExtension = "bak";
-            home-manager.users.bazinga = { pkgs, ...}: {
-              imports = [
-                ./metatron/home
-                catppuccin.homeModules.catppuccin
-                zen-browser.homeModules.beta
-              ];
-            };
-          }
-        ];
+    baz9k-pkgs = {
+      inputs = {
+        nixpkgs = {
+          follows = "nixpkgs";
+        };
       };
-
-      jophiel = lib.nixosSystem {
-        inherit system;
-        specialArgs = { inherit self; };
-        modules = [
-          ./common/configuration.nix
-          ./common/packages.nix
-          ./jophiel/configuration.nix
-          ./common/languages/python.nix
-        ];
+      url = "github:Bazinga9000/baz9k-pkgs";
+    };
+    bizhawk = {
+      flake = false;
+      url = "github:TASEmulators/BizHawk";
+    };
+    catppuccin = {
+      inputs = {
+        nixpkgs = {
+          follows = "nixpkgs";
+        };
       };
+      url = "github:catppuccin/nix";
+    };
+    den = {
+      url = "github:vic/den";
+    };
+    flake-aspects = {
+      url = "github:vic/flake-aspects";
+    };
+    flake-compat = {
+      url = "github:edolstra/flake-compat";
+    };
+    flake-file = {
+      url = "github:vic/flake-file";
+    };
+    flake-parts = {
+      inputs = {
+        nixpkgs-lib = {
+          follows = "nixpkgs-lib";
+        };
+      };
+      url = "github:hercules-ci/flake-parts";
+    };
+    home-manager = {
+      inputs = {
+        nixpkgs = {
+          follows = "nixpkgs";
+        };
+      };
+      url = "github:nix-community/home-manager";
+    };
+    import-tree = {
+      url = "github:vic/import-tree";
+    };
+    nix-alien = {
+      url = "github:thiagokokada/nix-alien";
+    };
+    nix-auto-follow = {
+      inputs = {
+        nixpkgs = {
+          follows = "nixpkgs";
+        };
+      };
+      url = "github:fzakaria/nix-auto-follow";
+    };
+    nixpkgs = {
+      url = "nixpkgs/nixos-unstable";
+    };
+    nixpkgs-lib = {
+      follows = "nixpkgs";
+    };
+    nixpkgs-patcher = {
+      url = "github:gepbird/nixpkgs-patcher";
+    };
+    purescript-overlay = {
+      inputs = {
+        nixpkgs = {
+          follows = "nixpkgs";
+        };
+      };
+      url = "github:thomashoneyman/purescript-overlay";
+    };
+    systems = {
+      url = "github:nix-systems/default";
+    };
+    treefmt-nix = {
+      inputs = {
+        nixpkgs = {
+          follows = "nixpkgs";
+        };
+      };
+      url = "github:numtide/treefmt-nix";
+    };
+    zen-browser = {
+      inputs = {
+        nixpkgs = {
+          follows = "nixpkgs";
+        };
+      };
+      url = "github:0xc000022070/zen-browser-flake";
     };
   };
+
 }

@@ -4,6 +4,7 @@ _default:
 # Rebuild system
 rebuild *FLAGS:
     git add --intent-to-add *
+    nix run .#write-flake
     nh os switch --ask --hostname metatron . {{FLAGS}}
 
 
