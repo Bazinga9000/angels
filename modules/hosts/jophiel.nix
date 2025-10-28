@@ -22,7 +22,10 @@
         ../../hardware-configs/jophiel.nix
       ];
 
+      # Override grub setings for jophiel
       boot.loader.grub.device = lib.mkForce "/dev/sda";
+      boot.loader.grub.efiSupport = lib.mkForce false;
+      boot.loader.efi.canTouchEfiVariables = lib.mkForce false;
     };
   };
 }
