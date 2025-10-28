@@ -1,4 +1,4 @@
-{config, ...}: {
+{config, lib, ...}: {
   flake.nixosConfigurations.jophiel = config.flake.lib.make-host {
     system = "x86_64-linux";
     hostName = "jophiel";
@@ -21,6 +21,8 @@
       imports = [
         ../../hardware-configs/jophiel.nix
       ];
+
+      boot.loader.grub.device = lib.mkForce "/dev/sda";
     };
   };
 }
