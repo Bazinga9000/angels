@@ -55,7 +55,7 @@
         };
 
         programs.nushell.extraConfig = ''
-          hyfetch
+          if (not $nu.is-login) { hyfetch }
         '';
       };
     };
