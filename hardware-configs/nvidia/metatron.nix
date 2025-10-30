@@ -18,7 +18,7 @@ in
   hardware.graphics.extraPackages = with pkgs; [
       nvidia-vaapi-driver
       libvdpau-va-gl
-      vaapiVdpau
+      libva-vdpau-driver
   ];
 
   # Load "nvidia" driver for Xorg and Wayland
