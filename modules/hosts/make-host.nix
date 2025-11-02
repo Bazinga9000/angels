@@ -13,7 +13,7 @@
     assert builtins.isList host-cfg.aspects;
     inputs.nixpkgs-patcher.lib.nixosSystem {
         nixpkgsPatcher.inputs = inputs;
-        system = host-cfg.system;
+        stdenv.hostPlatform.system = host-cfg.system;
         modules = (builtins.map (module: config.flake.modules.nixos.${module} or { }) host-cfg.aspects) ++ [
         config.flake.modules.nixos.core # Include core on every host
         config.flake.modules.nixos.${host-cfg.hostName} or {} # Auto-include any host-specific aspect if one exists
