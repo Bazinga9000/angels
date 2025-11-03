@@ -9,6 +9,7 @@
         baobab # Disk Usage Analyzer
         bottles # Run windows applications
         font-manager # Show installed fonts
+        popsicle # USB Flasher
         zathura # PDF viewer
 
         # Zed Editor (libz is for the Discord presence extension)
