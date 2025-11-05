@@ -44,9 +44,13 @@
             ];
           })
 
-          # Balatro
-          (balatro.overrideAttrs (finalAttrs: previousAttrs: {
-            buildInputs = previousAttrs.buildInputs ++ [curl];
+          # Balatro, wrapped for curl for some mods
+          (balatro.overrideAttrs (oldAttrs: {
+            buildInputs = oldAttrs.buildInputs or [] ++ [ curl ];
+            postInstall = oldAttrs.postInstall or "" + ''
+              wrapProgram $out/bin/balatro \
+                --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath [curl]}"
+            '';
           }))
         ];
       };
