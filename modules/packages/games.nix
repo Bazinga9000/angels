@@ -11,7 +11,7 @@
       '';
       includes = with aspects; [baz9k];
 
-      # TODO: declaratively declare a-solitaire-mystery and sm64 files here
+      # TODO: declaratively declare a-solitaire-mystery and sm64 and balatro files here
 
       homeManager = {pkgs, ...}: {
         home.packages = with pkgs; [
@@ -43,6 +43,11 @@
               temurin-bin-21
             ];
           })
+
+          # Balatro
+          (balatro.overrideAttrs (finalAttrs: previousAttrs: {
+            buildInputs = previousAttrs.buildInputs ++ [curl];
+          }))
         ];
       };
     };
