@@ -32,6 +32,7 @@
       "purescript"
       "python"
       "rust"
+      "uiua"
     ];
   };
 
