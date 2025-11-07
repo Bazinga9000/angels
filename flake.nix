@@ -73,10 +73,6 @@
     nixpkgs-lib = {
       follows = "nixpkgs";
     };
-    nixpkgs-patch-lovely-injector-update = {
-      flake = false;
-      url = "https://github.com/NixOS/nixpkgs/pull/446993.diff";
-    };
     nixpkgs-patcher = {
       url = "github:gepbird/nixpkgs-patcher";
     };

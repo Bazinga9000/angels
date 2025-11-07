@@ -10,6 +10,7 @@ rebuild *FLAGS:
 
 # Update the flake inputs, then rebuild the system
 update *FLAGS:
+    nix run .#write-flake
     nh os switch --update --ask --hostname $(hostname) . {{FLAGS}}
     git add flake.lock
     git commit -m "update flake"
