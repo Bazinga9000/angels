@@ -13,7 +13,7 @@ update *FLAGS:
     nix run .#write-flake
     nh os switch --update --ask --hostname $(hostname) . {{FLAGS}}
     git add flake.lock
-    git commit -m "update flake"
+    git commit -m "flake: update"
     git push origin main
 
 # Add necessary external files to the Nix Store (see ./store-files/README.md for details)
