@@ -21,6 +21,7 @@
       "steam"
       "tools"
       "zen-browser"
+      "zed"
 
       # Language tooling
       "c-cpp"
