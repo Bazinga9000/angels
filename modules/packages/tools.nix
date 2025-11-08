@@ -12,14 +12,6 @@
         popsicle # USB Flasher
         zathura # PDF viewer
 
-        # Zed Editor (libz is for the Discord presence extension)
-        (zed-editor.fhsWithPackages (
-          ps: with ps; [
-            libz
-            openssl
-          ]
-        ))
-
         # Libreoffice and Spell Check
         libreoffice-qt-fresh
         hunspell
