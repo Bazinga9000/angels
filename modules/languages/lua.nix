@@ -10,5 +10,7 @@
         love
       ];
     };
+
+    homeManager.programs.zed-editor.extensions = ["lua"];
   };
 }

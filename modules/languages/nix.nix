@@ -7,7 +7,10 @@
     nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [
         nil
+        nixd
       ];
     };
+
+    homeManager.programs.zed-editor.extensions = ["nix"];
   };
 }

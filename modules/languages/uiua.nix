@@ -16,5 +16,7 @@
         uiua386
       ];
     };
+
+    homeManager.programs.zed-editor.extensions = ["uiua"];
   };
 }

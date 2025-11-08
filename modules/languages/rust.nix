@@ -9,5 +9,7 @@
         rustup
       ];
     };
+
+    homeManager.programs.zed-editor.extensions = ["rust-snippets"];
   };
 }

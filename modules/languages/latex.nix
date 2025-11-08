@@ -9,5 +9,7 @@
         texlive.combined.scheme-full
       ];
     };
+
+    homeManager.programs.zed-editor.extensions = ["latex"];
   };
 }

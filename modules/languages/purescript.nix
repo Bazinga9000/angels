@@ -23,5 +23,7 @@
         purs-backend-es
       ];
     };
+
+    homeManager.programs.zed-editor.extensions = ["purescript"];
   };
 }

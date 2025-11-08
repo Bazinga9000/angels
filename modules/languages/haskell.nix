@@ -11,5 +11,7 @@
         haskellPackages.haskell-language-server
       ];
     };
+
+    homeManager.programs.zed-editor.extensions = ["haskell"];
   };
 }
