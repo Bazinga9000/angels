@@ -13,6 +13,7 @@ update *FLAGS:
     nix run .#write-flake
     nh os switch --update --ask --hostname $(hostname) . {{FLAGS}}
     git add flake.lock
+    git add flake.nix
     git commit -m "flake: update"
     git push origin main
 
