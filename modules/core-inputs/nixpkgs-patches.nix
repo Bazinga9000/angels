@@ -9,4 +9,9 @@
   #
   # NB: Be sure to `nix run .#write-flake` after removing a merged patch.
   # Otherwise the patch will remain in the inputs and won't build.
+  flake-file.inputs.nixpkgs-patch-element-web-fix = {
+    # element-web-unwrapped: override jitsi-meet known vulnerabilities
+    url = "https://github.com/NixOS/nixpkgs/pull/460637.diff";
+    flake = false;
+  };
 }

@@ -59,19 +59,15 @@
     nix-alien = {
       url = "github:thiagokokada/nix-alien";
     };
-    nix-auto-follow = {
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
-      url = "github:fzakaria/nix-auto-follow";
-    };
     nixpkgs = {
       url = "nixpkgs/nixos-unstable";
     };
     nixpkgs-lib = {
       follows = "nixpkgs";
+    };
+    nixpkgs-patch-element-web-fix = {
+      flake = false;
+      url = "https://github.com/NixOS/nixpkgs/pull/460637.diff";
     };
     nixpkgs-patcher = {
       url = "github:gepbird/nixpkgs-patcher";
@@ -86,14 +82,6 @@
     };
     systems = {
       url = "github:nix-systems/default";
-    };
-    treefmt-nix = {
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
-      url = "github:numtide/treefmt-nix";
     };
     zen-browser = {
       inputs = {
