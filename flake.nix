@@ -65,10 +65,6 @@
     nixpkgs-lib = {
       follows = "nixpkgs";
     };
-    nixpkgs-patch-element-web-fix = {
-      flake = false;
-      url = "https://github.com/NixOS/nixpkgs/pull/460637.diff";
-    };
     nixpkgs-patcher = {
       url = "github:gepbird/nixpkgs-patcher";
     };
