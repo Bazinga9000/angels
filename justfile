@@ -11,6 +11,7 @@ rebuild *FLAGS:
 # Update the flake inputs, then rebuild the system
 update *FLAGS:
     nix run .#write-flake
+    @just --justfile {{justfile()}} store
     nh os switch --update --ask --hostname $(hostname) . {{FLAGS}}
     git add flake.lock
     git add flake.nix
@@ -22,6 +23,7 @@ store:
     nix-store --add-fixed sha256 ./store-files/Wolfram_14.2.1_LIN_Bndl.sh
     nix-store --add-fixed sha256 ./store-files/baserom.us.z64
     nix-store --add-fixed sha256 ./store-files/ASM_linux.tar.gz
+    nix-store --add-fixed sha256 ./store-files/Balatro-1.0.1o.exe
 
 
 # Garbage Collect the Nix Store (and then re-add required store files)
