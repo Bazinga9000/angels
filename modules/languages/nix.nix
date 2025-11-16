@@ -1,16 +1,34 @@
+{ lib, ... }:
 {
   flake.aspects.c-cpp = {
     description = ''
       Tools for Nix (the language)
     '';
 
-    nixos = {pkgs, ...}: {
-      environment.systemPackages = with pkgs; [
-        nil
-        nixd
-      ];
-    };
+    nixos =
+      { pkgs, ... }:
+      {
+        environment.systemPackages = with pkgs; [
+          nil
+          nixd
+          nixfmt
+        ];
+      };
 
-    homeManager.programs.zed-editor.extensions = ["nix"];
+    homeManager =
+      { pkgs, ... }:
+      {
+        programs = {
+          vscode.profiles.default.extensions = lib.optionals (pkgs ? vscode-marketplace) (
+            with pkgs.vscode-marketplace;
+            [
+              bbenoist.nix
+              jnoortheen.nix-ide
+            ]
+          );
+
+          zed-editor.extensions = [ "nix" ];
+        };
+      };
   };
 }

@@ -1,4 +1,4 @@
-{
+{lib, ...}: {
   flake.aspects.lua = {
     description = ''
       Tools for Lua
@@ -11,6 +11,14 @@
       ];
     };
 
-    homeManager.programs.zed-editor.extensions = ["lua"];
+    homeManager = {pkgs, ...}: {
+      programs = {
+        vscode.profiles.default.extensions = lib.optionals (pkgs?vscode-marketplace) (with pkgs.vscode-marketplace; [
+          sumneko.lua
+        ]);
+
+        zed-editor.extensions = ["lua"];
+      };
+    };
   };
 }

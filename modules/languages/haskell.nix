@@ -1,4 +1,4 @@
-{
+{lib, ...}: {
   flake.aspects.haskell = {
     description = ''
       Tools for Haskell
@@ -12,6 +12,15 @@
       ];
     };
 
-    homeManager.programs.zed-editor.extensions = ["haskell"];
+    homeManager = {pkgs, ...}: {
+      programs = {
+        vscode.profiles.default.extensions = lib.optionals (pkgs?vscode-marketplace) (with pkgs.vscode-marketplace; [
+          haskell.haskell
+          justusadam.language-haskell
+        ]);
+
+        zed-editor.extensions = ["haskell"];
+      };
+    };
   };
 }

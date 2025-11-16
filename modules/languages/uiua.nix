@@ -1,4 +1,4 @@
-{
+{lib, ...}: {
   flake.aspects.uiua = {
     description = ''
       Tools for Uiua
@@ -17,6 +17,20 @@
       ];
     };
 
-    homeManager.programs.zed-editor.extensions = ["uiua"];
+    homeManager = {pkgs, ...}: {
+      programs = {
+        vscode.profiles.default.extensions = lib.optionals (pkgs?vscode-marketplace) (with pkgs.vscode-marketplace; [
+          uiua-lang.uiua-vscode
+        ]);
+
+        vscode.profiles.default.userSettings = {
+          "[uiua]" = {
+             "editor.fontFamily" = "Uiua386, Fairfax HD, monospace";
+          };
+        };
+
+        zed-editor.extensions = ["uiua"];
+      };
+    };
   };
 }

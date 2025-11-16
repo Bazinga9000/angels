@@ -1,4 +1,4 @@
-{
+{lib, ...}: {
   flake.aspects.rust = {
     description = ''
       Tools for Rust
@@ -10,6 +10,14 @@
       ];
     };
 
-    homeManager.programs.zed-editor.extensions = ["rust-snippets"];
+    homeManager = {pkgs, ...}: {
+      programs = {
+        vscode.profiles.default.extensions = lib.optionals (pkgs?vscode-marketplace) (with pkgs.vscode-marketplace; [
+          rust-lang.rust-analyzer
+        ]);
+
+        zed-editor.extensions = ["rust-snippets"];
+      };
+    };
   };
 }

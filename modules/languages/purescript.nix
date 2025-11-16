@@ -1,4 +1,4 @@
-{inputs, ...}: {
+{inputs, lib, ...}: {
   flake-file.inputs.purescript-overlay = {
     url = "github:thomashoneyman/purescript-overlay";
     inputs.nixpkgs.follows = "nixpkgs";
@@ -24,6 +24,16 @@
       ];
     };
 
-    homeManager.programs.zed-editor.extensions = ["purescript"];
+    homeManager = {pkgs, ...}: {
+      programs = {
+        vscode.profiles.default.extensions = lib.optionals (pkgs?vscode-marketplace) (with pkgs.vscode-marketplace; [
+          nwolverson.ide-purescript
+          nwolverson.language-purescript
+          mvakula.vscode-purty
+        ]);
+
+        zed-editor.extensions = ["purescript"];
+      };
+    };
   };
 }

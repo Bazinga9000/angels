@@ -1,4 +1,4 @@
-{
+{lib, ...}: {
   flake.aspects.latex = {
     description = ''
       Tools for LaTeX
@@ -10,6 +10,15 @@
       ];
     };
 
-    homeManager.programs.zed-editor.extensions = ["latex"];
+    homeManager = {pkgs, ...}: {
+      programs = {
+        vscode.profiles.default.extensions = lib.optionals (pkgs?vscode-marketplace) (with pkgs.vscode-marketplace; [
+          haskell.haskell
+          justusadam.language-haskell
+        ]);
+
+        zed-editor.extensions = ["latex"];
+      };
+    };
   };
 }
