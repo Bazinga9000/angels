@@ -20,6 +20,7 @@
       "social"
       "steam"
       "tools"
+      "vscode"
       "zen-browser"
       "zed"
 
@@ -30,6 +31,7 @@
       "lua"
       "mathematica"
       "nix"
+      "nu"
       "purescript"
       "python"
       "rust"
