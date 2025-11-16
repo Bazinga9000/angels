@@ -4,10 +4,12 @@
       Enable and configure Nushell as the default shell.
     '';
 
-    nixos = {pkgs, ...}: {
-      environment.systemPackages = with pkgs; [ nushell ];
-      users.defaultUserShell = pkgs.nushell;
-    };
+    nixos =
+      { pkgs, ... }:
+      {
+        environment.systemPackages = with pkgs; [ nushell ];
+        users.defaultUserShell = pkgs.nushell;
+      };
 
     homeManager = {
       # Enable and configure Nushell via Home Manager

@@ -1,4 +1,5 @@
-{inputs, config, ...}: {
+{ inputs, config, ... }:
+{
   flake-file.inputs.nixpkgs-patcher.url = "github:gepbird/nixpkgs-patcher";
 
   # Generates a host using the nixos and home-manager parts of each provided flake aspect.
@@ -12,41 +13,49 @@
     assert builtins.isString host-cfg.userName;
     assert builtins.isList host-cfg.aspects;
     inputs.nixpkgs-patcher.lib.nixosSystem {
-        nixpkgsPatcher.inputs = inputs;
-        system = host-cfg.system;
-        modules = (builtins.map (module: config.flake.modules.nixos.${module} or { }) host-cfg.aspects) ++ [
+      nixpkgsPatcher.inputs = inputs;
+      system = host-cfg.system;
+      modules = (builtins.map (module: config.flake.modules.nixos.${module} or { }) host-cfg.aspects) ++ [
         config.flake.modules.nixos.core # Include core on every host
-        config.flake.modules.nixos.${host-cfg.hostName} or {} # Auto-include any host-specific aspect if one exists
+        config.flake.modules.nixos.${host-cfg.hostName} or { } # Auto-include any host-specific aspect if one exists
 
         {
-            # Set hostname and stateversion
-            networking.hostName = host-cfg.hostName;
-            system.stateVersion = host-cfg.stateVersion;
+          # Set hostname and stateversion
+          networking.hostName = host-cfg.hostName;
+          system.stateVersion = host-cfg.stateVersion;
 
-            # Add the requested user as root:
-            users.users.${host-cfg.userName} = {
+          # Add the requested user as root:
+          users.users.${host-cfg.userName} = {
             isNormalUser = true;
-            extraGroups = [ "networkmanager" "wheel" ];
+            extraGroups = [
+              "networkmanager"
+              "wheel"
+            ];
             useDefaultShell = true;
-            };
+          };
         }
 
         # Set up home-manager
-        inputs.home-manager.nixosModules.home-manager {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.backupFileExtension = "bak";
-            home-manager.users.bazinga = { pkgs, ...}: {
-            imports = (builtins.map (module: config.flake.modules.homeManager.${module} or { }) host-cfg.aspects) ++ [
-                config.flake.modules.homeManager.core # always add core
-                {
-                home.username = host-cfg.userName;
-                home.homeDirectory = "/home/${host-cfg.userName}";
-                programs.home-manager.enable = true;
-                home.stateVersion = host-cfg.homeStateVersion or host-cfg.stateVersion; # set stateversion to match the system's if unspecified
-                }
-            ];
-          };
+        inputs.home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.backupFileExtension = "bak";
+          home-manager.users.bazinga =
+            { pkgs, ... }:
+            {
+              imports =
+                (builtins.map (module: config.flake.modules.homeManager.${module} or { }) host-cfg.aspects)
+                ++ [
+                  config.flake.modules.homeManager.core # always add core
+                  {
+                    home.username = host-cfg.userName;
+                    home.homeDirectory = "/home/${host-cfg.userName}";
+                    programs.home-manager.enable = true;
+                    home.stateVersion = host-cfg.homeStateVersion or host-cfg.stateVersion; # set stateversion to match the system's if unspecified
+                  }
+                ];
+            };
         }
       ];
     };

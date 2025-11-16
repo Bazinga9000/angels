@@ -1,4 +1,5 @@
-{inputs, ...}: {
+{ inputs, ... }:
+{
   flake-file.inputs.nix-alien = {
     url = "github:thiagokokada/nix-alien";
   };
@@ -8,12 +9,14 @@
       Enables nix-alien for running non-NixOS binaries.
     '';
 
-    nixos = {pkgs, ...}: {
-      nixpkgs.overlays = [
-        inputs.nix-alien.overlays.default
-      ];
+    nixos =
+      { pkgs, ... }:
+      {
+        nixpkgs.overlays = [
+          inputs.nix-alien.overlays.default
+        ];
 
-      environment.systemPackages = [pkgs.nix-alien];
-    };
+        environment.systemPackages = [ pkgs.nix-alien ];
+      };
   };
 }

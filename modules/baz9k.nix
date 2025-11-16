@@ -1,4 +1,5 @@
-{inputs, ...}: {
+{ inputs, ... }:
+{
   flake-file.inputs.baz9k-pkgs = {
     url = "github:Bazinga9000/baz9k-pkgs";
     inputs.nixpkgs.follows = "nixpkgs";

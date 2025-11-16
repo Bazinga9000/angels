@@ -9,7 +9,10 @@
       nixpkgs.config.allowUnfree = true;
 
       # Enable experimental features (for flakes)
-      nix.settings.experimental-features = [ "nix-command" "flakes" ];
+      nix.settings.experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
 
       # Automatic garbage collection of the nix store
       nix.gc = {

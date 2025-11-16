@@ -4,8 +4,10 @@
       Steam and its helpers (Gamemode, Proton, Gamescope)
     '';
 
-    nixos = {pkgs, ...}: {
-      programs.steam = {
+    nixos =
+      { pkgs, ... }:
+      {
+        programs.steam = {
           enable = true;
           protontricks.enable = true;
           extest.enable = true;
@@ -13,11 +15,11 @@
           dedicatedServer.openFirewall = true;
           localNetworkGameTransfers.openFirewall = true;
           extraCompatPackages = with pkgs; [
-              proton-ge-bin
+            proton-ge-bin
           ];
+        };
+        programs.gamemode.enable = true;
+        programs.gamescope.enable = true;
       };
-      programs.gamemode.enable = true;
-      programs.gamescope.enable = true;
-    };
   };
 }

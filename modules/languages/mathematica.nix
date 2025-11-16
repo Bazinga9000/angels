@@ -4,12 +4,14 @@
       Tools for Mathematica
     '';
 
-    nixos = {pkgs, ...}: {
-      # TODO: declaratively require mathematica file here
+    nixos =
+      { pkgs, ... }:
+      {
+        # TODO: declaratively require mathematica file here
 
-      environment.systemPackages = with pkgs; [
-        mathematica
-      ];
-    };
+        environment.systemPackages = with pkgs; [
+          mathematica
+        ];
+      };
   };
 }

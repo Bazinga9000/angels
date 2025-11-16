@@ -1,4 +1,5 @@
-{config, ...}: {
+{ config, ... }:
+{
   flake.nixosConfigurations.metatron = config.flake.lib.make-host {
     system = "x86_64-linux";
     hostName = "metatron";

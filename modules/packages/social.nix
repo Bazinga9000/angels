@@ -4,16 +4,20 @@
       Programs for socializing.
     '';
 
-    nixos = {pkgs, ...}: {
-      environment.systemPackages = with pkgs; [
-        vesktop # This is a system package to play nice with screensharing
-      ];
-    };
+    nixos =
+      { pkgs, ... }:
+      {
+        environment.systemPackages = with pkgs; [
+          vesktop # This is a system package to play nice with screensharing
+        ];
+      };
 
-    homeManager = {pkgs, ...}: {
-      home.packages = with pkgs; [
-        element-desktop
-      ];
-    };
+    homeManager =
+      { pkgs, ... }:
+      {
+        home.packages = with pkgs; [
+          element-desktop
+        ];
+      };
   };
 }

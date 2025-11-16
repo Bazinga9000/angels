@@ -1,4 +1,5 @@
-{config, lib, ...}: {
+{ config, lib, ... }:
+{
   flake.nixosConfigurations.jophiel = config.flake.lib.make-host {
     system = "x86_64-linux";
     hostName = "jophiel";

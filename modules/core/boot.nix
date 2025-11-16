@@ -13,7 +13,7 @@
       boot.loader.efi.canTouchEfiVariables = true;
 
       # Enable NTFS Support
-      boot.supportedFilesystems = ["ntfs"];
+      boot.supportedFilesystems = [ "ntfs" ];
     };
   };
 }
