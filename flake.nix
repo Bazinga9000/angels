@@ -59,6 +59,14 @@
     nix-alien = {
       url = "github:thiagokokada/nix-alien";
     };
+    nix-vscode-extensions = {
+      inputs = {
+        nixpkgs = {
+          follows = "nixpkgs";
+        };
+      };
+      url = "github:nix-community/nix-vscode-extensions";
+    };
     nixpkgs = {
       url = "nixpkgs/nixos-unstable";
     };
