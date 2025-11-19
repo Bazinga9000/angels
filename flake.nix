@@ -6,11 +6,7 @@
 
   inputs = {
     baz9k-pkgs = {
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
       url = "github:Bazinga9000/baz9k-pkgs";
     };
     bizhawk = {
@@ -18,81 +14,37 @@
       url = "github:TASEmulators/BizHawk";
     };
     catppuccin = {
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
       url = "github:catppuccin/nix";
     };
-    den = {
-      url = "github:vic/den";
-    };
-    flake-aspects = {
-      url = "github:vic/flake-aspects";
-    };
-    flake-compat = {
-      url = "github:edolstra/flake-compat";
-    };
-    flake-file = {
-      url = "github:vic/flake-file";
-    };
+    den.url = "github:vic/den";
+    flake-aspects.url = "github:vic/flake-aspects";
+    flake-compat.url = "github:edolstra/flake-compat";
+    flake-file.url = "github:vic/flake-file";
     flake-parts = {
-      inputs = {
-        nixpkgs-lib = {
-          follows = "nixpkgs-lib";
-        };
-      };
+      inputs.nixpkgs-lib.follows = "nixpkgs-lib";
       url = "github:hercules-ci/flake-parts";
     };
     home-manager = {
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/home-manager";
     };
-    import-tree = {
-      url = "github:vic/import-tree";
-    };
-    nix-alien = {
-      url = "github:thiagokokada/nix-alien";
-    };
+    import-tree.url = "github:vic/import-tree";
+    nix-alien.url = "github:thiagokokada/nix-alien";
     nix-vscode-extensions = {
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/nix-vscode-extensions";
     };
-    nixpkgs = {
-      url = "nixpkgs/nixos-unstable";
-    };
-    nixpkgs-lib = {
-      follows = "nixpkgs";
-    };
-    nixpkgs-patcher = {
-      url = "github:gepbird/nixpkgs-patcher";
-    };
+    nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs-lib.follows = "nixpkgs";
+    nixpkgs-patcher.url = "github:gepbird/nixpkgs-patcher";
     purescript-overlay = {
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
       url = "github:thomashoneyman/purescript-overlay";
     };
-    systems = {
-      url = "github:nix-systems/default";
-    };
+    systems.url = "github:nix-systems/default";
     zen-browser = {
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
       url = "github:0xc000022070/zen-browser-flake";
     };
   };
