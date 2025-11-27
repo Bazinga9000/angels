@@ -43,6 +43,10 @@
       url = "github:thomashoneyman/purescript-overlay";
     };
     systems.url = "github:nix-systems/default";
+    uiua = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:uiua-lang/uiua";
+    };
     zen-browser = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:0xc000022070/zen-browser-flake";

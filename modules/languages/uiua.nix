@@ -1,5 +1,10 @@
-{ lib, ... }:
+{ inputs, lib, ... }:
 {
+  flake-file.inputs.uiua = {
+    url = "github:uiua-lang/uiua";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
+
   flake.aspects.uiua = {
     description = ''
       Tools for Uiua
@@ -9,14 +14,11 @@
       { pkgs, ... }:
       {
         environment.systemPackages = with pkgs; [
-          (uiua-unstable.override {
-            webcamSupport = true;
-            windowSupport = true;
-          })
+          inputs.uiua.packages.${pkgs.stdenv.hostPlatform.system}.default
         ];
 
         fonts.packages = with pkgs; [
-          uiua386
+          inputs.uiua.packages.${pkgs.stdenv.hostPlatform.system}.fonts
         ];
       };
 
