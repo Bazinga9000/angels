@@ -20,16 +20,16 @@
           { pkgs, ... }:
           {
             home.packages = with pkgs; [
+              a-solitaire-mystery # Hempuli's 30 Solitaire Variants
               archipelago # Archipelago multiworld randomizer client
               asciiquarium # Command line ASCII acquarium
-              baz9k.a-solitaire-mystery # Hempuli's 30 Solitaire Variants
-              baz9k.cambridge # Cambridge Stacker
-              baz9k.magicseteditor.all # MSE incl. non-Magic Templates
-              baz9k.nsmb-mariovsluigi # NSMB Mario VS. Luigi reimplementation
+              cambridge # Cambridge Stacker
               cbonsai # Command line bonsai trees
               celeste64 # Celeste 64 - Fragments of the Mountain
               cockatrice # MTG Client
               godot # Godot Game Engine
+              magicseteditor-all # MSE incl. non-Magic Templates
+              nsmb-mariovsluigi # NSMB Mario VS. Luigi reimplementation
               jugglinglab # Juggling Lab
               olympus # Celeste Mod Manager
               sm64coopdx # Mario 64 Port

@@ -22,7 +22,7 @@
                 proggyfonts
                 google-fonts
                 corefonts
-                baz9k.kreative-kore-fonts
+                kreative-kore-fonts
               ]
               ++ (builtins.filter lib.isDerivation (builtins.attrValues nerd-fonts));
           };

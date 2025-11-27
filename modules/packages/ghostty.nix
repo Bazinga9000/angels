@@ -13,7 +13,7 @@
           { pkgs, ... }:
           {
             fonts.packages = with pkgs; [
-              baz9k.kreative-kore-fonts
+              kreative-kore-fonts
             ];
           };
 

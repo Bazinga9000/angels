@@ -3,16 +3,17 @@
     "baz9k-pkgs": {
       "inputs": {
         "flake-compat": "flake-compat",
+        "flake-parts": "flake-parts",
         "nixpkgs": [
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1763958421,
-        "narHash": "sha256-DIoqK1mSLgBE2fC5e4wC/a0VpLdmLO+pgjoN2BD6Z4g=",
+        "lastModified": 1764223622,
+        "narHash": "sha256-8KE8jK/rKDkWPsyqIzZQuu3s/hY2co8ai0fvqbtn33k=",
         "owner": "Bazinga9000",
         "repo": "baz9k-pkgs",
-        "rev": "144ad76aea88c619a46bdce9697045cf5220fcaa",
+        "rev": "f78ced9d601760442f7bfab61d8ff53c9929a9ac",
         "type": "github"
       },
       "original": {
@@ -181,6 +182,24 @@
     },
     "flake-parts": {
       "inputs": {
+        "nixpkgs-lib": "nixpkgs-lib"
+      },
+      "locked": {
+        "lastModified": 1763759067,
+        "narHash": "sha256-LlLt2Jo/gMNYAwOgdRQBrsRoOz7BPRkzvNaI/fzXi2Q=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "2cccadc7357c0ba201788ae99c4dfa90728ef5e0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "flake-parts_2": {
+      "inputs": {
         "nixpkgs-lib": [
           "nixpkgs-lib"
         ]
@@ -199,7 +218,7 @@
         "type": "github"
       }
     },
-    "flake-parts_2": {
+    "flake-parts_3": {
       "inputs": {
         "nixpkgs-lib": [
           "uiua",
@@ -353,6 +372,21 @@
         "type": "github"
       }
     },
+    "nixpkgs-lib": {
+      "locked": {
+        "lastModified": 1761765539,
+        "narHash": "sha256-b0yj6kfvO8ApcSE+QmA6mUfu8IYG6/uU28OFn4PaC8M=",
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "rev": "719359f4562934ae99f5443f20aa06c2ffff91fc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nixpkgs.lib",
+        "type": "github"
+      }
+    },
     "nixpkgs-patcher": {
       "locked": {
         "lastModified": 1762257953,
@@ -414,7 +448,7 @@
         "flake-aspects": "flake-aspects",
         "flake-compat": "flake-compat_2",
         "flake-file": "flake-file",
-        "flake-parts": "flake-parts",
+        "flake-parts": "flake-parts_2",
         "home-manager": "home-manager",
         "import-tree": "import-tree",
         "nix-alien": "nix-alien",
@@ -490,7 +524,7 @@
     "uiua": {
       "inputs": {
         "crane": "crane",
-        "flake-parts": "flake-parts_2",
+        "flake-parts": "flake-parts_3",
         "nixpkgs": [
           "nixpkgs"
         ],
