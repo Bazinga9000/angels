@@ -20,7 +20,7 @@ update *FLAGS:
 
 # Add necessary external files to the Nix Store (see ./store-files/README.md for details)
 store:
-    nix-store --add-fixed sha256 ./store-files/Wolfram_14.2.1_LIN_Bndl.sh
+    nix-store --add-fixed sha256 ./store-files/Wolfram_14.3.0_LIN_Bndl.sh
     nix-store --add-fixed sha256 ./store-files/baserom.us.z64
     nix-store --add-fixed sha256 ./store-files/ASM_linux.tar.gz
     nix-store --add-fixed sha256 ./store-files/Balatro-1.0.1o.exe
