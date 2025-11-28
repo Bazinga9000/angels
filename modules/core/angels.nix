@@ -17,6 +17,7 @@
           # Generally useful cross-host
           wget
           lazygit
+          htop
         ];
       };
   };
