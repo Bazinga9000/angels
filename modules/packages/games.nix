@@ -27,6 +27,7 @@
               cbonsai # Command line bonsai trees
               celeste64 # Celeste 64 - Fragments of the Mountain
               cockatrice # MTG Client
+              deadlock-mod-manager # Deadlock Mod Manager
               godot # Godot Game Engine
               magicseteditor-all # MSE incl. non-Magic Templates
               nsmb-mariovsluigi # NSMB Mario VS. Luigi reimplementation
