@@ -28,7 +28,7 @@ store:
 
 # Garbage Collect the Nix Store (and then re-add required store files)
 clean:
-    sudo nix-collect-garbage -d
+    nh clean all -K 7d --optimise
     @just --justfile {{justfile()}} store
 
 # Commit the entire working tree, and push to remote
