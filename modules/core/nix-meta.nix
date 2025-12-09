@@ -14,11 +14,10 @@
         "flakes"
       ];
 
-      # Automatic garbage collection of the nix store
-      nix.gc = {
-        automatic = true;
-        dates = "weekly";
-        options = "--delete-older-than 30d";
+      programs.nh = {
+        enable = true;
+        clean.enable = true;
+        clean.extraArgs = "--keep 3 --keep-since 30d --optimise";
       };
 
       # Automatic optimization of the nix store
