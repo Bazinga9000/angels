@@ -12,7 +12,6 @@
           bottles # Run windows applications
           font-manager # Show installed fonts
           popsicle # USB Flasher
-          zathura # PDF viewer
 
           # Libreoffice and Spell Check
           libreoffice-qt-fresh
