@@ -26,17 +26,7 @@
       "zed"
 
       # Language tooling
-      "c-cpp"
-      "haskell"
-      "latex"
-      "lua"
-      "mathematica"
-      "nix"
-      "nu"
-      "purescript"
-      "python"
-      "rust"
-      "uiua"
+      "polyglot"
     ];
   };
 
