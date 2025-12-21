@@ -1,6 +1,6 @@
 { lib, ... }:
 {
-  flake.aspects.c-cpp = {
+  flake.aspects.nu = {
     description = ''
       Tools for Nu
     '';
