@@ -19,6 +19,7 @@
           python
           rust
           uiua
+          typst
         ];
 
         nixos = { };
