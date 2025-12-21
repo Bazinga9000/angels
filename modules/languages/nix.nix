@@ -1,6 +1,6 @@
 { lib, ... }:
 {
-  flake.aspects.c-cpp = {
+  flake.aspects.nix = {
     description = ''
       Tools for Nix (the language)
     '';
