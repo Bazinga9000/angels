@@ -61,6 +61,8 @@
                   "*" = false;
                 };
               };
+
+              mutableExtensionsDir = false;
             };
           };
       };
