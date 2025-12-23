@@ -37,6 +37,10 @@
     };
     nixpkgs.url = "nixpkgs/nixos-unstable";
     nixpkgs-lib.follows = "nixpkgs";
+    nixpkgs-patch-xivlauncher = {
+      flake = false;
+      url = "https://github.com/NixOS/nixpkgs/pull/472659.diff";
+    };
     nixpkgs-patcher.url = "github:gepbird/nixpkgs-patcher";
     purescript-overlay = {
       inputs.nixpkgs.follows = "nixpkgs";
