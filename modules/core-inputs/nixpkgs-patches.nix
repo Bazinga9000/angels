@@ -9,4 +9,8 @@
   #
   # NB: Be sure to `nix run .#write-flake` after removing a merged patch.
   # Otherwise the patch will remain in the inputs and won't build.
+  flake-file.inputs.nixpkgs-patch-vesktop-fix = {
+    url = "https://github.com/NixOS/nixpkgs/pull/476347.diff";
+    flake = false;
+  };
 }
