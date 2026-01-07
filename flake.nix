@@ -37,10 +37,6 @@
     };
     nixpkgs.url = "nixpkgs/nixos-unstable";
     nixpkgs-lib.follows = "nixpkgs";
-    nixpkgs-patch-vesktop-fix = {
-      flake = false;
-      url = "https://github.com/NixOS/nixpkgs/pull/476347.diff";
-    };
     nixpkgs-patcher.url = "github:gepbird/nixpkgs-patcher";
     purescript-overlay = {
       inputs.nixpkgs.follows = "nixpkgs";
