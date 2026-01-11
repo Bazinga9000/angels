@@ -29,6 +29,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/home-manager";
     };
+    hytale-launcher = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:TNAZEP/HytaleLauncherFlake";
+    };
     import-tree.url = "github:vic/import-tree";
     nix-alien.url = "github:thiagokokada/nix-alien";
     nix-vscode-extensions = {

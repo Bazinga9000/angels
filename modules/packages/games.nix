@@ -5,6 +5,11 @@
     flake = false;
   };
 
+  flake-file.inputs.hytale-launcher = {
+    url = "github:TNAZEP/HytaleLauncherFlake";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
+
   flake.aspects =
     { aspects, ... }:
     {
@@ -58,6 +63,9 @@
                     --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath [ curl ]}"
                 '';
               }))
+
+              # Hytale
+              inputs.hytale-launcher.packages.${pkgs.system}.default
             ];
           };
       };
