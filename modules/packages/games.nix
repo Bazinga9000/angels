@@ -34,6 +34,7 @@
               cockatrice # MTG Client
               deadlock-mod-manager # Deadlock Mod Manager
               godot # Godot Game Engine
+              hytale-launcher # Hytale
               magicseteditor-all # MSE incl. non-Magic Templates
               nsmb-mariovsluigi # NSMB Mario VS. Luigi reimplementation
               jugglinglab # Juggling Lab
@@ -63,9 +64,6 @@
                     --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath [ curl ]}"
                 '';
               }))
-
-              # Hytale
-              inputs.hytale-launcher.packages.${pkgs.system}.default
             ];
           };
       };
