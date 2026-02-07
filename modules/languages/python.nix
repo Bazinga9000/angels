@@ -32,7 +32,6 @@
               ms-python.vscode-pylance
               ms-python.vscode-pylance
               ms-python.debugpy
-              batisteo.vscode-django
             ]
           );
         };
