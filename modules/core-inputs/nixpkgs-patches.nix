@@ -13,4 +13,9 @@
     url = "https://github.com/NixOS/nixpkgs/pull/479368.diff";
     flake = false;
   };
+
+  flake-file.inputs.nixpkgs-patch-deadlock = {
+    url = "https://github.com/NixOS/nixpkgs/pull/488202.diff";
+    flake = false;
+  };
 }

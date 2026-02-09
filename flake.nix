@@ -41,6 +41,10 @@
     };
     nixpkgs.url = "nixpkgs/nixos-unstable";
     nixpkgs-lib.follows = "nixpkgs";
+    nixpkgs-patch-deadlock = {
+      flake = false;
+      url = "https://github.com/NixOS/nixpkgs/pull/488202.diff";
+    };
     nixpkgs-patch-hytale = {
       flake = false;
       url = "https://github.com/NixOS/nixpkgs/pull/479368.diff";

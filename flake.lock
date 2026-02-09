@@ -426,6 +426,18 @@
         "type": "github"
       }
     },
+    "nixpkgs-patch-deadlock": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-X9qgpVVHXIWyNbOCEuj2KwK/CKxGmK7olHSTcOlLALM=",
+        "type": "file",
+        "url": "https://github.com/NixOS/nixpkgs/pull/488202.diff"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/NixOS/nixpkgs/pull/488202.diff"
+      }
+    },
     "nixpkgs-patch-hytale": {
       "flake": false,
       "locked": {
@@ -508,6 +520,7 @@
         "nixpkgs-lib": [
           "nixpkgs"
         ],
+        "nixpkgs-patch-deadlock": "nixpkgs-patch-deadlock",
         "nixpkgs-patch-hytale": "nixpkgs-patch-hytale",
         "nixpkgs-patcher": "nixpkgs-patcher",
         "purescript-overlay": "purescript-overlay",
