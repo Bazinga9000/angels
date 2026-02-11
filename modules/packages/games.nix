@@ -28,7 +28,7 @@
               a-solitaire-mystery # Hempuli's 30 Solitaire Variants
               archipelago # Archipelago multiworld randomizer client
               asciiquarium # Command line ASCII acquarium
-              balatro # Balatro, the poker roguelike
+              (balatro.override { src = null; }) # Balatro, the poker roguelike
               cambridge # Cambridge Stacker
               cbonsai # Command line bonsai trees
               celeste64 # Celeste 64 - Fragments of the Mountain
