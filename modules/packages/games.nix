@@ -28,6 +28,7 @@
               a-solitaire-mystery # Hempuli's 30 Solitaire Variants
               archipelago # Archipelago multiworld randomizer client
               asciiquarium # Command line ASCII acquarium
+              balatro # Balatro, the poker roguelike
               cambridge # Cambridge Stacker
               cbonsai # Command line bonsai trees
               celeste64 # Celeste 64 - Fragments of the Mountain
@@ -55,15 +56,6 @@
                   temurin-bin-21
                 ];
               })
-
-              # Balatro, wrapped for curl for some mods
-              (balatro.overrideAttrs (oldAttrs: {
-                buildInputs = oldAttrs.buildInputs or [ ] ++ [ curl ];
-                postInstall = oldAttrs.postInstall or "" + ''
-                  wrapProgram $out/bin/balatro \
-                    --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath [ curl ]}"
-                '';
-              }))
             ];
           };
       };

@@ -18,4 +18,9 @@
     url = "https://github.com/NixOS/nixpkgs/pull/488202.diff";
     flake = false;
   };
+
+  flake-file.inputs.nixpkgs-patch-balatro = {
+    url = "https://github.com/NixOS/nixpkgs/pull/487860.diff";
+    flake = false;
+  };
 }
