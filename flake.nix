@@ -45,9 +45,9 @@
       flake = false;
       url = "https://github.com/NixOS/nixpkgs/pull/487860.diff";
     };
-    nixpkgs-patch-deadlock = {
+    nixpkgs-patch-balatro-rebase = {
       flake = false;
-      url = "https://github.com/NixOS/nixpkgs/pull/488202.diff";
+      url = "https://github.com/NixOS/nixpkgs/pull/489805.diff";
     };
     nixpkgs-patch-hytale = {
       flake = false;

@@ -14,13 +14,13 @@
     flake = false;
   };
 
-  flake-file.inputs.nixpkgs-patch-deadlock = {
-    url = "https://github.com/NixOS/nixpkgs/pull/488202.diff";
+  flake-file.inputs.nixpkgs-patch-balatro = {
+    url = "https://github.com/NixOS/nixpkgs/pull/487860.diff";
     flake = false;
   };
 
-  flake-file.inputs.nixpkgs-patch-balatro = {
-    url = "https://github.com/NixOS/nixpkgs/pull/487860.diff";
+  flake-file.inputs.nixpkgs-patch-balatro-rebase = {
+    url = "https://github.com/NixOS/nixpkgs/pull/489805.diff";
     flake = false;
   };
 }
