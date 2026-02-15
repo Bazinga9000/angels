@@ -35,20 +35,16 @@
     };
     import-tree.url = "github:vic/import-tree";
     nix-alien.url = "github:thiagokokada/nix-alien";
+    nix-index-database = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/nix-index-database";
+    };
     nix-vscode-extensions = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/nix-vscode-extensions";
     };
     nixpkgs.url = "nixpkgs/nixos-unstable";
     nixpkgs-lib.follows = "nixpkgs";
-    nixpkgs-patch-balatro = {
-      flake = false;
-      url = "https://github.com/NixOS/nixpkgs/pull/487860.diff";
-    };
-    nixpkgs-patch-balatro-rebase = {
-      flake = false;
-      url = "https://github.com/NixOS/nixpkgs/pull/489805.diff";
-    };
     nixpkgs-patch-hytale = {
       flake = false;
       url = "https://github.com/NixOS/nixpkgs/pull/479368.diff";
