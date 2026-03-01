@@ -49,10 +49,6 @@
       flake = false;
       url = "https://github.com/NixOS/nixpkgs/pull/479368.diff";
     };
-    nixpkgs-patch-lager = {
-      flake = false;
-      url = "https://github.com/NixOS/nixpkgs/pull/493363.diff";
-    };
     nixpkgs-patcher.url = "github:gepbird/nixpkgs-patcher";
     purescript-overlay = {
       inputs.nixpkgs.follows = "nixpkgs";

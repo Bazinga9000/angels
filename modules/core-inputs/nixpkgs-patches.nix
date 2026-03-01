@@ -13,10 +13,4 @@
     url = "https://github.com/NixOS/nixpkgs/pull/479368.diff";
     flake = false;
   };
-
-  flake-file.inputs.nixpkgs-patch-lager = {
-    # For Krita
-    url = "https://github.com/NixOS/nixpkgs/pull/493363.diff";
-    flake = false;
-  };
 }
