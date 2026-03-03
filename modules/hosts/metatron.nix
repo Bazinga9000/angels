@@ -23,7 +23,7 @@
       "tools"
       "vscode"
       "zen-browser"
-      "zed"
+      # "zed"
 
       # Language tooling
       "polyglot"
