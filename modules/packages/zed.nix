@@ -1,55 +1,37 @@
 {
-  flake.aspects =
-    { aspects, ... }:
-    {
-      zed = {
-        description = ''
-          Configuration for the zed editor.
-        '';
+  flake.aspects.zed = {
+    description = ''
+      Configuration for the zed editor.
+    '';
 
-        # Include baz9k aspect for Fairfax HD
-        includes = [ aspects.baz9k ];
+    homeManager =
+      { pkgs, ... }:
+      {
+        programs.zed-editor = {
+          enable = true;
 
-        nixos =
-          { pkgs, ... }:
-          {
-            fonts.packages = with pkgs; [
-              kreative-kore-fonts
-              google-fonts
-            ];
+          # Core Zed extensions
+          extensions = [
+            "nix"
+            "toml"
+            "just"
+            "git-firefly"
+            "html"
+          ];
+
+          package = pkgs.zed-editor.fhsWithPackages (
+            ps: with ps; [
+              libz
+              openssl
+            ]
+          );
+
+          userSettings = {
+            ui_font_size = 16;
+            buffer_line_height = "comfortable";
+            buffer_font_size = 18;
           };
-
-        homeManager =
-          { pkgs, ... }:
-          {
-            programs.zed-editor = {
-              enable = true;
-
-              # Core Zed extensions
-              extensions = [
-                "nix"
-                "toml"
-                "just"
-                "git-firefly"
-                "html"
-              ];
-
-              package = pkgs.zed-editor.fhsWithPackages (
-                ps: with ps; [
-                  libz
-                  openssl
-                ]
-              );
-
-              userSettings = {
-                ui_font_family = "Quicksand";
-                ui_font_size = 16;
-                buffer_font_family = "Fairfax HD";
-                buffer_line_height = "comfortable";
-                buffer_font_size = 18;
-              };
-            };
-          };
+        };
       };
-    };
+  };
 }

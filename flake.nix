@@ -13,10 +13,6 @@
       flake = false;
       url = "github:TASEmulators/BizHawk";
     };
-    catppuccin = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:catppuccin/nix";
-    };
     den.url = "github:vic/den";
     flake-aspects.url = "github:vic/flake-aspects";
     flake-compat.url = "github:edolstra/flake-compat";
@@ -53,6 +49,10 @@
     purescript-overlay = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:thomashoneyman/purescript-overlay";
+    };
+    stylix = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/stylix";
     };
     uiua = {
       inputs.nixpkgs.follows = "nixpkgs";

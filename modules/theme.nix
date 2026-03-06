@@ -1,58 +1,69 @@
-let
-  catp-flavor = "mocha";
-  catp-accent = "peach";
-in
-{ inputs, ... }:
+{ inputs, config, ... }:
 {
-  flake-file.inputs.catppuccin = {
-    url = "github:catppuccin/nix";
+  flake-file.inputs.stylix = {
+    url = "github:nix-community/stylix";
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  flake.aspects.theme = {
-    description = ''
-      Theme the system. Uses Catpuccin whenever possible.
-    '';
+  flake.aspects =
+    { aspects, ... }:
+    {
+      theme = {
 
-    nixos = {
-      imports = [
-        inputs.catppuccin.nixosModules.catppuccin
-      ];
+        includes = with aspects; [ baz9k ];
 
-      catppuccin.enable = true;
-      catppuccin.flavor = catp-flavor;
-      catppuccin.accent = catp-accent;
-    };
+        description = ''
+          Theme the system with Stylix. Uses Papercolor Dark whenever possible.
+        '';
 
-    homeManager =
-      { pkgs, ... }:
-      {
-        imports = [
-          inputs.catppuccin.homeModules.catppuccin
-        ];
+        nixos =
+          { pkgs, ... }:
+          {
+            imports = [
+              inputs.stylix.nixosModules.stylix
+            ];
 
-        # Non-GTK: Catppuccin
-        catppuccin.enable = true;
-        catppuccin.flavor = catp-flavor;
-        catppuccin.accent = catp-accent;
+            stylix.enable = true;
+            stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/chinoiserie-midnight.yaml";
+            stylix.image = ../assets/wallpapers/doom_sasasu_interphos.png;
 
-        # dconf Dark Mode (for the internet etc)
-        dconf.enable = true;
-        dconf.settings = {
-          "org/gnome/desktop/interface" = {
-            color-scheme = "prefer-dark";
+            stylix.fonts.sansSerif = {
+              package = pkgs.google-fonts;
+              name = "Quicksand";
+            };
+
+            stylix.fonts.monospace = {
+              package = pkgs.kreative-kore-fonts;
+              name = "Fairfax HD";
+            };
+
+            stylix.cursor = {
+              name = "volantes_cursors";
+              size = 16;
+              package = pkgs.volantes-cursors;
+            };
+
+            # Use HyperFluent GRUB theme
+            stylix.targets.grub.enable = false;
+            boot.loader.grub.theme = pkgs.stdenv.mkDerivation {
+              pname = "hyperfluent-grub-themes";
+              version = "1.0.1";
+              src = pkgs.fetchFromGitHub {
+                owner = "Coopydood";
+                repo = "HyperFluent-GRUB-Theme";
+                rev = "v1.0.1";
+                hash = "sha256-zryQsvue+YKGV681Uy6GqnDMxGUAEfmSJEKCoIuu2z8=";
+              };
+              installPhase = "cp -r nixos $out";
+            };
           };
-        };
 
-        # Catpuccin Cursor
-        home.pointerCursor = {
-          gtk.enable = true;
-          x11.enable = true;
-          name = "catppuccin-mocha-dark-cursors";
-          size = 16;
-          package = pkgs.catppuccin-cursors.mochaDark;
-        };
-
+        homeManager =
+          { pkgs, ... }:
+          {
+            # set profiles for zen browser
+            stylix.targets.zen-browser.profileNames = [ "default" ];
+          };
       };
-  };
+    };
 }
