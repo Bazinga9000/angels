@@ -5,14 +5,14 @@ _default:
 rebuild *FLAGS:
     git add --intent-to-add *
     nix run .#write-flake
-    nh os switch --ask --hostname $(hostname) . {{FLAGS}}
+    nh os switch --diff always --ask --hostname $(hostname) . {{FLAGS}}
 
 
 # Update the flake inputs, then rebuild the system
 update *FLAGS:
     nix run .#write-flake
     @just --justfile {{justfile()}} store
-    nh os switch --update --ask --hostname $(hostname) . {{FLAGS}}
+    nh os switch --diff always --update --ask --hostname $(hostname) . {{FLAGS}}
     git add flake.lock
     git add flake.nix
     git commit -m "flake: update"
