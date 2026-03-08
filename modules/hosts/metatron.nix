@@ -7,7 +7,7 @@
     stateVersion = "24.05";
     aspects = [
       # General system configuration
-      "cosmic"
+      "niri"
       "flatpak"
       "fonts"
       "nix-alien"
