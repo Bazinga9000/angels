@@ -30,6 +30,10 @@
       url = "github:TNAZEP/HytaleLauncherFlake";
     };
     import-tree.url = "github:vic/import-tree";
+    niri-flake = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:sodiboo/niri-flake";
+    };
     nix-alien.url = "github:thiagokokada/nix-alien";
     nix-index-database = {
       inputs.nixpkgs.follows = "nixpkgs";
@@ -46,6 +50,17 @@
       url = "https://github.com/NixOS/nixpkgs/pull/479368.diff";
     };
     nixpkgs-patcher.url = "github:gepbird/nixpkgs-patcher";
+    noctalia = {
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        noctalia-qs.follows = "noctalia-qs";
+      };
+      url = "github:noctalia-dev/noctalia-shell";
+    };
+    noctalia-qs = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:noctalia-dev/noctalia-qs";
+    };
     purescript-overlay = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:thomashoneyman/purescript-overlay";
