@@ -59,10 +59,18 @@
           };
 
         homeManager =
-          { pkgs, ... }:
+          { pkgs, lib, ... }:
           {
             # set profiles for zen browser
             stylix.targets.zen-browser.profileNames = [ "default" ];
+
+            # dconf Dark Mode (for the internet etc)
+            dconf.enable = true;
+            dconf.settings = {
+              "org/gnome/desktop/interface" = {
+                color-scheme = lib.mkForce "prefer-dark";
+              };
+            };
           };
       };
     };
