@@ -43,6 +43,13 @@
               package = pkgs.volantes-cursors;
             };
 
+            stylix.icons = {
+              enable = true;
+              package = pkgs.papirus-icon-theme;
+              dark = "Papirus-Dark";
+              light = "Papirus-Light";
+            };
+
             # Use HyperFluent GRUB theme
             stylix.targets.grub.enable = false;
             boot.loader.grub.theme = pkgs.stdenv.mkDerivation {
