@@ -93,11 +93,11 @@
     "bizhawk": {
       "flake": false,
       "locked": {
-        "lastModified": 1772758708,
-        "narHash": "sha256-Wk1N4JWvEtLuhjc92iYphfAopX4lQ5TlMf74bHcCIpw=",
+        "lastModified": 1773103571,
+        "narHash": "sha256-JeJV4lJtGDrHrSPhlliYPMVXq8sxEehOi5pkH474E+8=",
         "owner": "TASEmulators",
         "repo": "BizHawk",
-        "rev": "098114063a08d1bbba57f1381b72b01a26e14562",
+        "rev": "3464c38cd033e1fe0f152ebfef6ad4403eac8e34",
         "type": "github"
       },
       "original": {
@@ -123,11 +123,11 @@
     },
     "den": {
       "locked": {
-        "lastModified": 1773101213,
-        "narHash": "sha256-lEwksqfrsJPu7+cmN76BPV2vnSFvIPkvTIbEa5tk0vg=",
+        "lastModified": 1773112561,
+        "narHash": "sha256-xFfb3Qi7zMYOlLFNxDGPwg5iU8aTN08PQ7uJ9OeGSXI=",
         "owner": "vic",
         "repo": "den",
-        "rev": "dbf2cfc2fbf122ce95d8494cbf02690fded2f83e",
+        "rev": "c158988a7e366c6b7e2bb1de7fbd6db2b0ced22b",
         "type": "github"
       },
       "original": {
@@ -580,11 +580,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1773024435,
-        "narHash": "sha256-7/TN5LXdxiZPRG9jwEcGkF4gBitFze2bVXaqoGHOt8Y=",
+        "lastModified": 1773110250,
+        "narHash": "sha256-6hKCHERasNDbM+r/c1GdiLV5WBudFY+83fvN2yGffT8=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "1b704b075169f68bd81f6ddcb1dd1a2286069386",
+        "rev": "63cd90b93bae923575db4f54a6ae7292b620befc",
         "type": "github"
       },
       "original": {
@@ -692,11 +692,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1773090974,
-        "narHash": "sha256-D9dpV+/TMVLO34Q/cZADB68OvmDbFt+9ydxyXpFEVjY=",
+        "lastModified": 1773111688,
+        "narHash": "sha256-rgii0p58f6Mzk4pi5ffnlnaZEbMBkoPq0AwkyMKDRi8=",
         "owner": "noctalia-dev",
         "repo": "noctalia-shell",
-        "rev": "44045fa02045300304b9d1cb0d6c0a9988fc4772",
+        "rev": "93deeda58904a830707d91d05588d59701d18c44",
         "type": "github"
       },
       "original": {
@@ -977,11 +977,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1773017331,
-        "narHash": "sha256-r1sICUAXgbbFumHHob9NfXGMbmDPvuqPSQk1PD2TBoA=",
+        "lastModified": 1773110140,
+        "narHash": "sha256-p93BgW5JJSc+2IaFgHCqN1b0UPEb9KXrzBSuG7RhsE4=",
         "owner": "uiua-lang",
         "repo": "uiua",
-        "rev": "e62e35b7ddb5467b2a697a30f2f8d0d5d27f0cec",
+        "rev": "451ab0267b1092335c8e426dafa2a7764a28e657",
         "type": "github"
       },
       "original": {
