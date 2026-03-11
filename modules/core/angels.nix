@@ -17,8 +17,11 @@
           # Generally useful cross-host
           wget
           lazygit
-          htop
         ];
       };
+
+    homeManager = {
+      programs.btop.enable = true;
+    };
   };
 }
