@@ -52,15 +52,15 @@
         services.displayManager.cosmic-greeter.enable = true;
         programs.niri.enable = true;
 
-        # Enable thunar for file management
-        programs.thunar.enable = true;
-
         # Wayland Environment Fixes
         environment.sessionVariables.NIXOS_OZONE_WL = "1"; # Electron
 
-        # Enable XWayland support
         environment.systemPackages = with pkgs; [
+          # Enable XWayland support
           xwayland-satellite
+
+          # Enable nautilus for file management
+          nautilus
         ];
       };
 

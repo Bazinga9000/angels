@@ -40,7 +40,7 @@
             "code"
             "/home/bazinga/angels"
           ];
-          "Mod+N".action.spawn = "thunar";
+          "Mod+N".action.spawn = "nautilus";
 
           # You can also use a shell. Do this if you need pipes, multiple commands, etc.
           # Note: the entire command goes as a single argument in the end.
