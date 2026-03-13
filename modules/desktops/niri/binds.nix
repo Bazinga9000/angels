@@ -23,10 +23,10 @@
           #
           # Most actions that you can bind here can also be invoked programmatically with
           # `niri msg action do-something`.
-
           # Mod-Shift-/, which is usually the same as Mod-?,
           # shows a list of important hotkeys.
           "Mod+Shift+Slash".action.spawn = noctalia "plugin:keybind-cheatsheet toggle";
+          "Mod+Ctrl+Shift+Slash".action.show-hotkey-overlay = { };
 
           # Spawners
           "Mod+Return".action.spawn = "ghostty";
@@ -86,6 +86,7 @@
           };
 
           "Mod+Shift+Q".action.close-window = { };
+          "Mod+Tab".action.toggle-overview = { };
 
           "Mod+Left".action.focus-column-left = { };
           "Mod+Down".action.focus-window-down = { };
@@ -242,13 +243,15 @@
           "Mod+Period".action.expel-window-from-column = { };
 
           # There are also commands that consume or expel a single window to the side.
-          # Mod+BracketLeft  { consume-or-expel-window-left; }
-          # Mod+BracketRight { consume-or-expel-window-right; }
+          "Mod+BracketLeft".action.consume-or-expel-window-left = { };
+          "Mod+BracketRight".action.consume-or-expel-window-right = { };
 
           "Mod+R".action.switch-preset-column-width = { };
           "Mod+Shift+R".action.reset-window-height = { };
           "Mod+F".action.maximize-column = { };
           "Mod+Shift+F".action.fullscreen-window = { };
+          "Mod+Ctrl+F".action.toggle-window-floating = { };
+          "Mod+Ctrl+Shift+F".action.switch-focus-between-floating-and-tiling = { };
           "Mod+C".action.center-column = { };
 
           # Finer width adjustments.
