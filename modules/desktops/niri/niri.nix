@@ -85,6 +85,9 @@
           # Disable hot corners
           gestures.hot-corners.enable = false;
 
+          # Enable compose key on capslock
+          input.keyboard.xkb.options = "compose:caps";
+
           # Force eDP-1 to 0,0 if it exists (this is the laptop monitor)
           outputs."eDP-1".position = {
             x = 0;
