@@ -13,7 +13,7 @@
         includes = with aspects; [ baz9k ];
 
         description = ''
-          Theme the system with Stylix. Uses Papercolor Dark whenever possible.
+          Theme the system with Stylix. Uses Penumbra Dark (Contrast++) whenever possible.
         '';
 
         nixos =
@@ -24,7 +24,7 @@
             ];
 
             stylix.enable = true;
-            stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/chinoiserie-midnight.yaml";
+            stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/penumbra-dark-contrast-plus-plus.yaml";
             stylix.image = ../assets/wallpapers/doom_sasasu_interphos.png;
 
             stylix.fonts.sansSerif = {
