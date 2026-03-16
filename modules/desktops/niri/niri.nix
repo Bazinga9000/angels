@@ -55,6 +55,9 @@
         # Wayland Environment Fixes
         environment.sessionVariables.NIXOS_OZONE_WL = "1"; # Electron
 
+        # Enable evolution-data-server for calendar support
+        services.gnome.evolution-data-server.enable = true;
+
         environment.systemPackages = with pkgs; [
           # Enable XWayland support
           xwayland-satellite
@@ -78,6 +81,12 @@
         # Enable Noctalia shell and the systemd service
         programs.noctalia-shell = {
           enable = true;
+          package = (
+            # Override package for calendar support
+            inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
+              calendarSupport = true;
+            }
+          );
         };
 
         # Configure Niri settings
