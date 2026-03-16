@@ -78,7 +78,6 @@
         # Enable Noctalia shell and the systemd service
         programs.noctalia-shell = {
           enable = true;
-          systemd.enable = true;
         };
 
         # Configure Niri settings
@@ -94,6 +93,14 @@
             x = 0;
             y = 0;
           };
+
+          spawn-at-startup = [
+            {
+              command = [
+                "noctalia-shell" # Spawn Noctalia on startup
+              ];
+            }
+          ];
 
           window-rules = [
             {
