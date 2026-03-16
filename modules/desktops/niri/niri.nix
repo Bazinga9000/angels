@@ -61,6 +61,7 @@
 
           # Enable nautilus for file management
           nautilus
+          nautilus-python
         ];
       };
 
