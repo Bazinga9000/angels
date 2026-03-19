@@ -18,6 +18,11 @@
           wget
           lazygit
         ];
+
+        programs.tmux = {
+          enable = true;
+          clock24 = true;
+        };
       };
 
     homeManager = {
