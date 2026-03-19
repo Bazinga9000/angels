@@ -12,6 +12,7 @@
           boot
           caches
           hyfetch
+          ghostty
           locale
           networking
           nix-meta
