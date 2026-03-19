@@ -15,6 +15,9 @@
         "9.9.9.9"
       ];
       networking.networkmanager.dns = "none";
+
+      # Enable SSH
+      services.openssh.enable = true;
     };
   };
 }
