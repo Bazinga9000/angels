@@ -18,12 +18,8 @@
     };
   };
 
-  flake.aspects.niri-cache = {
-    descritpion = ''
-      Seperate aspect for manually enabling the Niri flake's cache. 
-      When setting up a new system, enable this aspect, rebuild, then enable the full niri aspect.
-    '';
-
+  # Add binary cache for niri
+  flake.aspects.caches = {
     nixos.nix.settings = {
       substituters = [ "https://niri.cachix.org" ];
       trusted-public-keys = [ "niri.cachix.org-1:Wv0OmO7PsuocRKzfDoJ3mulSl7Z6oezYhGhR+3W2964=" ];

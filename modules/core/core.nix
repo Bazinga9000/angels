@@ -10,6 +10,7 @@
         includes = with aspects; [
           angels
           boot
+          caches
           hyfetch
           locale
           networking
