@@ -14,7 +14,7 @@
       { pkgs, ... }:
       {
         environment.systemPackages = with pkgs; [
-          inputs.uiua.packages.${pkgs.stdenv.hostPlatform.system}.default
+          uiua-git
         ];
 
         fonts.packages = with pkgs; [
