@@ -77,12 +77,7 @@
         # Enable Noctalia shell and the systemd service
         programs.noctalia-shell = {
           enable = true;
-          package = (
-            # Override package for calendar support
-            inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
-              calendarSupport = true;
-            }
-          );
+          package = pkgs.noctalia-git-calendar;
         };
 
         # Configure Niri settings
