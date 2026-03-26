@@ -18,6 +18,7 @@
       "creative"
       "games"
       "ghostty"
+      "sajak"
       "social"
       "steam"
       "tools"
