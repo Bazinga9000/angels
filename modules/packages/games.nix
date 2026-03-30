@@ -39,6 +39,7 @@
               jugglinglab # Juggling Lab
               magicseteditor-all # MSE incl. non-Magic Templates
               nsmb-mariovsluigi # NSMB Mario VS. Luigi reimplementation
+              pvzge # PvZ2 Gardendless
               olympus # Celeste Mod Manager
               sm64coopdx # Mario 64 Port
               xivlauncher # Final Fantasy XIV
