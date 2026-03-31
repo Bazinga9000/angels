@@ -23,6 +23,7 @@
                 google-fonts
                 corefonts
                 kreative-kore-fonts
+                times-new-argam
               ]
               ++ (builtins.filter lib.isDerivation (builtins.attrValues nerd-fonts));
           };
