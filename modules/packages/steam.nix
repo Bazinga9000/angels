@@ -20,6 +20,9 @@
         };
         programs.gamemode.enable = true;
         programs.gamescope.enable = true;
+
+        # Enable NTSync kernel module for Wine/Proton
+        boot.kernelModules = [ "ntsync" ];
       };
   };
 }
