@@ -19,6 +19,7 @@
           nushell
           printing
           sound
+          ssh
           vim
           xserver
         ];

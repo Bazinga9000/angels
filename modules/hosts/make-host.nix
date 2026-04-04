@@ -1,4 +1,4 @@
-{ inputs, config, ... }:
+{ inputs, config, lib, ... }:
 {
   flake-file.inputs.nixpkgs-patcher.url = "github:gepbird/nixpkgs-patcher";
 
@@ -32,6 +32,11 @@
               "wheel"
             ];
             useDefaultShell = true;
+
+            # Add all authorized SSH keys from modules/core/ssh/keys.nix
+            # This will allow every host declared here to ssh into every other host
+            openssh.authorizedKeys.keys = lib.attrsets.attrValues config.flake.ssh-keys;
+  
           };
         }
 
