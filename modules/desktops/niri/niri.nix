@@ -51,8 +51,11 @@
         # Wayland Environment Fixes
         environment.sessionVariables.NIXOS_OZONE_WL = "1"; # Electron
 
-        # Enable evolution-data-server for calendar support
+        # Services for noctalia calendar / gnome calendar with external calendars
+        programs.dconf.enable = true;
         services.gnome.evolution-data-server.enable = true;
+        services.gnome.gnome-online-accounts.enable = true;
+        services.gnome.gnome-keyring.enable = true;
 
         environment.systemPackages = with pkgs; [
           # Enable XWayland support
@@ -61,6 +64,9 @@
           # Enable nautilus for file management
           nautilus
           nautilus-python
+
+          # Enable gnome-calendar
+          gnome-calendar
         ];
 
         # Use GNOME polkit instead of kde
