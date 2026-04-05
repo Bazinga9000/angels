@@ -57,6 +57,12 @@
         services.gnome.gnome-online-accounts.enable = true;
         services.gnome.gnome-keyring.enable = true;
 
+        # Hook up nautilus python extensions for ghostty
+        environment.pathsToLink = [
+          "/share/nautilus-python/extensions"
+        ];
+        environment.sessionVariables.NAUTILUS_4_EXTENSION_DIR = "${pkgs.nautilus-python}/lib/nautilus/extensions-4";
+
         environment.systemPackages = with pkgs; [
           # Enable XWayland support
           xwayland-satellite
