@@ -8,6 +8,7 @@
         '';
         # Include the various core aspects in all hosts
         includes = with aspects; [
+          agenix
           angels
           boot
           caches
@@ -20,6 +21,7 @@
           printing
           sound
           ssh
+          tailscale
           vim
           xserver
         ];

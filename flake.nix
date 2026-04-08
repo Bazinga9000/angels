@@ -4,6 +4,10 @@
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
 
   inputs = {
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     baz9k-pkgs = {
       url = "github:Bazinga9000/baz9k-pkgs";
       inputs.nixpkgs.follows = "nixpkgs";
