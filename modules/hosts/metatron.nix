@@ -42,6 +42,10 @@
         ../../hardware-configs/metatron.nix
         ../../hardware-configs/nvidia/metatron.nix
       ];
+
+      # Set CPU governor to performance
+      powerManagement.cpuFreqGovernor = "performance";
+
     };
   };
 }
