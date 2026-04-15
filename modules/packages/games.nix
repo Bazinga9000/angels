@@ -27,6 +27,7 @@
             home.packages = with pkgs; [
               a-solitaire-mystery # Hempuli's 30 Solitaire Variants
               archipelago # Archipelago multiworld randomizer client
+              astroterm # Terminal planetarium
               asciiquarium # Command line ASCII acquarium
               (balatro.override { src = null; }) # Balatro, the poker roguelike
               cambridge # Cambridge Stacker
