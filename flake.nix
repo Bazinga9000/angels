@@ -21,7 +21,7 @@
     flake-file.url = "github:vic/flake-file";
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
-      inputs.nixpkgs-lib.follows = "nixpkgs-lib";
+      inputs.nixpkgs-lib.follows = "nixpkgs";
     };
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -46,7 +46,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    nixpkgs-lib.follows = "nixpkgs";
     nixpkgs-patch-hytale = {
       url = "https://github.com/NixOS/nixpkgs/pull/479368.diff";
       flake = false;
