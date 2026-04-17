@@ -13,6 +13,7 @@
           { pkgs, ... }:
           {
             home.packages = with pkgs; [
+              audacity # Sound
               gimp2 # Gnu Image Manipulation Program (v2 becuase v3 crashes)
               graphviz # Graph visualization tools
               helio-workstation # Musical composition software
