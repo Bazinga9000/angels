@@ -12,6 +12,7 @@
           angels
           boot
           caches
+          helix
           hyfetch
           ghostty
           locale
