@@ -8,6 +8,7 @@
       { pkgs, ... }:
       {
         home.packages = with pkgs; [
+          android-tools # ADB
           baobab # Disk Usage Analyzer
           bottles # Run windows applications
           font-manager # Show installed fonts
