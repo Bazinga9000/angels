@@ -12,6 +12,7 @@
           baobab # Disk Usage Analyzer
           bottles # Run windows applications
           font-manager # Show installed fonts
+          hexyl # Hex dump
           popsicle # USB Flasher
 
           # Libreoffice and Spell Check
