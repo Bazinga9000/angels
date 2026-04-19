@@ -18,15 +18,11 @@
           wget
           lazygit
         ];
-
-        programs.tmux = {
-          enable = true;
-          clock24 = true;
-        };
       };
 
     homeManager = {
       programs.btop.enable = true;
+      programs.zellij.enable = true;
     };
   };
 }
