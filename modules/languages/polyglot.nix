@@ -15,7 +15,7 @@
           mathematica
           nix
           nu
-          # purescript # See https://github.com/thomashoneyman/purescript-overlay/issues/138
+          purescript
           python
           rust
           uiua
