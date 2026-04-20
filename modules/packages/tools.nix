@@ -14,6 +14,7 @@
           font-manager # Show installed fonts
           hexyl # Hex dump
           popsicle # USB Flasher
+          ripgrep # Regex search tool
 
           # Libreoffice and Spell Check
           libreoffice-qt-fresh
