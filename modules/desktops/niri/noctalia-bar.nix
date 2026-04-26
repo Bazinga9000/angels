@@ -13,6 +13,9 @@
               compactMode = false;
               showNetworkStats = true;
 
+              showCpuFreq = true;
+              showLoadAverage = true;
+
               showDiskUsage = true;
               showDiskAvailable = true;
               diskPath = "/home";
