@@ -8,7 +8,9 @@
       { pkgs, ... }:
       {
         environment.systemPackages = with pkgs; [
+          ast-grep # Syntax tree grep
           bat # Fancy cat
+          gping # Graphical ping util
           hexyl # Hex dump
           lazygit # Git TUI
           ripgrep # Regex search tool
