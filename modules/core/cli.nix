@@ -1,0 +1,25 @@
+{
+  flake.aspects.cli = {
+    description = ''
+      Useful cross-host command-line tools
+    '';
+
+    nixos =
+      { pkgs, ... }:
+      {
+        environment.systemPackages = with pkgs; [
+          bat # Fancy cat
+          hexyl # Hex dump
+          lazygit # Git TUI
+          ripgrep # Regex search tool
+          wget # Network downloader
+        ];
+      };
+
+    homeManager = {
+      programs.btop.enable = true; # System Monitor
+      programs.helix.enable = true; # Helix text editor
+      programs.zellij.enable = true; # Terminal Multiplexer
+    };
+  };
+}

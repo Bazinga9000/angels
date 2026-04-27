@@ -13,16 +13,7 @@
           gh
           just
           nh
-
-          # Generally useful cross-host
-          wget
-          lazygit
         ];
       };
-
-    homeManager = {
-      programs.btop.enable = true;
-      programs.zellij.enable = true;
-    };
   };
 }
