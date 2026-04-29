@@ -12,6 +12,7 @@
           bat # Fancy cat
           gping # Graphical ping util
           hexyl # Hex dump
+          hyperfine # Benchmarking
           lazygit # Git TUI
           ripgrep # Regex search tool
           wget # Network downloader
