@@ -27,6 +27,13 @@
         enable = true;
         enableNushellIntegration = true;
       };
+
+      # Enable Oh My Posh for prompt
+      programs.oh-my-posh = {
+        enable = true;
+        enableNushellIntegration = true;
+        useTheme = "atomicBit";
+      };
     };
   };
 }
