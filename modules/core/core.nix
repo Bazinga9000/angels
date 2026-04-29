@@ -15,6 +15,7 @@
           cli
           hyfetch
           ghostty
+          kernel
           locale
           networking
           nix-meta

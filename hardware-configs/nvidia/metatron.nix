@@ -1,11 +1,11 @@
 # ABANDON ALL HOPE YE WHO ENTER HERE
 
-{ /* config, */ pkgs, ... }:
+{ config, pkgs, ... }:
 let
-    drivers = {
-      beta = pkgs.linuxPackages.nvidiaPackages.beta;
-      latest = pkgs.linuxPackages.nvidiaPackages.latest;
-    };
+  drivers = {
+    beta = config.boot.kernelPackages.nvidiaPackages.beta;
+    latest = config.boot.kernelPackages.nvidiaPackages.latest;
+  };
 in
 {
   # Enable graphics driver
@@ -16,13 +16,13 @@ in
 
   # Hardware Video Acceleration
   hardware.graphics.extraPackages = with pkgs; [
-      nvidia-vaapi-driver
-      libvdpau-va-gl
-      libva-vdpau-driver
+    nvidia-vaapi-driver
+    libvdpau-va-gl
+    libva-vdpau-driver
   ];
 
   # Load "nvidia" driver for Xorg and Wayland
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   # Magic incantation to fix NVK error
   environment.sessionVariables.VK_DRIVER_FILES = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.x86_64.json:/run/opengl-driver/share/vulkan/icd.d/intel_icd.x86_64.json";
@@ -62,10 +62,10 @@ in
     nvidiaSettings = true;
 
     prime = {
-        sync.enable = true;
+      sync.enable = true;
 
-    	intelBusId = "PCI:0:2:0"; #same on the real machine
-    	nvidiaBusId = "PCI:1:0:0";
+      intelBusId = "PCI:0:2:0"; # same on the real machine
+      nvidiaBusId = "PCI:1:0:0";
     };
 
   };
