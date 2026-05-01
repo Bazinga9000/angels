@@ -28,11 +28,10 @@
         enableNushellIntegration = true;
       };
 
-      # Enable Oh My Posh for prompt
-      programs.oh-my-posh = {
+      # Enable Starship for prompt
+      programs.starship = {
         enable = true;
         enableNushellIntegration = true;
-        useTheme = "atomicBit";
       };
     };
   };
