@@ -45,10 +45,6 @@
 
       # Enable thermald (for intel CPU)
       services.thermald.enable = true;
-
-      # Set CPU governor to performance
-      powerManagement.cpuFreqGovernor = "performance";
-
     };
   };
 }
