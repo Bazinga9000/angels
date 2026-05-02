@@ -14,7 +14,10 @@
           hexyl # Hex dump
           hyperfine # Benchmarking
           lazygit # Git TUI
+          lazyssh # SSH TUI
+          pik # Process killer TUI
           ripgrep # Regex search tool
+          sttr # String transformation
           wget # Network downloader
         ];
       };
