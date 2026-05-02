@@ -14,6 +14,7 @@
           hexyl # Hex dump
           hyperfine # Benchmarking
           lazygit # Git TUI
+          lazyjournal # Journalctl TUI
           lazyssh # SSH TUI
           pik # Process killer TUI
           ripgrep # Regex search tool
