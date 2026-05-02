@@ -24,6 +24,7 @@
                 corefonts
                 kreative-kore-fonts
                 times-new-argam
+                nahuatl-one-font
               ]
               ++ (builtins.filter lib.isDerivation (builtins.attrValues nerd-fonts));
           };
