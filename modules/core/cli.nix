@@ -17,6 +17,7 @@
           lazyjournal # Journalctl TUI
           lazyssh # SSH TUI
           pik # Process killer TUI
+          repgrep # Find and replace wrapper around ripgrep
           ripgrep # Regex search tool
           sttr # String transformation
           wget # Network downloader
