@@ -24,22 +24,10 @@ in
   # Load "nvidia" driver for Xorg and Wayland
   services.xserver.videoDrivers = [ "nvidia" ];
 
-  # Magic incantation to fix NVK error
-  environment.sessionVariables.VK_DRIVER_FILES = "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.x86_64.json:/run/opengl-driver/share/vulkan/icd.d/intel_icd.x86_64.json";
-
   # Enable NVIDIA related kernel module
   boot.kernelParams = [ "nvidia-drm.fbdev=1" ];
 
-  # Some environment variables
-  environment.variables = {
-    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    GBM_BACKEND = "nvidia-drm";
-    XDG_SESSION_TYPE = "wayland";
-    LIBVA_DRIVER_NAME = "nvidia";
-  };
-
   hardware.nvidia = {
-
     # Modesetting is required.
     modesetting.enable = true;
 
@@ -62,9 +50,13 @@ in
     nvidiaSettings = true;
 
     prime = {
-      sync.enable = true;
+      # sync.enable = true;
+      offload = {
+        enable = true;
+        enableOffloadCmd = true;
+      };
 
-      intelBusId = "PCI:0:2:0"; # same on the real machine
+      intelBusId = "PCI:0:2:0";
       nvidiaBusId = "PCI:1:0:0";
     };
 
