@@ -13,6 +13,7 @@
           boot
           caches
           cli
+          fwupd
           hyfetch
           ghostty
           kernel
