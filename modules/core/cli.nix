@@ -16,6 +16,7 @@
           lazygit # Git TUI
           lazyjournal # Journalctl TUI
           lazyssh # SSH TUI
+          moreutils # Additions to unix coreutils (vidir, ts, etc...)
           pik # Process killer TUI
           repgrep # Find and replace wrapper around ripgrep
           ripgrep # Regex search tool
