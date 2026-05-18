@@ -1,4 +1,7 @@
+{ inputs, ... }:
 {
+  flake-file.inputs.millennium.url = "github:SteamClientHomebrew/Millennium/next?dir=packages/nix";
+
   flake.aspects.steam = {
     description = ''
       Steam and its helpers (Gamemode, Proton, Gamescope)
@@ -7,8 +10,11 @@
     nixos =
       { pkgs, ... }:
       {
+        nixpkgs.overlays = [ inputs.millennium.overlays.default ];
+
         programs.steam = {
           enable = true;
+          package = pkgs.millennium-steam;
           protontricks.enable = true;
           extest.enable = true;
           remotePlay.openFirewall = true;
