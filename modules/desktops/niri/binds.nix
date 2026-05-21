@@ -12,6 +12,8 @@
               "call"
             ]
             ++ (pkgs.lib.splitString " " cmd);
+
+          editor = "zeditor";
         in
         {
           # Keys consist of modifiers separated by + signs, followed by an XKB key name
@@ -35,9 +37,9 @@
           "Mod+S".action.spawn = noctalia "settings toggle";
           "Mod+Shift+Return".action.spawn = "zen-beta";
           "Mod+D".action.spawn = "vesktop";
-          "Mod+V".action.spawn = "code";
+          "Mod+V".action.spawn = editor;
           "Mod+Shift+V".action.spawn = [
-            "code"
+            editor
             "/home/bazinga/angels"
           ];
           "Mod+N".action.spawn = "nautilus";

@@ -22,9 +22,9 @@
       "social"
       "steam"
       "tools"
-      "vscode"
+      # "vscode"
       "zen-browser"
-      # "zed"
+      "zed"
 
       # Language tooling
       "polyglot"
