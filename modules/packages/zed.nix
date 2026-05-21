@@ -5,7 +5,7 @@
     '';
 
     homeManager =
-      { pkgs, ... }:
+      { pkgs, lib, ... }:
       {
         programs.zed-editor = {
           enable = true;
@@ -27,9 +27,9 @@
           );
 
           userSettings = {
-            ui_font_size = 16;
+            helix_mode = true;
             buffer_line_height = "comfortable";
-            buffer_font_size = 18;
+            buffer_font_size = lib.mkForce 18;
           };
         };
       };
