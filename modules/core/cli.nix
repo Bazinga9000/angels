@@ -11,6 +11,7 @@
           ast-grep # Syntax tree grep
           bat # Fancy cat
           gping # Graphical ping util
+          gum # Shell script util
           hexyl # Hex dump
           hyperfine # Benchmarking
           lazygit # Git TUI
