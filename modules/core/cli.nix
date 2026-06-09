@@ -30,6 +30,14 @@
       programs.btop.enable = true; # System Monitor
       programs.helix.enable = true; # Helix text editor
       programs.zellij.enable = true; # Terminal Multiplexer
+
+      # Shell aliases for the above programs:
+      programs.nushell.shellAliases = {
+        s = "lazyssh";
+        ag = "rg";
+        j = "lazyjournal";
+        p = "gping";
+      };
     };
   };
 }
