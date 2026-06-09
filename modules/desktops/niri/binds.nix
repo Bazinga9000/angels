@@ -7,9 +7,8 @@
           noctalia =
             cmd:
             [
-              "noctalia-shell"
-              "ipc"
-              "call"
+              "noctalia"
+              "msg"
             ]
             ++ (pkgs.lib.splitString " " cmd);
 
@@ -27,14 +26,13 @@
           # `niri msg action do-something`.
           # Mod-Shift-/, which is usually the same as Mod-?,
           # shows a list of important hotkeys.
-          "Mod+Shift+Slash".action.spawn = noctalia "plugin:keybind-cheatsheet toggle";
           "Mod+Ctrl+Shift+Slash".action.show-hotkey-overlay = { };
 
           # Spawners
           "Mod+Return".action.spawn = "ghostty";
-          "Mod+Space".action.spawn = noctalia "launcher toggle";
-          "Mod+Escape".action.spawn = noctalia "lockScreen lock";
-          "Mod+S".action.spawn = noctalia "settings toggle";
+          "Mod+Space".action.spawn = noctalia "panel-toggle launcher";
+          "Mod+Escape".action.spawn = noctalia "session lock";
+          "Mod+Shift+Escape".action.spawn = noctalia "panel-toggle session";
           "Mod+Shift+Return".action.spawn = "zen-beta";
           "Mod+D".action.spawn = "vesktop";
           "Mod+V".action.spawn = editor;

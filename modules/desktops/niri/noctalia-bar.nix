@@ -1,69 +1,103 @@
 {
-  flake.aspects.niri.homeManager =
-    { pkgs, ... }:
-    {
-      programs.noctalia-shell.settings.bar = {
-        widgets = {
-          left = [
-            {
-              id = "Workspace";
-            }
-            {
-              id = "SystemMonitor";
-              compactMode = false;
-              showNetworkStats = true;
+  flake.aspects.niri.homeManager.programs.noctalia.settings = {
+    bar = {
+      widgets = {
+        center = [
+          "clock"
+          "date"
+        ];
+        contact_shadow = true;
+        end = [
+          "media"
+          "tray"
+          "notifications"
+          "network"
+          "volume"
+          "brightness"
+          "battery"
+          "control-center"
+        ];
+        font_weight = 1000;
+        margin_ends = 50;
+        start = [
+          "workspaces"
+          "group:g1"
+          "active_window"
+        ];
 
-              showCpuFreq = true;
-              showLoadAverage = true;
-
-              showDiskUsage = true;
-              showDiskAvailable = true;
-              diskPath = "/home";
-            }
-            {
-              id = "ActiveWindow";
-            }
-            {
-              id = "MediaMini";
-            }
-          ];
-          center = [
-            {
-              id = "Clock";
-              formatHorizontal = "HH:mm:ss ddd, MMM dd";
-            }
-          ];
-          right = [
-            {
-              id = "Tray";
-            }
-            {
-              id = "NotificationHistory";
-            }
-            {
-              id = "CustomButton";
-              icon = "snowflake";
-              ipcIdentifier = "nixos-generation";
-              generalTooltipText = "NixOS Generation";
-              textCommand = "readlink /nix/var/nix/profiles/system | cut -d- -f2";
-              textIntervalMs = 3000;
-            }
-            {
-              id = "Battery";
-              displayMode = "graphic";
-            }
-            {
-              id = "Volume";
-            }
-            {
-              id = "Brightness";
-            }
-            {
-              id = "ControlCenter";
-              useDistroLogo = true;
-            }
-          ];
-        };
+        capsule_group = [
+          {
+            fill = "surface_variant";
+            id = "g1";
+            members = [
+              "cpu"
+              "temp"
+              "ram"
+              "network_rx"
+              "network_tx"
+              "sysmon"
+            ];
+            opacity = 1.0;
+            padding = 6.0;
+          }
+          {
+            fill = "surface_variant";
+            id = "g2";
+            members = [
+              "tray"
+              "media"
+            ];
+            opacity = 1.0;
+            padding = 6.0;
+          }
+        ];
       };
     };
+
+    widget = {
+      active_window = {
+        max_length = 300;
+        title_scroll = "on_hover";
+      };
+      clock = {
+        format = "{:%H:%M:%S}";
+      };
+      "control-center" = {
+        glyph = "math-avg";
+      };
+      cpu = {
+        display = "text";
+      };
+      date = {
+        format = "{:%a %b %d}";
+      };
+      media = {
+        title_scroll = "always";
+      };
+      network = {
+        show_label = false;
+      };
+      network_rx = {
+        display = "text";
+      };
+      network_tx = {
+        display = "text";
+      };
+      nix_generation = {
+        glyph = "brand-snowflake";
+        type = "custom_button";
+      };
+      ram = {
+        display = "text";
+      };
+      sysmon = {
+        display = "text";
+        path = "/home";
+        stat = "disk_pct";
+      };
+      temp = {
+        display = "text";
+      };
+    };
+  };
 }

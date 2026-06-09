@@ -6,23 +6,20 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.noctalia-qs.follows = "noctalia-qs";
-    };
-
-    noctalia-qs = {
-      url = "github:noctalia-dev/noctalia-qs";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    noctalia.url = "github:noctalia-dev/noctalia";
   };
 
   # Add binary cache for niri
   flake.aspects.caches = {
     nixos.nix.settings = {
-      substituters = [ "https://niri.cachix.org" ];
-      trusted-public-keys = [ "niri.cachix.org-1:Wv0OmO7PsuocRKzfDoJ3mulSl7Z6oezYhGhR+3W2964=" ];
+      substituters = [
+        "https://niri.cachix.org"
+        "https://noctalia.cachix.org"
+      ];
+      trusted-public-keys = [
+        "niri.cachix.org-1:Wv0OmO7PsuocRKzfDoJ3mulSl7Z6oezYhGhR+3W2964="
+        "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+      ];
     };
   };
 
@@ -104,9 +101,8 @@
         programs.zathura.enable = true;
 
         # Enable Noctalia shell and the systemd service
-        programs.noctalia-shell = {
+        programs.noctalia = {
           enable = true;
-          package = pkgs.noctalia-git-calendar;
         };
 
         # Configure Niri settings
@@ -126,7 +122,7 @@
           spawn-at-startup = [
             {
               command = [
-                "noctalia-shell" # Spawn Noctalia on startup
+                "noctalia" # Spawn Noctalia on startup
               ];
             }
           ];
