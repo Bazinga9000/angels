@@ -8,6 +8,7 @@
         ];
         contact_shadow = true;
         end = [
+          "weather"
           "media"
           "tray"
           "notifications"
