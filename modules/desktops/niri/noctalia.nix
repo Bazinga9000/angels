@@ -2,6 +2,7 @@
   flake.aspects.niri.homeManager.programs.noctalia.settings = {
     calendar = {
       enabled = true;
+      account.bazninethousand.type = "google";
     };
 
     location = {
