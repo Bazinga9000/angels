@@ -4,6 +4,16 @@
       Configuration for the zed editor.
     '';
 
+    nixos = { pkgs, ... }: {
+      programs.nix-ld = {
+        enable = true;
+        libraries = with pkgs; [
+          zlib
+          openssl
+        ];
+      };
+    };
+
     homeManager =
       { pkgs, lib, ... }:
       {
@@ -18,13 +28,6 @@
             "git-firefly"
             "html"
           ];
-
-          package = pkgs.zed-editor.fhsWithPackages (
-            ps: with ps; [
-              libz
-              openssl
-            ]
-          );
 
           userSettings = {
             helix_mode = true;
