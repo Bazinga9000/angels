@@ -5,8 +5,9 @@
     '';
 
     nixos.nix.settings = {
-      substituters = [ "https://cache.garnix.io" ];
-      trusted-public-keys = [ "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g=" ];
+      # Add more caches you want globally on by all systems here
+      substituters = [ ];
+      trusted-public-keys = [ ];
     };
   };
 }
