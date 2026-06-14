@@ -7,6 +7,7 @@
     };
 
     noctalia.url = "github:noctalia-dev/noctalia";
+    noctalia-greeter.url = "github:noctalia-dev/noctalia-greeter";
   };
 
   # Add binary cache for niri
@@ -33,6 +34,7 @@
       {
         imports = [
           inputs.niri-flake.nixosModules.niri
+          inputs.noctalia-greeter.nixosModules.default
         ];
 
         networking.networkmanager.enable = true;
@@ -41,8 +43,7 @@
         services.upower.enable = true;
         services.gvfs.enable = true;
 
-        # Enable cosmic-greeter and niri
-        services.displayManager.cosmic-greeter.enable = true;
+        programs.noctalia-greeter.enable = true;
         programs.niri.enable = true;
 
         # Wayland Environment Fixes

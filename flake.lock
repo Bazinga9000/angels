@@ -904,6 +904,19 @@
         "url": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz"
       }
     },
+    "nixpkgs_5": {
+      "locked": {
+        "lastModified": 1780749050,
+        "narHash": "sha256-G5B1h4sOH4DN/RZ85xYi6zPm2MHdOrNMeUmMslZ28Qs=",
+        "rev": "a799d3e3886da994fa307f817a6bc705ae538eeb",
+        "type": "tarball",
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1011622.a799d3e3886d/nixexprs.tar.xz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz"
+      }
+    },
     "noctalia": {
       "inputs": {
         "nixpkgs": "nixpkgs_4"
@@ -919,6 +932,24 @@
       "original": {
         "owner": "noctalia-dev",
         "repo": "noctalia",
+        "type": "github"
+      }
+    },
+    "noctalia-greeter": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_5"
+      },
+      "locked": {
+        "lastModified": 1781467413,
+        "narHash": "sha256-47vOm+ugBRvXD7jJ5DMK5m31U+q1DAjNPytFovPpiPA=",
+        "owner": "noctalia-dev",
+        "repo": "noctalia-greeter",
+        "rev": "b352c945b1d419a698bcb4fb0edcf053a37484fd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "noctalia-dev",
+        "repo": "noctalia-greeter",
         "type": "github"
       }
     },
@@ -989,6 +1020,7 @@
         "nixpkgs-patch-hytale": "nixpkgs-patch-hytale",
         "nixpkgs-patcher": "nixpkgs-patcher",
         "noctalia": "noctalia",
+        "noctalia-greeter": "noctalia-greeter",
         "purescript-overlay": "purescript-overlay",
         "sajak": "sajak",
         "stylix": "stylix",
