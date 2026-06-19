@@ -12,7 +12,8 @@ in
   hardware.graphics.enable = true;
 
   # NVIDIA Driver
-  hardware.nvidia.package = drivers.beta;
+  hardware.nvidia.package = drivers.latest;
+  # hardware.nvidia.package = drivers.beta; -- https://github.com/NixOS/nixpkgs/issues/532695
 
   # Hardware Video Acceleration
   hardware.graphics.extraPackages = with pkgs; [
