@@ -15,6 +15,7 @@
             home.packages = with pkgs; [
               audacity # Sound
               graphviz # Graph visualization tools
+              gimp # Image editing program
               helio-workstation # Musical composition software
               inkscape # Vector graphics program
               microwave # Microtonal synthesizer
