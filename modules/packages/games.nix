@@ -39,6 +39,7 @@
               hytale-launcher # Hytale
               jugglinglab # Juggling Lab
               magicseteditor-all # MSE incl. non-Magic Templates
+              mvlo-modloader # Mario VS. Luigi Online Mod-Loader
               nsmb-mariovsluigi # NSMB Mario VS. Luigi reimplementation
               pvzge # PvZ2 Gardendless
               olympus # Celeste Mod Manager
