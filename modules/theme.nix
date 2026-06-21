@@ -78,6 +78,11 @@
                 color-scheme = lib.mkForce "prefer-dark";
               };
             };
+
+            # Override default Fairfax HD to Fairfax HD Nerd Font for ghostty
+            programs.ghostty.settings = {
+              font-family = lib.mkForce "Fairfax HD Nerd Font";
+            };
           };
       };
     };

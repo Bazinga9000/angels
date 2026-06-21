@@ -23,6 +23,7 @@
                 google-fonts
                 corefonts
                 kreative-kore-fonts
+                kreative-kore-nerd-fonts
                 times-new-argam
                 nahuatl-one-font
               ]
