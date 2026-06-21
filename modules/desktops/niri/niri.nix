@@ -101,6 +101,13 @@
         # Enable zathura for PDFs
         programs.zathura.enable = true;
 
+        # Enable Yazi for file management
+        programs.yazi = {
+          enable = true;
+          enableNushellIntegration = true;
+          shellWrapperName = "y";
+        };
+
         # Enable Noctalia shell and the systemd service
         programs.noctalia = {
           enable = true;

@@ -40,7 +40,12 @@
             editor
             "/home/bazinga/angels"
           ];
-          "Mod+N".action.spawn = "nautilus";
+          # "Mod+N".action.spawn = "nautilus";
+          "Mod+N".action.spawn = [
+            "ghostty"
+            "-e"
+            "yazi"
+          ];
 
           # You can also use a shell. Do this if you need pipes, multiple commands, etc.
           # Note: the entire command goes as a single argument in the end.
