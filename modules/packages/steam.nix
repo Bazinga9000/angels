@@ -14,7 +14,8 @@
 
         programs.steam = {
           enable = true;
-          package = pkgs.millennium-steam;
+          # build failure
+          # package = pkgs.millennium-steam;
           protontricks.enable = true;
           extest.enable = true;
           remotePlay.openFirewall = true;
