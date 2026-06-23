@@ -101,11 +101,11 @@
         "uiua": "uiua"
       },
       "locked": {
-        "lastModified": 1782066418,
-        "narHash": "sha256-8xi5MsuH5RGpr4/+5ZtjgMbPLbvE1XEoWHKM66w2M3o=",
+        "lastModified": 1782200861,
+        "narHash": "sha256-lUCd/SBmTnZlZuKk6sNAOlpK1jLhAfr2BbpGnpTxrA0=",
         "owner": "Bazinga9000",
         "repo": "baz9k-pkgs",
-        "rev": "af684fbfe8468c45d393354dc3183941a5d65f5b",
+        "rev": "429acb40483b1bb55a518792df49930f8c2590b1",
         "type": "github"
       },
       "original": {
@@ -505,11 +505,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1782159472,
-        "narHash": "sha256-S+/v+BWz9c8IbGhRM8L4UUVC5j2oZuAHj1b5XlkBjyw=",
+        "lastModified": 1782233665,
+        "narHash": "sha256-h/xOtrByoA/Ak1lWHn0O1lVZz4qWYbwOSLQ8YSwQO0I=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "351959fcdbe5cadec1c3434d7abd14dff31af2d5",
+        "rev": "062581938b4a378a82dfbb294b494808157153a1",
         "type": "github"
       },
       "original": {
@@ -582,11 +582,11 @@
       },
       "locked": {
         "dir": "packages/nix",
-        "lastModified": 1782159716,
-        "narHash": "sha256-BT90kOYR9Y5hdHfgezJEmOkmhPzRE9F4rfoMQSvTGig=",
+        "lastModified": 1782175809,
+        "narHash": "sha256-2VNHOJmjh1Jm9WP39nkkXEckf52DBQCzchPf2UHXO1Y=",
         "owner": "SteamClientHomebrew",
         "repo": "Millennium",
-        "rev": "d82aa38ec111c3ce54f03b849e456fc49d4ecddc",
+        "rev": "36ecab9529ef2f5b73a50b9eb0c754635474d580",
         "type": "github"
       },
       "original": {
@@ -600,17 +600,17 @@
     "millennium-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1782159618,
-        "narHash": "sha256-n3IjaZAGAI/OPAbIgGSh1KAMLZWrLqHfHVpPBm6ESOU=",
+        "lastModified": 1782175707,
+        "narHash": "sha256-nAgnski2c247PqLtcK3g5NER7hVj/zlCJd9CTb2lne4=",
         "owner": "SteamClientHomebrew",
         "repo": "Millennium",
-        "rev": "9223fa44cf9cf21f7f757c4ed975e6d37d0798f2",
+        "rev": "5729ba4bb432a071a0276abb416b2c26d27afa71",
         "type": "github"
       },
       "original": {
         "owner": "SteamClientHomebrew",
         "repo": "Millennium",
-        "rev": "9223fa44cf9cf21f7f757c4ed975e6d37d0798f2",
+        "rev": "5729ba4bb432a071a0276abb416b2c26d27afa71",
         "type": "github"
       }
     },
@@ -679,11 +679,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1781517086,
-        "narHash": "sha256-o2iVZt04K97ypUszGRRH31kSanLv/+ujgqH3UI1qXUQ=",
+        "lastModified": 1782206964,
+        "narHash": "sha256-n6nn0A3U3FnHWa9Y+dWNiuQnMDrcndQplgE0ooiexG8=",
         "owner": "thiagokokada",
         "repo": "nix-alien",
-        "rev": "e218108d0fd1ff3e373f126872eddaba62e0afce",
+        "rev": "4fc9de6d1f215cf1679da04cf8749e085dd027d7",
         "type": "github"
       },
       "original": {
@@ -740,11 +740,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1782104473,
-        "narHash": "sha256-n96VM4h18yA1ih7f3CuVvmIyCIDtFlgX8OaKnIVSoL4=",
+        "lastModified": 1782187352,
+        "narHash": "sha256-mZ26pjHZPcDoCy7KYIoOe7FGofmsQzsYXtlN+gqcVyE=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "f99979a1f1d367dd4ccd0e744c31f3e3ae062c32",
+        "rev": "cf6c44bb3a6268ef0cb018208b35b8561f37431c",
         "type": "github"
       },
       "original": {
@@ -904,11 +904,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1782159196,
-        "narHash": "sha256-+2SNFxlnmetcPCIfai0gv89mgnXFQr3kMwLDKUyn0ZE=",
+        "lastModified": 1782228865,
+        "narHash": "sha256-vnmo148gkbMNtyNoWYzcPOKCoaAq+zY69WE2xgMox/I=",
         "owner": "noctalia-dev",
         "repo": "noctalia",
-        "rev": "a5a5ea605ac68599d29669030d39173f1e1a0c17",
+        "rev": "efb96e41fdac7cb3e5bcc9864d1bd0118da2470f",
         "type": "github"
       },
       "original": {
@@ -1228,11 +1228,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1781888200,
-        "narHash": "sha256-7O7yhOBNRpb8Q387b0Yi2Mr3lG7yXtQ3XoaQ02k6gzw=",
+        "lastModified": 1782156444,
+        "narHash": "sha256-U7x7HGXgw3Cc/7ndj3iwuiGTFuiEKjD4KFxy9oGiRdQ=",
         "owner": "uiua-lang",
         "repo": "uiua",
-        "rev": "743c653db92822b642b98a8a771a2727ca2f96de",
+        "rev": "3a246e986aacfdfd9be2bcb3314b62302e411dd8",
         "type": "github"
       },
       "original": {
