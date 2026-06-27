@@ -11,7 +11,6 @@
         programs.steam = {
           enable = true;
           protontricks.enable = true;
-          extest.enable = true;
           remotePlay.openFirewall = true;
           dedicatedServer.openFirewall = true;
           localNetworkGameTransfers.openFirewall = true;
