@@ -8,26 +8,24 @@
         nixos =
           { pkgs, lib, ... }:
           {
-            fonts.packages =
-              with pkgs;
-              [
-                noto-fonts
-                noto-fonts-cjk-sans
-                noto-fonts-color-emoji
-                liberation_ttf
-                fira-code
-                fira-code-symbols
-                mplus-outline-fonts.githubRelease
-                dina-font
-                proggyfonts
-                google-fonts
-                corefonts
-                kreative-kore-fonts
-                kreative-kore-nerd-fonts
-                times-new-argam
-                nahuatl-one-font
-              ]
-              ++ (builtins.filter lib.isDerivation (builtins.attrValues nerd-fonts));
+            fonts.packages = with pkgs; [
+              noto-fonts
+              noto-fonts-cjk-sans
+              noto-fonts-color-emoji
+              liberation_ttf
+              fira-code
+              fira-code-symbols
+              mplus-outline-fonts.githubRelease
+              dina-font
+              proggyfonts
+              google-fonts
+              corefonts
+              kreative-kore-fonts
+              kreative-kore-nerd-fonts
+              times-new-argam
+              nahuatl-one-font
+              nerd-fonts.symbols-only
+            ];
           };
       };
     };
