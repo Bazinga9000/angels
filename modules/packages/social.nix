@@ -12,6 +12,10 @@
         ];
 
         programs.vesktop.enable = true;
+        # https://github.com/NixOS/nixpkgs/issues/536623
+        programs.vesktop.package = pkgs.vesktop.override {
+          pnpm_10_29_2 = pkgs.pnpm_10;
+        };
         programs.vesktop.vencord.settings.plugins = {
           AlwaysAnimate.enabled = true;
           CallTimer.enabled = true;
