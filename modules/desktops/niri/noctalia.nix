@@ -18,34 +18,6 @@
       time_format = "{:%H:%M:%S}";
     };
 
-    theme = {
-      builtin = "Catppuccin";
-      source = "wallpaper";
-    };
-
-    wallpaper =
-      let
-        dir = ../../../assets/wallpapers;
-        wallpaper = ../../../assets/wallpapers/doom_sasasu_interphos.png;
-      in
-      {
-        directory = dir;
-        default = {
-          path = wallpaper;
-        };
-        last = {
-          path = wallpaper;
-        };
-        monitors = {
-          "DP-5" = {
-            path = wallpaper;
-          };
-          "eDP-1" = {
-            path = wallpaper;
-          };
-        };
-      };
-
     weather = {
       unit = "imperial";
     };
