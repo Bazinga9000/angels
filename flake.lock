@@ -587,11 +587,11 @@
         "xwayland-satellite-unstable": "xwayland-satellite-unstable"
       },
       "locked": {
-        "lastModified": 1784043058,
-        "narHash": "sha256-/LXa/IHpH6zqcxrfhtUaZOPZHfk0WXi5YUTICaslMCI=",
+        "lastModified": 1784189744,
+        "narHash": "sha256-D8oh9imibOynWAOUnvgG3w2EKDYqf8OTTaLCcTA4ePg=",
         "owner": "sodiboo",
         "repo": "niri-flake",
-        "rev": "24728b7da2cde86eb119a771c16b214f0751f91e",
+        "rev": "f4b479398c967d2c8d5a38b6d2c87283ae5078c4",
         "type": "github"
       },
       "original": {
@@ -701,11 +701,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1784083941,
-        "narHash": "sha256-0WFSuVE2sd1shdXvFsHMtPNupldvwaCq7/6PSqrz8UE=",
+        "lastModified": 1784170717,
+        "narHash": "sha256-nGgfKiclG2jzakbzh8J2kGiOLYy86pY0bgiH5kTBJHs=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "29b1ca67d8c24b6294f879b91adcda74a0e3548b",
+        "rev": "c7e994f9b2833677afa42181af98ea411562f6b9",
         "type": "github"
       },
       "original": {
@@ -772,6 +772,18 @@
         "url": "https://github.com/NixOS/nixpkgs/pull/479368.diff"
       }
     },
+    "nixpkgs-patch-vesktop": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-X4Zb8/THp6cteCv1OKGqZjYcf2B4TvrTWirTEPDuWio=",
+        "type": "file",
+        "url": "https://github.com/NixOS/nixpkgs/pull/542528.diff"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/NixOS/nixpkgs/pull/542528.diff"
+      }
+    },
     "nixpkgs-patcher": {
       "locked": {
         "lastModified": 1781789965,
@@ -805,11 +817,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1784007870,
-        "narHash": "sha256-G9I5EeMhwLckqD5QLgowA6hNBaOjG9CeYIzfSz4gZ6k=",
-        "rev": "18b9261cb3294b6d2a06d03f96872827b8fe2698",
+        "lastModified": 1784120854,
+        "narHash": "sha256-Pjytpyqs/h6Kfs46Pcj+upOCqq0/Wwq81YSSeko7ChM=",
+        "rev": "753cc8a3a87467296ddd1fa93f0cc3e81120ee46",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1034379.18b9261cb329/nixexprs.tar.xz"
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1035164.753cc8a3a874/nixexprs.tar.xz"
       },
       "original": {
         "id": "nixpkgs",
@@ -848,11 +860,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1784149351,
-        "narHash": "sha256-0YJ4CQ4ug++N7hdQOVzKhp4jUtXXcedZtqWcbmXJYcs=",
+        "lastModified": 1784228267,
+        "narHash": "sha256-h05DrwpzaUnxSc09F8p+VVzITzcbiorB6dmGjjQLzyU=",
         "owner": "noctalia-dev",
         "repo": "noctalia",
-        "rev": "4bf957f4c16272016da0e9dab47612828b09e322",
+        "rev": "b86e4a0964744915ed2970d28fc86580b6332696",
         "type": "github"
       },
       "original": {
@@ -943,6 +955,7 @@
         "nix-vscode-extensions": "nix-vscode-extensions",
         "nixpkgs": "nixpkgs_2",
         "nixpkgs-patch-hytale": "nixpkgs-patch-hytale",
+        "nixpkgs-patch-vesktop": "nixpkgs-patch-vesktop",
         "nixpkgs-patcher": "nixpkgs-patcher",
         "noctalia": "noctalia",
         "noctalia-greeter": "noctalia-greeter",
@@ -1248,11 +1261,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1784152615,
-        "narHash": "sha256-a6rXlj/ID3daqedQCT1/3L9sNYmK0ihcPrLF77uWSnY=",
+        "lastModified": 1784180486,
+        "narHash": "sha256-WyEBfIw3m2qpb/dy63NIEe9tmC9a1YxIRcEjrD2e390=",
         "owner": "0xc000022070",
         "repo": "zen-browser-flake",
-        "rev": "e273eec408c07eaa0865bedc4fa5f4d190d51980",
+        "rev": "2c429687b07e5b08a22552e85802ede13d1761cc",
         "type": "github"
       },
       "original": {

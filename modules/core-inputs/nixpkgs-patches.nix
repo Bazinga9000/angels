@@ -13,4 +13,9 @@
     url = "https://github.com/NixOS/nixpkgs/pull/479368.diff";
     flake = false;
   };
+
+  flake-file.inputs.nixpkgs-patch-vesktop = {
+    url = "https://github.com/NixOS/nixpkgs/pull/542528.diff";
+    flake = false;
+  };
 }
