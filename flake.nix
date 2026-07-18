@@ -50,10 +50,6 @@
       url = "https://github.com/NixOS/nixpkgs/pull/479368.diff";
       flake = false;
     };
-    nixpkgs-patch-vesktop = {
-      url = "https://github.com/NixOS/nixpkgs/pull/542528.diff";
-      flake = false;
-    };
     nixpkgs-patcher.url = "github:gepbird/nixpkgs-patcher";
     noctalia.url = "github:noctalia-dev/noctalia";
     noctalia-greeter.url = "github:noctalia-dev/noctalia-greeter";
