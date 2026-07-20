@@ -71,6 +71,9 @@
 
           # Enable gnome-calendar
           gnome-calendar
+
+          # Commandline dialogs
+          zenity
         ];
 
         # Use GNOME polkit instead of kde
