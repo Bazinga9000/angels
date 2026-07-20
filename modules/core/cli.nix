@@ -19,6 +19,7 @@
           lazyssh # SSH TUI
           moreutils # Additions to unix coreutils (vidir, ts, etc...)
           pik # Process killer TUI
+          putzen # Cache cleaner
           repgrep # Find and replace wrapper around ripgrep
           ripgrep # Regex search tool
           sttr # String transformation
