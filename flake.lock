@@ -101,11 +101,11 @@
         "uiua": "uiua"
       },
       "locked": {
-        "lastModified": 1784583988,
-        "narHash": "sha256-XqcOUS2e3b7HlevHEka4RzJaB3bQOwwvpjVt2BCuSPM=",
+        "lastModified": 1784878672,
+        "narHash": "sha256-0vECjxNQMte5Fzmgmg6jo+5PCDwS55UBfelGibmu7h0=",
         "owner": "Bazinga9000",
         "repo": "baz9k-pkgs",
-        "rev": "132dc6a77eabb44c6871b611e920f1b5c3c44f7d",
+        "rev": "5bf77b9b6d47b09c63566247bc05c842949d0c33",
         "type": "github"
       },
       "original": {
@@ -507,11 +507,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1784789275,
-        "narHash": "sha256-cgRTWuG+u1tBPhm01JrId2k0Bni09phVJ1Q0BZlRd7M=",
+        "lastModified": 1784913159,
+        "narHash": "sha256-JWq0BfjO4ktpH5USfQNQzdvHpIDT8fSKD5K7LvdMRFs=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "3b0e6bbd65869af1beadf5963a99befc179d209f",
+        "rev": "079a3b5d1aa6a719920a51316253b7d6dd22738d",
         "type": "github"
       },
       "original": {
@@ -589,11 +589,11 @@
         "xwayland-satellite-unstable": "xwayland-satellite-unstable"
       },
       "locked": {
-        "lastModified": 1784686714,
-        "narHash": "sha256-6HCWRBQq/U2NPY2msnnysnWczZYzEzhS1UZURmrr2f0=",
+        "lastModified": 1784874881,
+        "narHash": "sha256-u4jhSIf/Un0qZB+Cn3hTTaHSI20XeAxYbA5o4faqdJs=",
         "owner": "sodiboo",
         "repo": "niri-flake",
-        "rev": "4dfd38bad6150c07be6cc3fd7682787765092eea",
+        "rev": "ef7a2a3d719af46b906c22a3ebfb7d65627b2cd2",
         "type": "github"
       },
       "original": {
@@ -703,11 +703,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1784777292,
-        "narHash": "sha256-yByCAxOZHq2b6Wr49kw5RwkYmTrJK9CGSpKJ5zsl29A=",
+        "lastModified": 1784863416,
+        "narHash": "sha256-JC8Uqin7i4WQfmz4bWjJehK/wWvS2lMlgSvhQZxLVGY=",
         "owner": "nix-community",
         "repo": "nix-vscode-extensions",
-        "rev": "2879a232de7b66d9b19a393ae63af8cfd70981db",
+        "rev": "858733ce1e3d51c6365d62d8af5a877d4870db3b",
         "type": "github"
       },
       "original": {
@@ -774,6 +774,18 @@
         "url": "https://github.com/NixOS/nixpkgs/pull/479368.diff"
       }
     },
+    "nixpkgs-patch-qgis": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-Qy9AeOcsVPvy5j7a1IYAioZlOCGJbRW7TmNCsnWw650=",
+        "type": "file",
+        "url": "https://github.com/NixOS/nixpkgs/pull/544955.diff"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/NixOS/nixpkgs/pull/544955.diff"
+      }
+    },
     "nixpkgs-patcher": {
       "locked": {
         "lastModified": 1781789965,
@@ -807,11 +819,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1784497964,
-        "narHash": "sha256-WhdsTtaih3DgTPP/PX023b36UNQyMzEoi6GkPyGx0y4=",
-        "rev": "241313f4e8e508cb9b13278c2b0fa25b9ca27163",
+        "lastModified": 1784796856,
+        "narHash": "sha256-vwxWgF+Gj276WznzGb1LxGsK/39HaQwgQXiU3EkC844=",
+        "rev": "e2587caef70cea85dd97d7daab492899902dbf5d",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1037713.241313f4e8e5/nixexprs.tar.xz"
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1040357.e2587caef70c/nixexprs.tar.xz"
       },
       "original": {
         "id": "nixpkgs",
@@ -850,11 +862,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1784838755,
-        "narHash": "sha256-aTAnFf29sIVE9hpolWePKscnJfkJRdyFxEkdeP4y9YQ=",
+        "lastModified": 1784925811,
+        "narHash": "sha256-bi9hKFIoxSEVe3JA1O626ret/UqNuQH6b/3RgRFWRwY=",
         "owner": "noctalia-dev",
         "repo": "noctalia",
-        "rev": "45ec7e33885540427d766c4a54e8f813dfdc9db9",
+        "rev": "128e48bcfefffb48ab7854c4dce7b7fbb1c65eda",
         "type": "github"
       },
       "original": {
@@ -945,6 +957,7 @@
         "nix-vscode-extensions": "nix-vscode-extensions",
         "nixpkgs": "nixpkgs_2",
         "nixpkgs-patch-hytale": "nixpkgs-patch-hytale",
+        "nixpkgs-patch-qgis": "nixpkgs-patch-qgis",
         "nixpkgs-patcher": "nixpkgs-patcher",
         "noctalia": "noctalia",
         "noctalia-greeter": "noctalia-greeter",
@@ -1007,11 +1020,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1784584000,
-        "narHash": "sha256-NFmgh5s3ZOQMunkSPg62OGOVXupd+iZexKbae01hIWw=",
+        "lastModified": 1784875171,
+        "narHash": "sha256-lBgdFVHy9lxcUBxJ7cxd/AuJgL4olXu6JIElJBiStaY=",
         "owner": "Bazinga9000",
         "repo": "sajak",
-        "rev": "18823ca534f33f2322c5cff8d1c8333546822954",
+        "rev": "be29f7df69962de0529ccd323f11ab145ce283c0",
         "type": "github"
       },
       "original": {

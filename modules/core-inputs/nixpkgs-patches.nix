@@ -13,4 +13,9 @@
     url = "https://github.com/NixOS/nixpkgs/pull/479368.diff";
     flake = false;
   };
+
+  flake-file.inputs.nixpkgs-patch-qgis = {
+    url = "https://github.com/NixOS/nixpkgs/pull/544955.diff";
+    flake = false;
+  };
 }
