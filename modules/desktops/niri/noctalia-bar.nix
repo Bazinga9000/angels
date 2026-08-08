@@ -36,7 +36,6 @@
               "ram"
               "network_rx"
               "network_tx"
-              "sysmon"
             ];
             opacity = 1.0;
             padding = 6.0;
@@ -66,9 +65,6 @@
       "control-center" = {
         glyph = "math-avg";
       };
-      cpu = {
-        display = "text";
-      };
       date = {
         format = "{:%a %b %d}";
       };
@@ -78,26 +74,9 @@
       network = {
         show_label = false;
       };
-      network_rx = {
-        display = "text";
-      };
-      network_tx = {
-        display = "text";
-      };
       nix_generation = {
         glyph = "brand-snowflake";
         type = "custom_button";
-      };
-      ram = {
-        display = "text";
-      };
-      sysmon = {
-        display = "text";
-        path = "/home";
-        stat = "disk_pct";
-      };
-      temp = {
-        display = "text";
       };
     };
   };
