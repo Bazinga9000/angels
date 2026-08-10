@@ -26,6 +26,7 @@
             stylix.enable = true;
             stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/penumbra-dark-contrast-plus-plus.yaml";
             stylix.image = ../assets/wallpapers/doom_sasasu_interphos.png;
+            stylix.polarity = "dark";
 
             stylix.fonts.sansSerif = {
               package = pkgs.google-fonts;
