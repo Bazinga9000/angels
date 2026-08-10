@@ -9,6 +9,10 @@
       auto_locate = true;
     };
 
+    theme = {
+      mode = "dark";
+    };
+
     shell = {
       avatar_path = "~/.face";
       clipboard_enabled = false;
