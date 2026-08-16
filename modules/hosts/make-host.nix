@@ -58,6 +58,7 @@
                 (builtins.map (module: config.flake.modules.homeManager.${module} or { }) host-cfg.aspects)
                 ++ [
                   config.flake.modules.homeManager.core # always add core
+                  config.flake.modules.homeManager.${host-cfg.hostName} or { }
                   {
                     home.username = host-cfg.userName;
                     home.homeDirectory = "/home/${host-cfg.userName}";
