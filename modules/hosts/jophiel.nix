@@ -7,6 +7,7 @@
     stateVersion = "25.05";
     homeStateVersion = "25.11"; # This is different from stateVersion because jophiel didn't use HM before the great dendrification
     aspects = [
+      "bots"
       "cosmic"
       "python"
     ];
