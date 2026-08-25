@@ -69,6 +69,10 @@
       url = "github:uiua-lang/uiua";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    weed-lang = {
+      url = "github:Bazinga9000/weed-lang";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";

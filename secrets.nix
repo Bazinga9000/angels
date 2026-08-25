@@ -9,4 +9,5 @@ let
 in
 {
   "tailscale_auth.age" = allKeyArmoredSecret;
+  "shds_bot_token.age" = allKeyArmoredSecret;
 }
