@@ -1268,11 +1268,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1787695442,
-        "narHash": "sha256-B/g1w0DHQxUovPLm9336Uc2wuKJ9unNDv0QX+VJIetE=",
+        "lastModified": 1787787516,
+        "narHash": "sha256-pRsZFw5+cEgTTvkO4U51RB1+oeZl2aNrhF630mESgPo=",
         "owner": "Bazinga9000",
         "repo": "weed-lang",
-        "rev": "88a5d0ea0757cf910b9c39eda6f49c4739e4431e",
+        "rev": "c6975d66d41ff55d104021876693a013f8b8b675",
         "type": "github"
       },
       "original": {
