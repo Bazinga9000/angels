@@ -13,4 +13,8 @@
     url = "https://github.com/NixOS/nixpkgs/pull/479368.diff";
     flake = false;
   };
+  flake-file.inputs.nixpkgs-patch-pyqt5 = {
+    url = "https://github.com/NixOS/nixpkgs/pull/559495.diff";
+    flake = false;
+  };
 }
