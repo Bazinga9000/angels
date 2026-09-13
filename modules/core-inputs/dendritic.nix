@@ -1,7 +1,7 @@
 # Enable various modules for the Dendritic Pattern (e.g flake-aspects)
 { inputs, lib, ... }:
 {
-  flake-file.inputs.flake-file.url = lib.mkDefault "github:vic/flake-file";
+  flake-file.inputs.flake-file.url = lib.mkDefault "github:denful/flake-file";
   # flake-file.inputs.den.url = lib.mkDefault "github:vic/den";
   flake-file.inputs.flake-aspects.url = lib.mkDefault "github:vic/flake-aspects";
   imports = [
