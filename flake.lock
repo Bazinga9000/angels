@@ -101,11 +101,11 @@
         "uiua": "uiua"
       },
       "locked": {
-        "lastModified": 1789402803,
-        "narHash": "sha256-wx1n26US7vagQvPgNtoMUeDk8J3X7cmkv7phhpY+Q9s=",
+        "lastModified": 1789425369,
+        "narHash": "sha256-Bd09tQiYyRUTDpNntwNH7O31OjKHopBCUX53VS033VE=",
         "owner": "Bazinga9000",
         "repo": "baz9k-pkgs",
-        "rev": "976d7825c993396b69e10bb056dd6a2442d862e1",
+        "rev": "c11a0c8a1986991e0569a4a5a782ddd858344122",
         "type": "github"
       },
       "original": {
