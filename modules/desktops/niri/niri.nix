@@ -104,6 +104,8 @@
           inputs.noctalia.homeModules.default
         ];
 
+        disabledModules = [ "programs/noctalia" ];
+
         # Enable zathura for PDFs
         programs.zathura.enable = true;
 
