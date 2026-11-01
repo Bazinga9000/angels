@@ -124,7 +124,12 @@
         # Configure Niri settings
         programs.niri.settings = {
           # Disable hot corners
-          gestures.hot-corners.enable = false;
+          gestures.hot-corners = {
+            top-left = false;
+            top-right = false;
+            bottom-left = false;
+            bottom-right = false;
+          };
 
           # Enable compose key on capslock
           input.keyboard.xkb.options = "compose:caps";
