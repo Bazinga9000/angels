@@ -29,7 +29,6 @@
               archipelago # Archipelago multiworld randomizer client
               astroterm # Terminal planetarium
               asciiquarium # Command line ASCII acquarium
-              balatro-mod-manager # Mod manager for Balatro
               cambridge # Cambridge Stacker
               cbonsai # Command line bonsai trees
               celeste64 # Celeste 64 - Fragments of the Mountain
