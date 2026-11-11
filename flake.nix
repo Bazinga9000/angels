@@ -46,6 +46,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs-patch-deadlock-mod-manager = {
+      url = "https://github.com/NixOS/nixpkgs/pull/576813.diff";
+      flake = false;
+    };
     nixpkgs-patch-hytale = {
       url = "https://github.com/NixOS/nixpkgs/pull/479368.diff";
       flake = false;
