@@ -12,5 +12,4 @@ in {
   # NB: Be sure to `nix run .#write-flake` after removing a merged patch.
   # Otherwise the patch will remain in the inputs and won't build.
   flake-file.inputs.nixpkgs-patch-hytale = mkPatch 479368;
-  flake-file.inputs.nixpkgs-patch-deadlock-mod-manager = mkPatch 576813;
 }
