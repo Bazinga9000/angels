@@ -21,11 +21,11 @@
           RevealAllSpoilers.enabled = true;
           RoleColorEverywhere.enabled = true;
           ServerListIndicators.enabled = true;
-          ShikiCodeblocks = {
-            enabled = true;
-            tryHljs = "PRIMARY";
-            useDevIcon = "COLOR";
-          };
+          # ShikiCodeblocks = {
+          #   enabled = true;
+          #   tryHljs = "PRIMARY";
+          #   useDevIcon = "COLOR";
+          # };
           TypingTweaks.enabled = true;
           Unindent.enabled = true;
           WebKeybinds.enabled = true;
